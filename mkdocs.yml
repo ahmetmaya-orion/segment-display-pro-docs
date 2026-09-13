@@ -1,0 +1,44 @@
+site_name: Segment Display Pro
+site_description: User manual for the Segment Display Pro Blender add-on.
+site_author: Segment Display Pro
+copyright: Copyright &copy; Segment Display Pro
+
+repo_name: segment-display-pro-docs
+repo_url: https://github.com/segment-display-pro/segment-display-pro-docs
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
