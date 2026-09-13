@@ -27,6 +27,8 @@ feature set.
 
 ## Installation
 
+![Enabling the add-on in Blender Preferences](assets/images/installation/installation.png){ align=right width="380" }
+
 1. Open Blender and go to **Edit** → **Preferences**.
 2. Switch to the **Add-ons** tab.
 3. Click the **Install** button (the arrow icon in the top-right of the window).
@@ -53,18 +55,9 @@ unlock the full feature set.
 3. Enter your license key in the activation field.
 4. Click **Activate**.
 
-!!! note "Lite edition"
-    The free Segment Display Lite edition does not require a license key and can
-    be used to test compatibility before purchasing.
-
-Once activated, all Pro features are unlocked.
-
 ## Uninstalling
-
-To remove the add-on, disable it in **Preferences** → **Add-ons**, then click the
-arrow next to it and select **Remove**.
 
 !!! info "Your objects stay safe"
     Uninstalling the add-on does not delete existing segment display objects.
     The linked asset data is embedded in your project, and object settings are
-    preserved in the Geometry Nodes modifiers.
+    preserved in the Geometry Nodes modifiers. If you re-install the add-on, you can continue to work where you left.
