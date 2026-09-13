@@ -6,7 +6,6 @@ This manual covers everything you need to get started: installation, activation,
 
 Note for Lite edition users: The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
 
-
 ## What it does
 
 Segment Display Pro provides a set of display modules that you place and control
@@ -52,6 +51,26 @@ display geometry stays procedural and adjustable after creation.
 After the add-on is enabled, open the 3D Viewport and press `N` to show the
 sidebar. Segment Display Pro appears under its own **SegDisp Pro** tab, alongside
 Blender's other N-panel categories.
+
+## The Asset File
+
+- When you add a segment display object to the scene via the N-Panel interface, the Segment Display asset blend file appears in Outliner > Blender File as linked. No matter how many segment display objects you have in the scene, they all share the same single linked asset data. 
+
+!!! warning "Linked Blend Data"
+    Do not delete the linked blend file directly from the Outliner — doing so will cause you to lose all your object settings. If you need to clean up your project file, make sure there are no segment display objects remaining in the scene, then use Blender > Purge Unused Data — this will automatically remove the asset file from the current blend file.
+
+- If you somehow uninstall the add-on accidentally, all your segment display objects in the scene stays safe. Because the linked asset file is embedded to your current project blend file data library. The object settings stays untouched in the Properties > Modifiers panel as Geometry Nodes setup. If you re-install the add-on, you can continue to work where you left.
+
+!!! warning "The Asset File"
+    Geometry Nodes features change frequently across Blender versions. **Do not open or rename the original asset blend file under any circumstances**. Opening the asset file risks accidentally saving it with an incompatible Blender version, which can permanently corrupt it. If your asset file becomes corrupted, you will need to either replace it with a fresh copy or reinstall the add-on.
+
+## The Segment Display Object
+
+- The "Add Segment Display" button in the N-panel interface only appears when you click on an empty space in the 3D scene. The object is always added at the current **3D cursor** location.
+
+- The N-panel always displays the settings of the active segment display object (the one with the brighter outline, i.e. the last one you clicked). You don't need it to be the only selected object; even if multiple objects are selected, the panel controls whichever segment display is active.
+
+- The object settings will only appear if a Segment Display object is active or selected. If any other type of element is selected in the scene, a "Select a Segment Display object" message will be shown instead.
 
 ## Licensing
 
