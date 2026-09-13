@@ -54,3 +54,4 @@ plugins:
 nav:
   - Home: index.md
   - Introduction: introduction.md
+  - Installation & Activation: installation.md

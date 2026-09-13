@@ -75,5 +75,5 @@ Blender's other N-panel categories.
 ## Licensing
 
 Segment Display Pro is a commercial add-on. It uses license-key activation, so a
-valid key is required to unlock the full feature set. See the installation and
-activation pages for details.
+valid key is required to unlock the full feature set. See the [installation and
+Activation](installation.md) pages for details.
