@@ -1,6 +1,6 @@
 # Segment Display Pro
 
-User manual for the Segment Display Blender add-on.
+*User manual for **v1.0.0** · Compatible with Blender 5.1.1*
 
 ## Overview
 
