@@ -1,7 +1,7 @@
 site_name: Segment Display Pro
 site_description: User manual for the Segment Display Pro Blender add-on.
 site_author: Segment Display Pro
-copyright: Copyright &copy; Segment Display Pro
+copyright: Copyright &copy; OrionNovember.Studio
 
 repo_name: segment-display-pro-docs
 repo_url: https://github.com/segment-display-pro/segment-display-pro-docs
@@ -19,7 +19,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: indigo
+      accent: deep-orange
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -53,3 +53,4 @@ plugins:
 
 nav:
   - Home: index.md
+  - Introduction: introduction.md
