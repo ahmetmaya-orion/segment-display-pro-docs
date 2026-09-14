@@ -3,7 +3,7 @@ The Settings & Preferences panel is where you manage your license activation and
 
 ## License Activation
 
-![Activation Panel in Blender Preferences](assets\images\prefs_and_settings\pref_license_key.jpg){ align=right width="550" }
+![Activation Panel in Blender Preferences](assets\images\prefs_and_settings\prefs_license_key.jpg){ align=right width="550" }
 
 The License Activation section displays your current activation status and allows you to manage your license key.
 Status: Shows whether your license is currently activated or not (checkmark icon when active).
@@ -16,7 +16,7 @@ Deactivate: Removes the license activation from the current device, freeing up a
 
 ## Asset Status Panel
 
-![Activation Panel in Blender Preferences](assets\images\prefs_and_settings\pref_asset_stats.jpg){ align=right width="550" }
+![Activation Panel in Blender Preferences](assets\images\prefs_and_settings\prefs_asset_stats.jpg){ align=right width="550" }
 
 The Asset Status section monitors the connection between the add-on and its asset .blend file. On each Blender launch, the add-on checks whether the asset file is available in the segment_display/assets directory.
 

@@ -60,7 +60,7 @@ The add-on and its related asset files will be installed in the same directory (
 
 ## Activation/Deactivation
 
-![Enabling the add-on in Blender Preferences](assets\images\prefs_and_settings\pref_license_key.jpg){ align=right width="500" }
+![Enabling the add-on in Blender Preferences](assets\images\prefs_and_settings\prefs_license_key.jpg){ align=right width="500" }
 
 After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your customer billing portal under your subscription details.
 
