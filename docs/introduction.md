@@ -4,7 +4,8 @@ Segment Display Pro is a procedural Blender add-on that lets you create fully cu
 
 This manual covers everything you need to get started: installation, activation, the N-panel interface, and a detailed breakdown of every input and setting available to you. Whether you're building a retro dashboard or a sci-fi HUD, this guide will help you get the most out of the add-on.
 
-Note for Lite edition users: The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
+!!! note "Note for Lite edition users:" 
+     The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
 
 ## What it does
 
