@@ -13,8 +13,8 @@ Before you begin, make sure your system matches the add-on's requirements:
 | Render Engines      | Eevee, Cycles          |
 | OS Platforms        | Windows, Linux, macOS  |
 | Add-on Format       | Legacy/zip             |
-| Script Size         | 492 – 575 KB**         |
-| Asset Size          | 170 – 200 MB**         |
+| Script Size         | 492 – 575 KB           |
+| Asset Size          | 170 – 200 MB           |
 
 !!! info "OS Compatibility"
     The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
@@ -81,7 +81,6 @@ Upon successful activation, the add-on creates a file called **sdp_activation.da
 
 !!! warning "Always deactivate your license before uninstalling the add-on"
     If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender does not allow add-ons to prevent or intercept the uninstall action. If you accidentally uninstall without deactivating, you can manage your activation seats yourself by logging into the [Lemon Squeezy customer portal](https://app.lemonsqueezy.com/my-orders) with your purchase email. Under your order's license key details, you can view all active devices and deactivate any instance to free up a seat. If you need help with this, please reach out to our support email for guidance.
-
 
 !!! info "Your objects stay safe"
     Uninstalling the add-on does not delete existing segment display objects and the asset file. The linked asset data is embedded in your project library, and object settings are
