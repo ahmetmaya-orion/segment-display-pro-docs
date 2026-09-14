@@ -66,7 +66,7 @@ After purchasing Segment Display Pro, you will receive an order confirmation ema
 
 To activate, copy your license key and paste it into the License Key field in the add-on preferences panel, then click Activate. **(Mouse Right-click to paste does not work — use Ctrl+V instead.)** The status monitor above the key field displays your current activation status (top-left) and your activation limit/seats (top-right).
 
-!!! info "Internet Connection Required" 
+!!! internet "Internet Connection Required"
     License activation and deactivation both require an internet connection. Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > Network tab.
 
 Upon successful activation, the add-on creates a file called **sdp_activation.dat** in the add-on's root directory. This file stores your activation data in encrypted form and ensures your license persists correctly between Blender sessions.
