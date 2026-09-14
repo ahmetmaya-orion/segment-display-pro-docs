@@ -60,7 +60,7 @@ The add-on and its related asset files will be installed in the same directory (
 
 ## Activation/Deactivation
 
-![Enabling the add-on in Blender Preferences](assets\images\prefs_and_settings\Pref_license_key.jpg){ align=right width="500" }
+![Enabling the add-on in Blender Preferences](assets\images\prefs_and_settings\pref_license_key.jpg){ align=right width="500" }
 
 After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your customer billing portal under your subscription details.
 
@@ -80,7 +80,7 @@ Upon successful activation, the add-on creates a file called **sdp_activation.da
 ## Uninstalling
 
 !!! warning "Always deactivate your license before uninstalling the add-on"
-    If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender does not allow add-ons to prevent or intercept the uninstall action. If you accidentally uninstall without deactivating, you can manage your activation seats yourself by logging into the [Lemon Squeezy customer portal](https://app.lemonsqueezy.com/my-orders) with your purchase email. Under your order's license key details, you can view all active devices and deactivate any instance to free up a seat. If you need help with this, please reach out to our support email for guidance.
+    If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender does not allow add-ons to prevent or intercept the uninstall action. If you accidentally uninstall without deactivating, you can manage your activation seats yourself by logging into the <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy customer portal</a> with your purchase email. Under your order's license key details, you can view all active devices and deactivate any instance to free up a seat. If you need help with this, please reach out to our support email for guidance.
 
 !!! info "Your objects stay safe"
     Uninstalling the add-on does not delete existing segment display objects and the asset file. The linked asset data is embedded in your project library, and object settings are
