@@ -61,3 +61,7 @@ nav:
   - Installation & Activation: installation.md
   - Preferences & Settings: prefs_and_settings.md
   - Troubleshooting: troubleshooting.md
+  - Input Categories:
+      - Numbers: in_cat_numbers.md
+      - Alphanumeric: in_cat_alphanum.md
+      - Time: in_cat_time.md
