@@ -32,7 +32,7 @@ Blender uses single-precision floating point (float32) internally. Because of th
 
 ![Number Precision](assets/images/troubleshoot/num_precision.png){ width="1000" }
 
-To work around this, the add-on provides a Complex Number Input option. Instead of typing a large number into a single input field (which Blender would corrupt beyond 7 digits), you enter values into manageable three-digit blocks (0–999) categorized by their place value. This allows the display to safely represent numbers up to the hundred trillions (15 digits) without precision loss. See the [Numbers Page](numbers.md) for details.
+To work around this, the add-on provides a Complex Number Input option. Instead of typing a large number into a single input field (which Blender would corrupt beyond 7 digits), you enter values into manageable three-digit blocks (0–999) categorized by their place value. This allows the display to safely represent numbers up to the hundred trillions (15 digits) without precision loss. See the [Numbers Page](in_cat_numbers.md) for details.
 
 ## Alphanumeric Preset Animations (Multi-Input)
 
