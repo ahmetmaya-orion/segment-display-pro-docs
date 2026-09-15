@@ -34,6 +34,11 @@ Blender uses single-precision floating point (float32) internally. Because of th
 
 To work around this, the add-on provides a Complex Number Input option. Instead of typing a large number into a single input field (which Blender would corrupt beyond 7 digits), you enter values into manageable three-digit blocks (0–999) categorized by their place value. This allows the display to safely represent numbers up to the hundred trillions (15 digits) without precision loss. See the [Numbers Page](numbers.md) for details.
 
+## Alphanumeric Preset Animations (Multi-Input)
+
+**Bypassing Blender's Limits:** Because Blender does not natively support the animation of string (text) inputs, the add-on includes a built-in multi-input preset system. See the [Alphanumeric Input Page](in_cat_alphanum.md) for details.
+
+
 ## Time FPS
 
 The auto time animations (Clock, Timer) and the Animation Start Offset feature only work correctly with whole-number frame rates (e.g. 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate timing results due to mathematical limitations in how Blender calculates frame-to-time conversions.

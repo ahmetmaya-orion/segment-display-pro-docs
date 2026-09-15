@@ -21,6 +21,11 @@
   clear: both;
 }
 
+/* Use {: .clear } on a heading (or any block) so it starts below floated images. */
+.md-typeset .clear {
+  clear: both;
+}
+
 /* Material sets display: flow-root on ol/ul, which makes a list a block
    formatting context: placed beside a floated image it keeps the narrowed
    width for its whole height, leaving the space below the image empty.
