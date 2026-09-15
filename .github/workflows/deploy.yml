@@ -20,10 +20,23 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: |
-          pip install mkdocs
-          pip install mkdocs-material  # remove if not using Material theme
-          # add any other mkdocs plugins you use here
+        # Single source of truth; includes mike so it is available when
+        # versioning is switched on (see README "Versioning with mike").
+        run: pip install -r requirements.txt
+
+      # Versioned deploys (mike) - enable together with the `extra.version`
+      # block in mkdocs.yml. mike needs a git identity to commit to gh-pages:
+      # - name: Configure git for mike
+      #   run: |
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      # - name: Deploy versioned docs
+      #   run: |
+      #     mike deploy v1.0 latest --update-aliases --push
+      #     mike set-default latest --push
+      #
+      # NOTE: once mike owns gh-pages, remove the step below. `mkdocs
+      # gh-deploy --force` pushes a flat site that would wipe all versions.
 
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force

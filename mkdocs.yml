@@ -52,6 +52,14 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+# Version dropdown (mike). Disabled for now - uncomment to enable, and see
+# README "Versioning with mike" for the full checklist. Only takes effect
+# once versions.json exists on the deployed branch (i.e. after the first
+# `mike deploy`), until then the dropdown simply never renders.
+# extra:
+#   version:
+#     provider: mike
+
 plugins:
   - search
 
