@@ -64,7 +64,7 @@ You can also verify the linked asset file from Blender's Outliner area using the
 Time Synchronization syncs the Clock and Timer display values to Blender's timeline, matching the add-on's FPS with the scene FPS so the displayed time updates accurately as the animation plays.
 Set the FPS using the Addon Frame Rate dropdown menu in Addon Settings to match your project's frame rate.
 
-The Animation Start Offset option, available in both Clock and Timer, calculates its timing based on the scene FPS and the add-on's internal FPS. 
+The Animation Start Offset option, available in both Clock and Timer, calculates its timing based on the scene FPS and the add-on's internal FPS. See the [Input Categories/ Time Page](in_cat_time.md#general-overview) for more details.
 
 !!! info
      This option only works correctly with whole-number frame rates (e.g., 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate results due to mathematical limitations.
