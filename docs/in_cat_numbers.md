@@ -1,7 +1,7 @@
 
 ## Simple Number Inputs
 
-![Numbers Simple](assets\images\in_cat_numbers\ui_num_simple.png){ align=right width="400" }
+![Numbers Simple](assets/images/in_cat_numbers/ui_num_simple.png){ align=right width="400" }
 
 1. **Number Input Option:**
     - **Simple:** Up to 8 digits with a single input.
@@ -39,13 +39,13 @@
 Overcoming Software Limits with "Complex Input": Blender uses single-precision floats (float32), which means that if you try to type a standard number longer than 7 digits, it will become inaccurate and produce calculation errors. To bypass this and safely reach the hundred trillion, the add-on uses Complex Input Options. Instead of typing a massive 15-digit string all at once, you input values into manageable three-digit blocks (ranging from 0-999) categorized by their place value.
 
 <figure markdown>
-  ![Complex Number Display](assets\images\in_cat_numbers\disp_num_complex.png){ width="600" }
+  ![Complex Number Display](assets/images/in_cat_numbers/disp_num_complex.png){ width="600" }
 </figure>
 
 </div>
 
 <figure markdown>
-  ![Complex Number UI](assets\images\in_cat_numbers\ui_num_complex.png){ width="400" }
+  ![Complex Number UI](assets/images/in_cat_numbers/ui_num_complex.png){ width="400" }
 </figure>
 
 </div>

@@ -1,9 +1,9 @@
 
 **Input Capabilities:** The Alphanumeric Main Display seamlessly processes inputs containing both numbers and letters, fully supporting both uppercase and lowercase characters, allowing you to mix and match digits and alphabetic characters freely within a single input. Both single and multi input options are available, and the input also supports blank spaces and separator characters.
 
-![Alphanum Single UI](assets\images\in_cat_alphanum\ui_alpha_single_in.png){ align=right width="300" }
+![Alphanum Single UI](assets/images/in_cat_alphanum/ui_alpha_single_in.png){ align=right width="300" }
 
-![Alphanum Multi UI](assets\images\in_cat_alphanum\ui_alpha_multi_in.png){ align=right width="300" }
+![Alphanum Multi UI](assets/images/in_cat_alphanum/ui_alpha_multi_in.png){ align=right width="300" }
 
 ## Inputs
 
@@ -29,7 +29,7 @@
 
 **[4] Simulating True Spaces:** If you want an actual blank space rather than a symbol, select "X" from the Separator panel's character menu. This will insert an extra, empty digit to simulate a blank space.
 
-![Alphanum Sep Demo](assets\images\in_cat_alphanum\alpha_sep_demo.png){ width="1200" }
+![Alphanum Sep Demo](assets/images/in_cat_alphanum/alpha_sep_demo.png){ width="1200" }
 !!! info "You can enter a maximum of two spaces per display."
      If you include more than two spaces, you will trigger an error or the display will appear empty.
 
@@ -38,7 +38,7 @@
 
 ### Display Length Behavior
 
-![Alphanum Display Length](assets\images\in_cat_alphanum\alpha_disp_length_demo.png){ align=right width="600" }
+![Alphanum Display Length](assets/images/in_cat_alphanum/alpha_disp_length_demo.png){ align=right width="600" }
 
 When determining your overall "Display Length," remember that typing a space and selecting a separator character will take up exactly one digit of that total length. The same rule applies to the second separator character. To match the exact display length, use blank spaces.
 
@@ -54,7 +54,7 @@ When determining your overall "Display Length," remember that typing a space and
 
 **[4] Display Separations:** You can adjust the physical separation space between the main display and the additional displays using the "Display Separation" value.
 
-![Alphanum Sep. Demo](assets\images\in_cat_alphanum\alpha_multi_disp_demo.png){ width="1200" }
+![Alphanum Sep. Demo](assets/images/in_cat_alphanum/alpha_multi_disp_demo.png){ width="1200" }
 
 !!! warning "Important Separators Limitation"
      Please note that fully functional separator characters are exclusively available on Main Display-1. If you use spaces in Display 2 or Display 3, they will appear as empty digits rather than actual separator characters. For more complex setups, manually stack additional segment display objects next to each other.

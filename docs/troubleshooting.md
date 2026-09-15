@@ -30,7 +30,7 @@ valid key is required to unlock the full feature set. See the [Activation Page](
 
 Blender uses single-precision floating point (float32) internally. Because of this, the Segment Display add-on cannot produce correct digit results beyond 7 digits, even when using whole integers. If you enter a number with more than 7 digits, expect rounding errors or incorrect segment values.
 
-![Number Precision](assets\images\troubleshoot\num_precision.png){ width="1000" }
+![Number Precision](assets/images/troubleshoot/num_precision.png){ width="1000" }
 
 To work around this, the add-on provides a Complex Number Input option. Instead of typing a large number into a single input field (which Blender would corrupt beyond 7 digits), you enter values into manageable three-digit blocks (0–999) categorized by their place value. This allows the display to safely represent numbers up to the hundred trillions (15 digits) without precision loss. See the [Numbers Page](numbers.md) for details.
 
@@ -47,7 +47,7 @@ Make sure the Addon Frame Rate dropdown in the add-on's N-panel settings matches
 
 ## Viewport | Solid Color Preview
 
-![Activation Panel in Blender Preferences](assets\images\troubleshoot\solid_view_preview.png){ align=right width="500" }
+![Activation Panel in Blender Preferences](assets/images/troubleshoot/solid_view_preview.png){ align=right width="500" }
 
 
 The Solid Viewport Preview feature may not display correctly in certain conditions:
@@ -84,7 +84,7 @@ To resolve: Simply save and restart Blender, or open a fresh file. Since the add
 
 To allow the Segment Display emission to interact with the scene in EEVEE — similar to the Cycles engine — enable the Raytracing option in Properties > Render Properties.
 
-![Activation Panel in Blender Preferences](assets\images\troubleshoot\eevee_raytracing.jpg){width="400"}
+![Activation Panel in Blender Preferences](assets/images/troubleshoot/eevee_raytracing.jpg){width="400"}
 
 ## License Deactivation Before Uninstall
 !!! warning "Always deactivate your license before uninstalling the add-on."
