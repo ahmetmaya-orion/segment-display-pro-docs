@@ -26,6 +26,12 @@
   clear: both;
 }
 
+/* Grids are a BFC, so beside a float they shrink to the leftover column and
+   wrap their items. Clear them so they take full width and stay in one row. */
+.md-typeset .grid {
+  clear: both;
+}
+
 /* Material sets display: flow-root on ol/ul, which makes a list a block
    formatting context: placed beside a floated image it keeps the narrowed
    width for its whole height, leaving the space below the image empty.

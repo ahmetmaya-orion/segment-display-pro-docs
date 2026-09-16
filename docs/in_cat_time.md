@@ -73,3 +73,28 @@ Perfect for explosive countdowns or intricate chronometers, the Timer feature sp
 
 
 ## Date {: .clear }
+
+![Time|Timer](assets/images/in_cat_time/date//time_date_ui.png){ align=right width="350" }
+
+Quickly generate procedural calendar readouts with full formatting control over your display.
+
+**[1] Date Format:** Customize the exact order of your calendar units (Day, Month, Year) to fit your regional layout.
+
+**[2] Year Format:** Choose to display the year as either a minimal 2-digit or a full 4-digit readout.
+
+**[3] Month Format:** You can represent the month as a standard numeric value or switch to a 3-digit alphabetic value for a more advanced UI aesthetic. Note: The alphabetic month format is exclusively available when using the 16-Segment Display Model, due to the segment count limitations of the 7-Segment model.
+
+
+<div class="grid" markdown>
+
+<figure markdown>
+  ![Un-linked Asset](assets/images/in_cat_time/date/month_format_num.png){ width="400" }
+  <figcaption>Numeric</figcaption>
+</figure>
+
+<figure markdown>
+  ![Linked Asset](assets/images/in_cat_time/date/month_format_alphanum.png){ width="400" }
+  <figcaption>Alphabet</figcaption>
+</figure>
+
+</div>
