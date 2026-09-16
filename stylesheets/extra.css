@@ -1,0 +1,73 @@
+/* Custom admonition type "privacy" with a lock icon.
+   Follows the custom admonition pattern from the Material for MkDocs docs:
+   https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions */
+
+:root {
+  --md-admonition-icon--privacy: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3"/></svg>');
+  --md-admonition-icon--internet: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>');
+}
+
+/* A second right-floated image may not overlap an earlier right float, so on
+   wide viewports the browser places it left of the first image instead of
+   below it. clear: right forces every right float under the previous one,
+   keeping all of them against the right edge at any window width. */
+.md-typeset img[align=right] {
+  clear: right;
+}
+
+/* Admonitions never wrap around floated images; they start below them. */
+.md-typeset .admonition,
+.md-typeset details {
+  clear: both;
+}
+
+/* Use {: .clear } on a heading (or any block) so it starts below floated images. */
+.md-typeset .clear {
+  clear: both;
+}
+
+/* Grids are a BFC, so beside a float they shrink to the leftover column and
+   wrap their items. Clear them so they take full width and stay in one row. */
+.md-typeset .grid {
+  clear: both;
+}
+
+/* Material sets display: flow-root on ol/ul, which makes a list a block
+   formatting context: placed beside a floated image it keeps the narrowed
+   width for its whole height, leaving the space below the image empty.
+   Lists that directly follow a floated image opt out, so their text flows
+   into the space under the image the way paragraphs do. The margins replace
+   the li > p margins (.5em) that flow-root previously contained. */
+.md-typeset p:has(> img[align]) + :is(ol, ul) {
+  display: block;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.md-typeset .admonition.privacy,
+.md-typeset details.privacy,
+.md-typeset .admonition.internet,
+.md-typeset details.internet {
+  border-color: rgb(0, 184, 212);
+}
+
+.md-typeset .privacy > .admonition-title,
+.md-typeset .privacy > summary,
+.md-typeset .internet > .admonition-title,
+.md-typeset .internet > summary {
+  background-color: rgba(0, 184, 212, 0.1);
+}
+
+.md-typeset .privacy > .admonition-title::before,
+.md-typeset .privacy > summary::before {
+  background-color: rgb(0, 184, 212);
+  -webkit-mask-image: var(--md-admonition-icon--privacy);
+  mask-image: var(--md-admonition-icon--privacy);
+}
+
+.md-typeset .internet > .admonition-title::before,
+.md-typeset .internet > summary::before {
+  background-color: rgb(0, 184, 212);
+  -webkit-mask-image: var(--md-admonition-icon--internet);
+  mask-image: var(--md-admonition-icon--internet);
+}
