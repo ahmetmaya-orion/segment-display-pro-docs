@@ -26,6 +26,15 @@
   clear: both;
 }
 
+/* Inverse of .clear: lets a block wrap around floated images. For admonitions
+   the class is added as an extra word in front of the title (`!!! info wrap
+   "..."` becomes class "admonition info wrap"). Admonitions are already a BFC
+   (display: flow-root), so beside a float they shrink to the leftover width
+   instead of extending under the image. */
+.md-typeset .wrap {
+  clear: none;
+}
+
 /* Grids are a BFC, so beside a float they shrink to the leftover column and
    wrap their items. Clear them so they take full width and stay in one row. */
 .md-typeset .grid {

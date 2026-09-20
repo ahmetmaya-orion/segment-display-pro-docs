@@ -58,3 +58,5 @@ When determining your overall "Display Length," remember that typing a space and
 
 !!! warning "Important Separators Limitation"
      Please note that fully functional separator characters are exclusively available on Main Display-1. If you use spaces in Display 2 or Display 3, they will appear as empty digits rather than actual separator characters. For more complex setups, manually stack additional segment display objects next to each other.
+
+See the [Separators page](separators.md#alphanumeric-specific-separator-options) for more information.
