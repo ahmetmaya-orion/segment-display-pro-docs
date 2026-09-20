@@ -74,3 +74,4 @@ nav:
       - Numbers: in_cat_numbers.md
       - Alphanumeric: in_cat_alphanum.md
       - Time: in_cat_time.md
+  - Separators: separators.md
