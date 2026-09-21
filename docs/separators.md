@@ -29,7 +29,7 @@ Each character and shape has its own dedicated settings and properties. These op
 
 **[5] Character Angle:** Tilts the separator character to a custom angle. Note: Not available for slash and line characters.
 
-**[6] Vertical Position:** Sets the separator's vertical alignment. The character can be automatically aligned to the decimal digit position or manually adjusted to your preference. Decimal digit position options can be found on the [Display page](display.md).
+**[6] Vertical Position:** Sets the separator's vertical alignment. The character can be automatically aligned to the decimal digit position or manually adjusted to your preference. Decimal digit position options can be found on the [Display page](display.md#display-align-spacing-and-size).
 
 **[7] Custom Vertical Position:** Provides a custom vertical position value when automatic alignment is not selected. **Manual Vertical Offset:** Manually adjusts the vertical offset of the separator character.
 

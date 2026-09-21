@@ -44,13 +44,12 @@
 /* Material sets display: flow-root on ol/ul, which makes a list a block
    formatting context: placed beside a floated image it keeps the narrowed
    width for its whole height, leaving the space below the image empty.
-   Lists that directly follow a floated image opt out, so their text flows
-   into the space under the image the way paragraphs do. The margins replace
-   the li > p margins (.5em) that flow-root previously contained. */
-.md-typeset p:has(> img[align]) + :is(ol, ul) {
+   Opt out so list text flows into the space under the image the way
+   paragraphs do. This file loads after Material's CSS, so equal
+   specificity wins by order. */
+.md-typeset ol:not([hidden]),
+.md-typeset ul:not([hidden]) {
   display: block;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
 }
 
 .md-typeset .admonition.privacy,
