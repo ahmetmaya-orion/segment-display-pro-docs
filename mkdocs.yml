@@ -1,4 +1,4 @@
-site_name: Segment Display ProSS
+site_name: Segment Display Pro
 site_description: User manual for the Segment Display Pro Blender add-on.
 site_author: Segment Display Pro
 copyright: Copyright &copy; OrionNovember.Studio
@@ -69,7 +69,6 @@ nav:
   - Introduction: introduction.md
   - Installation & Activation: installation.md
   - Preferences & Settings: prefs_and_settings.md
-  - Troubleshooting: troubleshooting.md
   - Input Categories:
       - Numbers: in_cat_numbers.md
       - Alphanumeric: in_cat_alphanum.md
@@ -77,3 +76,5 @@ nav:
   - Separators: separators.md
   - Display Options: display.md
   - Viewport & Overlays: viewport_overlays.md
+  - Changelog: changelog.md
+  - Troubleshooting: troubleshooting.md
