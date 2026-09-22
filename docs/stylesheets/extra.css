@@ -79,3 +79,39 @@
   -webkit-mask-image: var(--md-admonition-icon--internet);
   mask-image: var(--md-admonition-icon--internet);
 }
+
+/* Image swap on hover: the first image (.def) is shown by default, the second
+   (.hover-img) sits on top of it fully transparent and crossfades in while
+   hovering the figure. Both images must have identical dimensions. */
+/* Material gives every figure `width: fit-content` plus `margin: 1em auto`,
+   which centers the shrink-wrapped box. Reset the horizontal margin so the
+   figure sits at the left edge. */
+.md-typeset figure.img-hover {
+  position: relative;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.md-typeset figure.img-hover p {
+  margin: 0;
+}
+
+.md-typeset figure.img-hover .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.md-typeset figure.img-hover:hover .hover-img {
+  opacity: 1;
+}
+
+/* Optional `left` modifier: float the hover figure so the following text
+   wraps beside it. The right margin keeps a gap between image and text. */
+.md-typeset figure.img-hover.left {
+  float: left;
+  margin: 0 0.8rem 0.8rem 0;
+}

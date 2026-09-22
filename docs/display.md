@@ -125,6 +125,14 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 
 **[7] Minus Sign Base Style:** Selects whether to display the complete digit base or only the the minus sign's base.
 
+<figure class="img-hover left" markdown>
+
+  ![Minus Sign Base Style: complete digit base](assets/images/display_options/disp-minus-base-def.png){ width="400" }
+  
+  ![Minus Sign Base Style: minus sign base only](assets/images/display_options/disp-minus-base-hover.png){ .hover-img width="400" aria-hidden="true" }
+
+</figure>
+
 **[8] Digit Separator Base Style:** Selects whether to display the complete digit base or only the separator segment variations. For a more realistic look, select "Whole Display."
 
 **[9] Base Z Offset & Thickness:** Controls the distance from the display base to the LED surface and the overall thickness of the base panel.
