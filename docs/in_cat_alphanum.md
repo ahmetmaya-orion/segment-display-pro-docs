@@ -9,9 +9,17 @@
 
 **[1] Display Count:** The alphanumeric category allows you to utilize up to three separate displays simultaneously.
 
-**[2] **Display Length:** The total number of digits shown in a single display.
+**[2] Display Length:** The total number of digits shown in a single display.
 
-**[3] **Alignment:** You can snap and align your text to either the left or right side of the digital display.
+**[3] Input Alignment:** You can snap and align your text to either the left or right side of the digital display.
+
+<figure class="img-hover" markdown>
+
+  ![Input Alignment: left](assets/images/in_cat_alphanum/alpha_disp_align_left.png){ width="600" }
+
+  ![Input Alignment: right](assets/images/in_cat_alphanum/alpha_disp_align_right.png){ .hover-img width="600" aria-hidden="true" }
+
+</figure>
 
 **[4] Input Options:** Single / Multi
 
