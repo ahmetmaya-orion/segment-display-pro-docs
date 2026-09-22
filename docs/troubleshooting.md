@@ -11,6 +11,7 @@ If you somehow uninstall the add-on accidentally, all your segment display objec
 !!! warning "Do not open or rename the original asset blend file under any circumstances."
      Geometry Nodes features change frequently across Blender versions.  Opening the asset file risks accidentally saving it with an incompatible Blender version, which can permanently corrupt it. If your asset file becomes corrupted, you will need to either replace it with a fresh copy or reinstall the add-on.
 
+---
 
 ## The Segment Display Object
 
@@ -20,11 +21,21 @@ The N-panel always displays the settings of the active segment display object (t
 
 The object settings will only appear if a Segment Display object is active or selected. If any other type of element is selected in the scene, a "Select a Segment Display object" message will be shown instead.
 
+---
 
 ## Licensing
 
 Segment Display Pro is a commercial add-on. It uses license-key activation, so a
 valid key is required to unlock the full feature set. See the [Activation Page](installation.md#activationdeactivation) for details.
+
+## License Deactivation Before Uninstall
+!!! warning "Always deactivate your license before uninstalling the add-on."
+     If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender's API does not allow add-ons to prevent or intercept the uninstall action, so the add-on cannot warn you or auto-deactivate at that point. If you accidentally uninstall without deactivating, please contact us via our support email so we can manually free up the activation slot for you.
+
+!!! internet "License activation and deactivation both require an internet connection."
+     Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > Network tab.
+
+---
 
 ## Numbers
 
@@ -34,16 +45,21 @@ Blender uses single-precision floating point (float32) internally. Because of th
 
 To work around this, the add-on provides a Complex Number Input option. Instead of typing a large number into a single input field (which Blender would corrupt beyond 7 digits), you enter values into manageable three-digit blocks (0–999) categorized by their place value. This allows the display to safely represent numbers up to the hundred trillions (15 digits) without precision loss. See the [Numbers Page](in_cat_numbers.md) for details.
 
+---
+
 ## Alphanumeric Preset Animations (Multi-Input)
 
 **Bypassing Blender's Limits:** Because Blender does not natively support the animation of string (text) inputs, the add-on includes a built-in multi-input preset system. See the [Alphanumeric Input Page](in_cat_alphanum.md) for details.
 
+---
 
 ## Time FPS
 
 The auto time animations (Clock, Timer) and the Animation Start Offset feature only work correctly with whole-number frame rates (e.g. 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate timing results due to mathematical limitations in how Blender calculates frame-to-time conversions.
 
 Make sure the Addon Frame Rate dropdown in the add-on's N-panel settings matches your project's scene frame rate for accurate time synchronization. For more information, see the [Settings Page](prefs_and_settings.md#time-synchronization).
+
+---
 
 ## Viewport | Solid Color Preview
 
@@ -58,6 +74,15 @@ If your Segment Display object looks glitchy from a distance when Solid Viewport
 
 For more details on this feature, see the  [Viewport & Overlays page](viewport_overlays.md#viewport-solid-preview)
 
+---
+
+## EEVEE Render Engine Tips
+
+To allow the Segment Display emission to interact with the scene in EEVEE — similar to the Cycles engine — enable the Raytracing option in Properties > Render Properties.
+
+![Activation Panel in Blender Preferences](assets/images/troubleshoot/eevee_raytracing.jpg){width="400"}
+
+---
 
 ## Blender Terminal Issues
 ### "VFont -> Node" Warnings
@@ -82,16 +107,3 @@ Linking or re-importing the display asset from a library.
 To resolve: Simply save and restart Blender, or open a fresh file. Since the add-on's functionality is not affected, you can safely ignore these messages during your workflow.
 
 <a href="https://projects.blender.org/blender/blender/issues/154517" target="_blank" rel="noopener">See the current issue on Blender Developer</a>
-
-## EEVEE Render Engine Tips
-
-To allow the Segment Display emission to interact with the scene in EEVEE — similar to the Cycles engine — enable the Raytracing option in Properties > Render Properties.
-
-![Activation Panel in Blender Preferences](assets/images/troubleshoot/eevee_raytracing.jpg){width="400"}
-
-## License Deactivation Before Uninstall
-!!! warning "Always deactivate your license before uninstalling the add-on."
-     If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender's API does not allow add-ons to prevent or intercept the uninstall action, so the add-on cannot warn you or auto-deactivate at that point. If you accidentally uninstall without deactivating, please contact us via our support email so we can manually free up the activation slot for you.
-
-!!! internet "License activation and deactivation both require an internet connection."
-     Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > Network tab.
