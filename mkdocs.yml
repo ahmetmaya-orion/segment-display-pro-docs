@@ -1,10 +1,10 @@
-site_name: Segment Display Pro
+site_name: Segment Display ProSS
 site_description: User manual for the Segment Display Pro Blender add-on.
 site_author: Segment Display Pro
 copyright: Copyright &copy; OrionNovember.Studio
 
-repo_name: segment-display-pro-docs
-repo_url: https://github.com/segment-display-pro/segment-display-pro-docs
+# repo_name: segment-display-pro-docs
+# repo_url: https://github.com/segment-display-pro/segment-display-pro-docs
 
 theme:
   name: material
@@ -76,3 +76,4 @@ nav:
       - Time: in_cat_time.md
   - Separators: separators.md
   - Display Options: display.md
+  - Viewport & Overlays: viewport_overlays.md
