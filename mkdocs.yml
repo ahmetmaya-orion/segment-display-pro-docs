@@ -65,16 +65,20 @@ plugins:
   - search
 
 nav:
-  - Home: index.md
-  - Introduction: introduction.md
-  - Installation & Activation: installation.md
-  - Preferences & Settings: prefs_and_settings.md
-  - Input Categories:
-      - Numbers: in_cat_numbers.md
-      - Alphanumeric: in_cat_alphanum.md
-      - Time: in_cat_time.md
-  - Separators: separators.md
-  - Display Options: display.md
-  - Viewport & Overlays: viewport_overlays.md
-  - Changelog: changelog.md
-  - Troubleshooting: troubleshooting.md
+  - Getting Started:
+    - Home: index.md
+    - Introduction: introduction.md
+    - Installation & Activation: installation.md
+    - Preferences & Settings: prefs_and_settings.md
+  - User Guide:
+    - Input Categories:
+        - Numbers: in_cat_numbers.md
+        - Alphanumeric: in_cat_alphanum.md
+        - Time: in_cat_time.md
+    - Separators: separators.md
+    - Display Options: display.md
+    - Viewport & Overlays: viewport_overlays.md
+    - Preferences & Settings: prefs_and_settings.md
+  - Reference:
+    - Changelog: changelog.md
+    - Troubleshooting: troubleshooting.md
