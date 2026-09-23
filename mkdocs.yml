@@ -67,8 +67,8 @@ plugins:
   - search
 
 nav:
+  - Home: index.md
   - Getting Started:
-    - Home: index.md
     - Introduction: introduction.md
     - Installation & Activation: installation.md
     - Preferences & Settings: prefs_and_settings.md
