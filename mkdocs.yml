@@ -29,6 +29,8 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.footer
+    - navigation.path
     - toc.integrate
     - search.suggest
     - search.highlight
