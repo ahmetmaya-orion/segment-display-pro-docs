@@ -2,7 +2,8 @@
 
 *User manual for **v1.0.0** · Compatible with Blender 5.1.1*
 
-
+!!! note "Note for Lite edition users:" 
+     The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
 
 ## Overview
 
