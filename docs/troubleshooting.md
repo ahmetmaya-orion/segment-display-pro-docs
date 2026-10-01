@@ -6,7 +6,7 @@ When you add a segment display object to the scene via the N-Panel interface, th
 !!! warning "Do not delete the linked blend file directly from the Outliner!"
     Doing so will cause you to lose all your object settings. If you need to clean up your project file, make sure there are no segment display objects remaining in the scene, then use Blender > Purge Unused Data — this will automatically remove the asset file from the current blend file.
 
-If you somehow uninstall the add-on accidentally, all your segment display objects in the scene stays safe. Because the linked asset file is embedded to your current project blend file data library. The object settings stays untouched in the Properties > Modifiers panel as Geometry Nodes setup. If you re-install the add-on, you can continue to work where you left.
+If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
 
 !!! warning "Do not open or rename the original asset blend file under any circumstances."
      Geometry Nodes features change frequently across Blender versions.  Opening the asset file risks accidentally saving it with an incompatible Blender version, which can permanently corrupt it. If your asset file becomes corrupted, you will need to either replace it with a fresh copy or reinstall the add-on.
