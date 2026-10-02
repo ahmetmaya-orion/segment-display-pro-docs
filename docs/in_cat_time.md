@@ -57,7 +57,7 @@ Perfect for explosive countdowns or intricate chronometers, the Timer feature sp
 
 **[3] Set Timer & Multiplier:** Easily set massive durations without doing complex math or trying to enter huge values directly into the "Set Timer" input field. For example, setting the multiplier menu to **"`Hour`"** and the input to `24s` will automatically calculate the 86,400 seconds needed for a **1-Day** countdown.
 
-**[4] Timer Direction: :** Set your timer to count `To Zero` (e.g., 3 - 2 - 1 - 0) or `From Zero` (e.g., 0 - 1 - 2 - 3). If you set your timer to `7` for example, counting *To Zero* means the timer will count down from `7` and stop at `0`, while counting *From Zero* means the timer will start at `0` and stop once it reaches `7`.
+**[4] Timer Count Mode:** Set your timer to `Countdown` (e.g., 3 - 2 - 1 - 0) or `Count Up` (e.g., 0 - 1 - 2 - 3). If you set your timer to `7` for example, *Countdown* means the timer will count down from `7` and stop at `0`, while *Count Up* means the timer will start at `0` and stop once it reaches `7`.
 
 **[5] Auto Timer Animation:** The timer starts when you hit play in the scene. **"Start Offset"** lets you specify the exact frame number at which the animation begins playing back.
 
