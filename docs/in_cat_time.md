@@ -25,7 +25,7 @@ Build realistic digital clocks effortlessly. You can manually input the exact Ho
 
 **[5] Clock Direction:** You can reverse the flow of time by switching the animation direction between `Reverse` and `Forward`.
 
-**[6] Auto Time Animation:** The clock starts when you hit play in the scene. **Start Offset** lets you specify the exact frame number at which the animation begins playing back.
+**[6] Auto Time Animation:** The clock starts when you hit play in the scene. **Clock Start Frame** lets you specify the exact frame number at which the animation begins playing back.
 
 **[7] Manual Time Animation:** You can manually keyframe your animation in non-linear time. The multiplier menu also lets you create high-speed time lapses by scaling your input range — for example, multiplying the speed so that one input second visually represents a full minute or even an hour:
 
