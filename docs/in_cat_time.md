@@ -23,7 +23,7 @@ Build realistic digital clocks effortlessly. You can manually input the exact Ho
 
 **[4] Initial Time:** In this example, an initial time of 19:00 is entered. Since 12-hour format is selected, the display shows 07:00.
 
-**[5] Time Direction:** You can reverse the flow of time by switching the animation direction between Clockwise and Counterclockwise.
+**[5] Clock Direction:** You can reverse the flow of time by switching the animation direction between `Reverse` and `Forward`.
 
 **[6] Auto Time Animation:** The clock starts when you hit play in the scene. **Start Offset** lets you specify the exact frame number at which the animation begins playing back.
 
