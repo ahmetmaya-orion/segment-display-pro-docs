@@ -59,7 +59,7 @@ Perfect for explosive countdowns or intricate chronometers, the Timer feature sp
 
 **[4] Timer Count Mode:** Set your timer to `Countdown` (e.g., 3 - 2 - 1 - 0) or `Count Up` (e.g., 0 - 1 - 2 - 3). If you set your timer to `7` for example, *Countdown* means the timer will count down from `7` and stop at `0`, while *Count Up* means the timer will start at `0` and stop once it reaches `7`.
 
-**[5] Auto Timer Animation:** The timer starts when you hit play in the scene. **"Start Offset"** lets you specify the exact frame number at which the animation begins playing back.
+**[5] Auto Timer Animation:** The timer starts when you hit play in the scene. **"Timer Start Frame"** lets you specify the exact frame number at which the animation begins playing back.
 
 **[6] Manual Timer Animation & Decimal Precision (Beta):** When manually keyframing timer animations, you have full control over decimal precision by choosing between Centiseconds, Deciseconds, or Milliseconds — available when **"Timer Decimals"** is enabled.
 
