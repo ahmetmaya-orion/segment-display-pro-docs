@@ -43,9 +43,9 @@ display geometry stays procedural and adjustable after creation.
 | Asset Size          | 170 – 200 MB**                 |
 
 !!! info "Important"
-    * The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
+    * The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
     
-    ** File sizes may change over time with future updates.
+    ** File sizes may change over time with future updates.
 
 ## Where to find it in Blender
 
@@ -62,8 +62,12 @@ Blender's other N-panel categories.
 
 - If you somehow uninstall the add-on accidentally, all your segment display objects in the scene stays safe. Because the linked asset file is embedded to your current project blend file data library. The object settings stays untouched in the Properties > Modifiers panel as Geometry Nodes setup. If you re-install the add-on, you can continue to work where you left.
 
-!!! warning "The Asset File"
-    Geometry Nodes features change frequently across Blender versions. **Do not open or rename the original asset blend file under any circumstances**. Opening the asset file risks accidentally saving it with an incompatible Blender version, which can permanently corrupt it. If your asset file becomes corrupted, you will need to either replace it with a fresh copy or reinstall the add-on.
+!!! warning "Do not open or modify the asset file!"
+    The add-on includes a .blend asset file. The add-on **links** to this file (it doesn't append it), so it has to stay exactly as shipped. Do not open, edit, re-save, rename or move it. Even opening and saving it in Blender without changing anything can break the add-on.
+
+    **Why this matters for support:** every shipped asset file has its own unique ID (a digital fingerprint) that we use to check it's the original. Opening or re-saving the file, even without changing anything, breaks that ID. Think of it like a laptop warranty: once you open the case, it's no longer covered. If the asset file has been modified, we can't provide support until you reinstall the add-on from the original ZIP.
+
+    If displays start acting strange or won't load, uninstall the add-on and reinstall it from the original ZIP.
 
 ## The Segment Display Object
 
@@ -78,3 +82,4 @@ Blender's other N-panel categories.
 Segment Display Pro is a commercial add-on. It uses license-key activation, so a
 valid key is required to unlock the full feature set. See the [installation and
 Activation](installation.md) pages for details.
+
