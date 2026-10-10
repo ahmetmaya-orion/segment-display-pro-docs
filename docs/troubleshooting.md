@@ -8,8 +8,12 @@ When you add a segment display object to the scene via the N-Panel interface, th
 
 If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
 
-!!! warning "Do not open or rename the original asset blend file under any circumstances."
-     Geometry Nodes features change frequently across Blender versions.  Opening the asset file risks accidentally saving it with an incompatible Blender version, which can permanently corrupt it. If your asset file becomes corrupted, you will need to either replace it with a fresh copy or reinstall the add-on.
+!!! warning "Do not open or modify the asset file!"
+    The add-on includes a .blend asset file. The add-on **links** to this file (it doesn't append it), so it has to stay exactly as shipped. Do not open, edit, re-save, rename or move it. Even opening and saving it in Blender without changing anything can break the add-on.
+
+    **Why this matters for support:** every shipped asset file has its own unique ID (a digital fingerprint) that we use to check it's the original. Opening or re-saving the file, even without changing anything, breaks that ID. Think of it like a laptop warranty: once you open the case, it's no longer covered. If the asset file has been modified, we can't provide support until you reinstall the add-on from the original ZIP.
+
+    If displays start acting strange or won't load, uninstall the add-on and reinstall it from the original ZIP.
 
 ---
 
@@ -57,7 +61,7 @@ To work around this, the add-on provides a Complex Number Input option. Instead 
 
 The auto time animations (Clock, Timer) and the Animation Start Offset feature only work correctly with whole-number frame rates (e.g. 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate timing results due to mathematical limitations in how Blender calculates frame-to-time conversions.
 
-Make sure the Addon Frame Rate dropdown in the add-on's N-panel settings matches your project's scene frame rate for accurate time synchronization. For more information, see the [Settings Page](prefs_and_settings.md#time-synchronization).
+Make sure the Addon Frame Rate dropdown in the add-on's N-panel settings matches your project's scene frame rate for accurate time synchronization. For more information, see the [Settings Page](prefs_and_settings.md#time-synchronization).
 
 ---
 
@@ -107,3 +111,4 @@ Linking or re-importing the display asset from a library.
 To resolve: Simply save and restart Blender, or open a fresh file. Since the add-on's functionality is not affected, you can safely ignore these messages during your workflow.
 
 <a href="https://projects.blender.org/blender/blender/issues/154517" target="_blank" rel="noopener">See the current issue on Blender Developer</a>
+
