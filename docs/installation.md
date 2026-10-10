@@ -93,7 +93,7 @@ Each license key has a limited number of activations, and every new device count
     **Deactivate** the license on the old machine first. Uninstalling the add-on without deactivating does **NOT** free up the activation slot. Lost access to the old machine? You can deactivate it yourself from your <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy order dashboard</a>, where you can also see and manage all your activations.
 
 !!! privacy "Privacy Notice"
-    During license activation, your custom device name (e.g., QUEEN-WINDOWS11) is stored on our online system dashboard. This information is used exclusively by our customer support team to assist you in the event of any activation issues. By activating your license, you consent to sharing this device identifier with us.
+    During license activation, your custom device name (e.g., QUEEN-WINDOWS11) is stored on our online system dashboard. This information is used exclusively by our customer support to assist you in the event of any activation issues. By activating your license, you consent to sharing this device identifier with us.
 
 ## Updating the Add-on
 
@@ -113,7 +113,6 @@ Each license key has a limited number of activations, and every new device count
 !!! warning "Always deactivate your license before uninstalling the add-on"
     If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender does not allow add-ons to prevent or intercept the uninstall action. If you accidentally uninstall without deactivating, you can manage your activation seats yourself by logging into the <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy customer portal</a> with your purchase email. Under your order's license key details, you can view all active devices and deactivate any instance to free up a seat. If you need help with this, please reach out to our support email for guidance.
 
-!!! info "Your objects stay safe"
-    Uninstalling the add-on does not delete existing segment display objects and the asset file. The linked asset data is embedded in your project library, and object settings are
-    preserved in the Geometry Nodes modifiers. If you re-install the add-on, you can continue to work where you left.
+!!! info "Accidentally Uninstalled the Add-on Mid-Project?"
+    If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
 
