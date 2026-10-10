@@ -93,7 +93,7 @@ Each license key has a limited number of activations, and every new device count
     **Deactivate** the license on the old machine first. Uninstalling the add-on without deactivating does **NOT** free up the activation slot. Lost access to the old machine? You can deactivate it yourself from your <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy order dashboard</a>, where you can also see and manage all your activations.
 
 !!! privacy "Privacy Notice"
-    During license activation, your custom device name (e.g., QUEEN-WINDOWS11) is stored on our online system dashboard. This information is used exclusively by our customer support team to assist you in the event of any activation issues. By activating your license, you consent to sharing this device identifier with us.
+    During license activation, your custom device name (e.g., QUEEN-WINDOWS11) is stored on our online system dashboard. This information is used exclusively by our customer support to assist you in the event of any activation issues. By activating your license, you consent to sharing this device identifier with us.
 
 ## Updating the Add-on
 
