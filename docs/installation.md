@@ -62,20 +62,51 @@ The add-on and its related asset files will be installed in the same directory (
 
 ![Enabling the add-on in Blender Preferences](assets/images/prefs_and_settings/prefs_license_key.jpg){ align=right width="500" }
 
-After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your customer billing portal under your subscription details.
+After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your Lemon Squeezy account under your order details.
 
-To activate, copy your license key and paste it into the License Key field in the add-on preferences panel, then click Activate. **(Mouse Right-click to paste does not work — use Ctrl+V instead.)** The status monitor above the key field displays your current activation status (top-left) and your activation limit/seats (top-right).
+1. In **Edit** → **Preferences** → **Add-ons**, expand **"Segment Display Pro"**.
+2. Paste your license key into the **"License Key"** field. **(Mouse Right-click to paste does not work — use Ctrl+V instead.)**
+3. Click **"Activate"**.
+4. When it shows as activated, you're done. Activation stays active after you restart Blender, update or reinstall the add-on, or move to a newer Blender version.
+
+The status monitor above the key field displays your current activation status (top-left) and your activation limit/seats (top-right).
 
 !!! internet "Internet Connection Required"
     License activation and deactivation both require an internet connection. Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > Network tab.
 
-Upon successful activation, the add-on creates a file called **sdp_activation.dat** in the add-on's root directory. This file stores your activation data in encrypted form and ensures your license persists correctly between Blender sessions.
+### The License File
 
-!!! warning "Do not delete the .dat file!"
-    Do not delete, rename, or move this file. It is automatically removed when you deactivate your license. If this file is missing or tampered with, your activation may break and require reactivation.
+Your activation is saved in a small license file (**sdp_activation.lic**) outside the add-on folder, so updating or reinstalling the add-on doesn't affect it:
+
+- Windows: `%LOCALAPPDATA%\OrionNovember.Studio\SegmentDisplay_Pro\`
+- macOS: `~/Library/Application Support/OrionNovember.Studio/SegmentDisplay_Pro/`
+- Linux: `~/.local/state/OrionNovember.Studio/SegmentDisplay_Pro/` (or `$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Pro/` if set)
+
+!!! warning "Do not edit, move or copy the license file"
+    Don't edit or move this file, and don't copy it to another computer. Each computer needs its own activation. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
+
+### Activation Limit
+
+Each license key has a limited number of activations, and every new device counts toward that limit.
+
+!!! warning "Moving to a new computer?"
+    **Deactivate** the license on the old machine first. Uninstalling the add-on without deactivating does **NOT** free up the activation slot. Lost access to the old machine? You can deactivate it yourself from your <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy order dashboard</a>, where you can also see and manage all your activations.
 
 !!! privacy "Privacy Notice"
     During license activation, your custom device name (e.g., QUEEN-WINDOWS11) is stored on our online system dashboard. This information is used exclusively by our customer support team to assist you in the event of any activation issues. By activating your license, you consent to sharing this device identifier with us.
+
+## Updating the Add-on
+
+1. No need to remove the old version. Install the new ZIP right over it (see [Installation](#installation) above) with **"Target Path"** set to **"Default"** and **"Overwrite"** ticked, then restart Blender.
+2. Your license stays activated, no need to reactivate. The license file is stored outside the add-on folder (see [Activation/Deactivation](#activationdeactivation) above), so updates don't touch it.
+3. Open your project. Your Segment Display objects are restored with the updated asset, and your current add-on panel settings are kept.
+4. Objects didn't come back after restarting Blender? Go to **Edit** → **Preferences** → **Add-ons**, expand **"Segment Display Pro"**, and click **"Re-link Asset"** in the **"Asset Status"** section.
+
+!!! info "Re-link Asset only works within the same Blender version"
+    If the new version of the add-on requires a newer version of Blender, you will be notified. Blender keeps add-ons in a separate folder for each version, so the asset file path changes when you switch Blender versions.
+
+!!! warning "Custom add-on directories are not tested"
+    If you installed the add-on into a custom Target Path or Script Directory, updating may not work properly. Use the default add-on folder.
 
 ## Uninstalling
 
@@ -85,3 +116,4 @@ Upon successful activation, the add-on creates a file called **sdp_activation.da
 !!! info "Your objects stay safe"
     Uninstalling the add-on does not delete existing segment display objects and the asset file. The linked asset data is embedded in your project library, and object settings are
     preserved in the Geometry Nodes modifiers. If you re-install the add-on, you can continue to work where you left.
+
