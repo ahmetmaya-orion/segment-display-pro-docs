@@ -34,16 +34,18 @@ The add-on ships with the asset blend file already included in the zip package. 
 
 ![Enabling the add-on in Blender Preferences](assets/images/installation/installation.png){ align=right width="350" }
 
-1. Open Blender and go to **Edit** → **Preferences**.
-2. Switch to the **Add-ons** tab.
-3. Click the **Install** button (the arrow icon in the top-right of the window).
-4. Browse to and select the **Segment Display Pro zip file**, then click
-   **Install Add-on**.
-5. Find **Segment Display Pro** in the list and enable it by ticking its
-   checkbox.
+1. Open Blender.
+2. Go to **Edit** → **Preferences** → **Add-ons**.
+3. Click the down arrow at the top right and choose **"Install from Disk..."**.
+4. In the file browser, open the settings panel (gear icon, top right). Under **"Legacy Add-ons"**, make sure **"Target Path"** is set to **"Default"** and **"Overwrite"** is ticked.
+5. Select the **Segment Display Pro ZIP file**, then click **"Install from Disk"**.
+6. Make sure **"Segment Display Pro"** is enabled (checkbox ticked).
 
 After enabling, the add-on appears in the 3D Viewport sidebar under the
 **SegDisp Pro** tab.
+
+!!! warning "Only Blender's default add-on folder is tested"
+    Installing into a custom add-on directory (a custom Target Path or custom Script Directory) may cause problems with using, activating and updating the add-on.
 
 ## Add-on Default File Directory
 
