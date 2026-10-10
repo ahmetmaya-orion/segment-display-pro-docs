@@ -32,7 +32,8 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.path
-    - toc.integrate
+    # - toc.follow # Right sidebar TOC (active)
+    - toc.integrate # Backup: merges TOC into left nav, hides right sidebar
     - search.suggest
     - search.highlight
     - content.code.copy
