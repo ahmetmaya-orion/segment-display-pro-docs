@@ -34,7 +34,7 @@ display geometry stays procedural and adjustable after creation.
 | Full Name           | Segment Display Pro           |
 | N-panel Label       | SegDisp Pro                   |
 | Add-on version      | 1.0.0                         |
-| Compatible Blender  | 5.1.1                         |
+| Compatible Blender  | 5.1 (Minimum 5.1.1)           |
 | Render Engines      | Eevee, Cycles                 |
 | OS Platforms        | Windows*, Linux, macOS        |
 | Location in UI      | `3D View` → Sidebar (`N`) → **SegDisp Pro** tab   |
