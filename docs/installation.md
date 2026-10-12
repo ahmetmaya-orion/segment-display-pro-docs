@@ -15,6 +15,7 @@ Before you begin, make sure your system matches the add-on's requirements:
 | Add-on Format       | Legacy/zip             |
 | Script Size         | 492 – 575 KB           |
 | Asset Size          | 170 – 200 MB           |
+| Internet Connection | To activate/deactivate, and at least once every 14 days ([see below](#activationdeactivation)) |
 
 !!! info "OS Compatibility"
     The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.

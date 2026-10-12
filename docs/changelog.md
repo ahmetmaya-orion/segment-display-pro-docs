@@ -3,7 +3,7 @@ All notable changes to Segment Display Pro are listed here, newest first.
 
 ## v1.0.0 (Initial Release)
 
-**Released:** YYYY-MM-DD &nbsp;·&nbsp; **Requires:** Blender 5.1
+**Released:** YYYY-MM-DD &nbsp;·&nbsp; **Requires:** Blender 5.1 (Minimum 5.1.1)
 
 The first public release of Segment Display Pro.
 
@@ -40,7 +40,7 @@ The first public release of Segment Display Pro.
 - "Add Segment Display" button, adds the object at the 3D cursor.
 - Fully procedural Geometry Nodes setup. All display objects share one linked asset file.
 - Works with EEVEE and Cycles.
-- License key activation and deactivation (Lemon Squeezy). Activation survives restarts, updates, reinstalls and new Blender versions.
+- License key activation and deactivation (Lemon Squeezy). Activation survives restarts, updates, reinstalls and new Blender versions (requires an online check at least every 14 days).
 - "Asset Status" section in Preferences with a "Re-link Asset" button.
 
 ### Known Limitations
@@ -50,3 +50,4 @@ The first public release of Segment Display Pro.
     - Only one Display Style is available for now. More styles are planned.
     - Harmless "VFont -> Node" warnings may appear in the System Console after reloading scripts or relinking assets.
     - Only tested on Windows 11 and Blender's default add-on folder.
+
