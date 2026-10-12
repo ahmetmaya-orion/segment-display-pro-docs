@@ -37,7 +37,7 @@ valid key is required to unlock the full feature set. See the [Activation Page](
      If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender's API does not allow add-ons to prevent or intercept the uninstall action, so the add-on cannot warn you or auto-deactivate at that point. If you accidentally uninstall without deactivating, please contact us via our support email so we can manually free up the activation slot for you.
 
 !!! internet "License activation and deactivation both require an internet connection."
-     Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > Network tab.
+     Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > System > Network.
 
 ---
 
