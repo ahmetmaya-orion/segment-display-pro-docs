@@ -76,6 +76,13 @@ The status monitor above the key field displays your current activation status (
 !!! internet "Internet Connection Required"
     License activation and deactivation both require an internet connection. Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > System > Network.
 
+!!! info "Working offline (14-day grace period)"
+    Once activated, the add-on re-checks your license with the Lemon Squeezy server when Blender starts. If the server can't be reached (no internet connection, or "Allow Online Access" is turned off), the add-on keeps working for up to **14 days** after its last successful check. Every successful check resets the 14-day period.
+
+    After 14 days without a successful check, the add-on locks and shows **"Not verified: connect to the internet to verify your license"**. To unlock it, connect to the internet, make sure "Allow Online Access" is enabled, and restart Blender. Your license is confirmed again and the 14-day period starts over. This does not use a new activation seat.
+
+    If you usually work offline, go online and open Blender at least once every 14 days to keep the add-on unlocked.
+
 ### The License File
 
 Your activation is saved in a small license file (**sdp_activation.lic**) outside the add-on folder, so updating or reinstalling the add-on doesn't affect it:
@@ -85,7 +92,7 @@ Your activation is saved in a small license file (**sdp_activation.lic**) outsid
 - Linux: `~/.local/state/OrionNovember.Studio/SegmentDisplay_Pro/` (or `$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Pro/` if set)
 
 !!! warning "Do not edit, move or copy the license file"
-    Don't edit or move this file, and don't copy it to another computer. Each computer needs its own activation. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
+    Don't edit or move this file, and don't copy it to another computer. The license file is tied to the computer it was activated on, so a copied file will not unlock the add-on on any other machine. Every new or additional computer must be activated on its own by entering your license key in the add-on preferences, and each activation uses one seat of your activation limit. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
 
 ### Activation Limit
 
