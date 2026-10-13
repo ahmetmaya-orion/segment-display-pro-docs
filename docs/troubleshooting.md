@@ -34,10 +34,21 @@ valid key is required to unlock the full feature set. See the [Activation Page](
 
 ## License Deactivation Before Uninstall
 !!! warning "Always deactivate your license before uninstalling the add-on."
-     If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender's API does not allow add-ons to prevent or intercept the uninstall action, so the add-on cannot warn you or auto-deactivate at that point. If you accidentally uninstall without deactivating, please contact us via our support email so we can manually free up the activation slot for you.
+     If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender's API does not allow add-ons to prevent or intercept the uninstall action, so the add-on cannot warn you or auto-deactivate at that point. If you accidentally uninstall without deactivating, you can free up the slot yourself from your <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy order dashboard</a>. If you need help with this, please contact us via our support email.
 
 !!! internet "License activation and deactivation both require an internet connection."
      Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > System > Network.
+
+## License Locked Messages
+
+When the add-on is locked, the Status line in the license panel shows why. None of these use a new activation seat.
+
+| Message | What it means | What to do |
+| ------- | ------------- | ---------- |
+| Offline period expired. Connect to the internet to verify your license. | The license couldn't be checked online for 14 days. | Go online and make sure "Allow Online Access" is enabled. The add-on unlocks within about 2 minutes, or right away after a Blender restart. |
+| System clock was moved back. Connect to the internet to verify your license. | Your computer's clock is earlier than the last license check or the last time the add-on was used. | Correct your system date and time, then go online. The add-on unlocks after the next online check. |
+| Not verified: connect to the internet to verify your license | The license hasn't been confirmed online yet. | Go online and make sure "Allow Online Access" is enabled. |
+| Activation belongs to another computer | The activation was copied from a different computer. | Activate with your license key on this computer. Each computer needs its own activation. |
 
 ---
 
