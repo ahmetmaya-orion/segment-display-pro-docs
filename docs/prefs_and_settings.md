@@ -7,8 +7,10 @@ The Settings & Preferences panel is where you manage your license activation and
 
 The License Activation section displays your current activation status and allows you to manage your license key.
 Status: Shows whether your license is currently activated or not (checkmark icon when active). When the add-on is locked, it shows the reason instead, for example "Offline period expired." or "System clock was moved back."
+
 Activations: Displays how many device slots you've used out of your total allowance (e.g. 1/2). The count is refreshed by the online check, so it shows "(last known)" when the add-on is locked or the offline grace period is almost over.
 Offline warning: In the last 3 days of the offline grace period, a red warning row shows how many days are left. See the [Activation page](installation.md#activationdeactivation) for details.
+
 License Key: The masked key field where you enter or view your license key.
 Activate: Activates your license key on this device. If this device was activated before, its existing seat is reused instead of taking a new one.
 Deactivate: Removes the license activation from the current device, freeing up a slot for use on another machine.
