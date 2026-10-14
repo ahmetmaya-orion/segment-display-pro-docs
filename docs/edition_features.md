@@ -5,7 +5,7 @@ A side-by-side look at what ships in **Segment Display Pro** and **Segment Displ
 | Feature | LITE | PRO |
 | ------- | ---- | --- |
 | **GENERAL** | | |
-| License Activation Seat | 🖥️ | 🖥️🖥️ |
+| License Activation Seat | 🖥️ | 🖥️🖥️🖥️ |
 | Future Updates/Upgrades | Hotfixes Only | ✓ |
 | Add-on Support | Social | E-mail |
 | Documentation | Reference Only | Full |
