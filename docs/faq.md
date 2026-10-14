@@ -4,7 +4,7 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
 ## The Lite Edition
 
-??? question "Is there a free version of the Segment Display add-on?"
+???+ question "Is there a free version of the Segment Display add-on?"
     
     Yes. There is a free version of the add-on called "Segment Display Lite". The Lite version is not a demo product. It's just a simplified variant with some limited features compared to the Pro version, for anyone who wants to discover the add-on. You can review the [Edition Features Table](edition_features.md) to compare both versions.
 
