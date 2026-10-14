@@ -83,5 +83,6 @@ nav:
     - Viewport & Overlays: viewport_overlays.md
     - Preferences & Settings: prefs_and_settings.md
   - Reference:
+    - Edition Features Table: edition_features.md
     - Changelog: changelog.md
     - Troubleshooting: troubleshooting.md
