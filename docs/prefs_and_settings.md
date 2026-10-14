@@ -12,7 +12,7 @@ Read more...: Opens a popup with the full explanation and the steps to fix it.
 Verify now: Checks your license online right away and shows the result: "License Verified", "No Internet Connection" or "Verification Failed". Verifying never uses another activation seat. See [Verify now results](troubleshooting.md#verify-now-results).
 
 Status: Shows whether your license is currently activated or not (checkmark icon when active). When the add-on is locked, it shows "Not Activated" and the reason appears in the red license notice above it. Other problems, for example "Activation belongs to another computer", are shown here.
-Activations: Displays how many device slots you've used out of your total allowance (e.g. 1/2). The count is refreshed by the online check, so it shows "(last known)" when the add-on is locked or the offline grace period is almost over.
+Activations: Displays how many device slots you've used out of your total allowance (e.g. 1/3). The count is refreshed by the online check, so it shows "(last known)" when the add-on is locked or the offline grace period is almost over.
 
 License Key: The masked key field where you enter or view your license key.
 Activate: Activates your license key on this device. If this device was activated before, its existing seat is reused instead of taking a new one.

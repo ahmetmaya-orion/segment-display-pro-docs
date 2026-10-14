@@ -101,7 +101,7 @@ Your activation is saved in a small license file (**sdp_activation.lic**) outsid
 
 ### Activation Limit
 
-Each license key has a limited number of activations, and every new device counts toward that limit.
+Your Segment Display Pro license key includes 3 activations (seats), and every new device counts toward that limit.
 
 !!! warning "Moving to a new computer?"
     **Deactivate** the license on the old machine first. Uninstalling the add-on without deactivating does **NOT** free up the activation slot. Lost access to the old machine? You can deactivate it yourself from your <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy order dashboard</a>, where you can also see and manage all your activations.
@@ -135,4 +135,5 @@ Each license key has a limited number of activations, and every new device count
 
 !!! info "Accidentally Uninstalled the Add-on Mid-Project?"
     If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
+
 
