@@ -41,6 +41,7 @@ The first public release of Segment Display Pro.
 - Fully procedural Geometry Nodes setup. All display objects share one linked asset file.
 - Works with EEVEE and Cycles.
 - License key activation and deactivation (Lemon Squeezy). Activation survives restarts, updates, reinstalls and new Blender versions (requires an online check at least every 14 days).
+- **Offline license notices:** a red warning at the top of the N-panel and in Preferences during the last 3 days of the 14-day offline period, and when the add-on is locked. "Read more..." explains the steps and "Verify now" checks the license online right away.
 - "Asset Status" section in Preferences with a "Re-link Asset" button.
 
 ### Known Limitations

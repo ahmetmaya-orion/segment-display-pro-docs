@@ -80,9 +80,11 @@ The status monitor above the key field displays your current activation status (
 !!! info "Working offline (14-day grace period)"
     Once activated, the add-on re-checks your license with the Lemon Squeezy server when Blender starts. If the server can't be reached (no internet connection, or "Allow Online Access" is turned off), the add-on keeps working for up to **14 days** after its last successful check. Every successful check resets the 14-day period.
 
-    In the last 3 days, the license panel shows a warning with the days left. After 14 days without a successful check, the add-on locks and shows **"Offline period expired. Connect to the internet to verify your license."** To unlock it, connect to the internet and make sure "Allow Online Access" is enabled. The add-on checks again on its own within about 2 minutes, or right away when you restart Blender. Your license is confirmed again and the 14-day period starts over. This does not use a new activation seat.
+    In the last 3 days, a red warning with the days left (for example **"Offline verification: 2 days left"**) appears at the top of the add-on's N-panel and in the license panel in Preferences. After 14 days without a successful check, the add-on locks and the warning changes to **"Offline period expired"**. Under each warning, **"Read more..."** explains what happened and what to do, and **"Verify now"** checks your license online right away. If you're still offline, Verify now tells you that an internet connection is required.
 
-    Setting your computer's clock back also locks the add-on until it can verify your license online.
+    To unlock it, connect to the internet, make sure "Allow Online Access" is enabled, and click **"Verify now"**. The add-on also checks again on its own within about 2 minutes, or when you restart Blender. Your license is confirmed again and the 14-day period starts over. This does not use a new activation seat.
+
+    Setting your computer's clock back also locks the add-on (**"System clock was moved back"**). Set the correct date and time, go online, then click **"Verify now"**.
 
     If you usually work offline, go online and open Blender at least once every 14 days to keep the add-on unlocked.
 

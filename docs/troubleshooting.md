@@ -41,14 +41,24 @@ valid key is required to unlock the full feature set. See the [Activation Page](
 
 ## License Locked Messages
 
-When the add-on is locked, the Status line in the license panel shows why. None of these use a new activation seat.
+When the add-on is locked, a red message appears at the top of the N-panel and in the license panel in Preferences, with **Read more...** and **Verify now** buttons below it. The Status line shows "Not Activated". None of these use a new activation seat.
 
 | Message | What it means | What to do |
 | ------- | ------------- | ---------- |
-| Offline period expired. Connect to the internet to verify your license. | The license couldn't be checked online for 14 days. | Go online and make sure "Allow Online Access" is enabled. The add-on unlocks within about 2 minutes, or right away after a Blender restart. |
-| System clock was moved back. Connect to the internet to verify your license. | Your computer's clock is earlier than the last license check or the last time the add-on was used. | Correct your system date and time, then go online. The add-on unlocks after the next online check. |
-| Not verified: connect to the internet to verify your license | The license hasn't been confirmed online yet. | Go online and make sure "Allow Online Access" is enabled. |
-| Activation belongs to another computer | The activation was copied from a different computer. | Activate with your license key on this computer. Each computer needs its own activation. |
+| Offline period expired | The license couldn't be checked online for 14 days. | Go online, make sure "Allow Online Access" is enabled, and click **Verify now**. The add-on also unlocks on its own within about 2 minutes, or after a Blender restart. |
+| System clock was moved back | Your computer's clock is earlier than the last license check or the last time the add-on was used. | Correct your system date and time, go online, then click **Verify now**. |
+| License not verified online | The license couldn't be confirmed online. | Go online, make sure "Allow Online Access" is enabled, and click **Verify now**. |
+| Activation belongs to another computer (Status line) | The activation was copied from a different computer. | Activate with your license key on this computer. Each computer needs its own activation. |
+
+### Verify now results
+
+After you click **Verify now**, the add-on checks your license online and shows one of these popups:
+
+| Popup | What it means |
+| ----- | ------------- |
+| License Verified | Your license was confirmed online. The add-on is active again and the 14-day offline period starts over. |
+| No Internet Connection | The license server couldn't be reached. Check your internet connection and make sure "Allow Online Access" is enabled in Preferences > System > Network, then try again. |
+| Verification Failed | The server rejected the activation (for example, the device was removed from your Lemon Squeezy order dashboard) or didn't answer in time. Try again, or activate again with your license key. |
 
 ---
 
