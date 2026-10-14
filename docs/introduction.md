@@ -23,10 +23,6 @@ from the N-panel. The available areas include:
 Each module is driven by the same underlying Geometry Nodes assets, so the
 display geometry stays procedural and adjustable after creation.
 
-!!! note "Work in progress"
-    This manual is being written alongside the add-on. Some pages are still
-    placeholders and will be filled in as the beta progresses.
-
 ## Add-on Credits & Requirements
 
 | Item              | Requirement                                                  |
