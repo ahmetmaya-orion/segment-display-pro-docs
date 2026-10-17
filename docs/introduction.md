@@ -69,6 +69,8 @@ Blender's other N-panel categories.
 
 - The "Add Segment Display" button in the N-panel interface only appears when you click on an empty space in the 3D scene. The object is always added at the current **3D cursor** location.
 
+- If you add a SegDisp object while the viewport is in **Solid** shading mode, you may not see the results of your inputs. Switch to **Material Preview** or **Rendered** shading, enable **Solid Viewport Preview** in the **Viewport & Overlays** panel, or disable/hide the **LED Base** to make the segment values visible. See [Troubleshooting: Viewport | Solid Color Preview](troubleshooting.md#viewport-solid-color-preview) for Solid viewport limitations and fixes.
+
 - The N-panel always displays the settings of the active segment display object (the one with the brighter outline, i.e. the last one you clicked). You don't need it to be the only selected object; even if multiple objects are selected, the panel controls whichever segment display is active.
 
 - The object settings will only appear if a Segment Display object is active or selected. If any other type of element is selected in the scene, a "Select a Segment Display object" message will be shown instead.
@@ -81,4 +83,5 @@ Blender's other N-panel categories.
 Segment Display Pro is a commercial add-on. It uses license-key activation, so a
 valid key is required to unlock the full feature set. See the [installation and
 Activation](installation.md) pages for details.
+
 
