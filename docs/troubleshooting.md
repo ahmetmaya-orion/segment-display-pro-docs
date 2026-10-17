@@ -29,6 +29,8 @@ The object settings will only appear if a Segment Display object is active or se
 
 ## Licensing
 
+Activation limits per license key: **Pro: 3 activation seats; Lite: 1 activation seat.**
+
 Segment Display Pro is a commercial add-on. It uses license-key activation, so a
 valid key is required to unlock the full feature set. See the [Activation Page](installation.md#activationdeactivation) for details.
 
