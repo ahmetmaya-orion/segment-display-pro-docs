@@ -101,7 +101,7 @@ Your activation is saved in a small license file (**sdp_activation.lic**) outsid
 
 ### Activation Limit
 
-Your Segment Display Pro license key includes 3 activations (seats), and every new device counts toward that limit.
+Activation limits per license key: **Pro: 3 activation seats; Lite: 1 activation seat.** Every new device counts toward the limit for your edition.
 
 !!! warning "Moving to a new computer?"
     **Deactivate** the license on the old machine first. Uninstalling the add-on without deactivating does **NOT** free up the activation slot. Lost access to the old machine? You can deactivate it yourself from your <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy order dashboard</a>, where you can also see and manage all your activations.

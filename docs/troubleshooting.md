@@ -25,9 +25,14 @@ The N-panel always displays the settings of the active segment display object (t
 
 The object settings will only appear if a Segment Display object is active or selected. If any other type of element is selected in the scene, a "Select a Segment Display object" message will be shown instead.
 
+!!! info "Important"
+    Each edition can only control objects created with that edition. SegDisp Pro cannot control SegDisp Lite objects, and SegDisp Lite cannot control SegDisp Pro objects. Use the matching add-on's N-panel to adjust each object.
+
 ---
 
 ## Licensing
+
+Activation limits per license key: **Pro: 3 activation seats; Lite: 1 activation seat.**
 
 Segment Display Pro is a commercial add-on. It uses license-key activation, so a
 valid key is required to unlock the full feature set. See the [Activation Page](installation.md#activationdeactivation) for details.
