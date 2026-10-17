@@ -3,7 +3,7 @@ All notable changes to Segment Display Pro are listed here, newest first.
 
 ## v1.0.0 (Initial Release)
 
-**Released:** YYYY-MM-DD &nbsp;·&nbsp; **Requires:** Blender 5.1 (Minimum 5.1.1)
+**Released:** 2026/10/17 &nbsp;·&nbsp; **Requires:** Blender 5.1 (Minimum 5.1.1)
 
 The first public release of Segment Display Pro.
 
