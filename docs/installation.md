@@ -9,7 +9,7 @@ Before you begin, make sure your system matches the add-on's requirements:
 
 | Item                | Requirement         |
 | ------------------- | ------------------- |
-| Compatible Blender  | 5.1.1                  |
+| Compatible Blender  | 5.1 (minimum 5.1.1)    |
 | Render Engines      | Eevee, Cycles          |
 | OS Platforms        | Windows, Linux, macOS  |
 | Add-on Format       | Legacy/zip             |
@@ -59,7 +59,7 @@ The add-on and its related asset files will be installed in the same directory (
 - Linux: `~/.config/blender/5.1/scripts/addons/`
 
 !!! warning "Custom Add-on Directory"
-    If you use a custom add-on directory, proper linking of asset files within a scene cannot be guaranteed, even when the add-on uses relative paths to reference assets. This add-on has only been tested with the default Blender scripts directory.
+    If you use a custom add-on directory, proper linking of asset files within a scene cannot be guaranteed, even if the add-on uses relative paths to reference assets. This add-on has only been tested with the default Blender scripts directory.
 
 ## Activation/Deactivation
 
@@ -135,5 +135,3 @@ Your Segment Display Pro license key includes 3 activations (seats), and every n
 
 !!! info "Accidentally Uninstalled the Add-on Mid-Project?"
     If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
-
-
