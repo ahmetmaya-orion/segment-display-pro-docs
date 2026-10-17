@@ -119,6 +119,25 @@
   mask-image: var(--md-admonition-icon--construction);
 }
 
+.md-typeset .admonition.question,
+.md-typeset details.question {
+  border-color: rgb(181, 77, 255);
+}
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary {
+  background-color: rgba(135, 62, 188, 0.171);
+}
+.md-typeset .question > .admonition-title::before,
+.md-typeset .question > summary::before {
+  background-color: rgb(200, 124, 255);
+  mask-image: var(--md-admonition-icon--question);
+}
+.md-typeset .question > .admonition-title::after,
+.md-typeset .question > summary::after {
+  color: rgb(200, 124, 255);
+}
+
+
 /* Image swap on hover: the first image (.def) is shown by default, the second
    (.hover-img) sits on top of it fully transparent and crossfades in while
    hovering the figure. Both images must have identical dimensions. */

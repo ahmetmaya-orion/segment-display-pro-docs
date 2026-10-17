@@ -23,10 +23,6 @@ from the N-panel. The available areas include:
 Each module is driven by the same underlying Geometry Nodes assets, so the
 display geometry stays procedural and adjustable after creation.
 
-!!! note "Work in progress"
-    This manual is being written alongside the add-on. Some pages are still
-    placeholders and will be filled in as the beta progresses.
-
 ## Add-on Credits & Requirements
 
 | Item              | Requirement                                                  |
@@ -34,7 +30,7 @@ display geometry stays procedural and adjustable after creation.
 | Full Name           | Segment Display Pro           |
 | N-panel Label       | SegDisp Pro                   |
 | Add-on version      | 1.0.0                         |
-| Compatible Blender  | 5.1.1                         |
+| Compatible Blender  | 5.1 (Minimum 5.1.1)           |
 | Render Engines      | Eevee, Cycles                 |
 | OS Platforms        | Windows*, Linux, macOS        |
 | Location in UI      | `3D View` → Sidebar (`N`) → **SegDisp Pro** tab   |
@@ -76,6 +72,9 @@ Blender's other N-panel categories.
 - The N-panel always displays the settings of the active segment display object (the one with the brighter outline, i.e. the last one you clicked). You don't need it to be the only selected object; even if multiple objects are selected, the panel controls whichever segment display is active.
 
 - The object settings will only appear if a Segment Display object is active or selected. If any other type of element is selected in the scene, a "Select a Segment Display object" message will be shown instead.
+
+!!! info "Important"
+    Each edition can only control objects created with that edition. SegDisp Pro cannot control SegDisp Lite objects, and SegDisp Lite cannot control SegDisp Pro objects. Use the matching add-on's N-panel to adjust each object.
 
 ## Licensing
 

@@ -15,6 +15,7 @@ Before you begin, make sure your system matches the add-on's requirements:
 | Add-on Format       | Legacy/zip             |
 | Script Size         | 492 – 575 KB           |
 | Asset Size          | 170 – 200 MB           |
+| Internet Connection | To activate/deactivate, and at least once every 14 days ([see below](#activationdeactivation)) |
 
 !!! info "OS Compatibility"
     The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
@@ -34,16 +35,18 @@ The add-on ships with the asset blend file already included in the zip package. 
 
 ![Enabling the add-on in Blender Preferences](assets/images/installation/installation.png){ align=right width="350" }
 
-1. Open Blender and go to **Edit** → **Preferences**.
-2. Switch to the **Add-ons** tab.
-3. Click the **Install** button (the arrow icon in the top-right of the window).
-4. Browse to and select the **Segment Display Pro zip file**, then click
-   **Install Add-on**.
-5. Find **Segment Display Pro** in the list and enable it by ticking its
-   checkbox.
+1. Open Blender.
+2. Go to **Edit** → **Preferences** → **Add-ons**.
+3. Click the down arrow at the top right and choose **"Install from Disk..."**.
+4. In the file browser, open the settings panel (gear icon, top right). Under **"Legacy Add-ons"**, make sure **"Target Path"** is set to **"Default"** and **"Overwrite"** is ticked.
+5. Select the **Segment Display Pro ZIP file**, then click **"Install from Disk"**.
+6. Make sure **"Segment Display Pro"** is enabled (checkbox ticked).
 
 After enabling, the add-on appears in the 3D Viewport sidebar under the
 **SegDisp Pro** tab.
+
+!!! warning "Only Blender's default add-on folder is tested"
+    Installing into a custom add-on directory (a custom Target Path or custom Script Directory) may cause problems with using, activating and updating the add-on.
 
 ## Add-on Default File Directory
 
@@ -72,7 +75,18 @@ After purchasing Segment Display Pro, you will receive an order confirmation ema
 The status monitor above the key field displays your current activation status (top-left) and your activation limit/seats (top-right).
 
 !!! internet "Internet Connection Required"
-    License activation and deactivation both require an internet connection. Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > Network tab.
+    License activation and deactivation both require an internet connection. Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > System > Network.
+
+!!! info "Working offline (14-day grace period)"
+    Once activated, the add-on re-checks your license with the Lemon Squeezy server when Blender starts. If the server can't be reached (no internet connection, or "Allow Online Access" is turned off), the add-on keeps working for up to **14 days** after its last successful check. Every successful check resets the 14-day period.
+
+    In the last 3 days, a red warning with the days left (for example **"Offline verification: 2 days left"**) appears at the top of the add-on's N-panel and in the license panel in Preferences. After 14 days without a successful check, the add-on locks and the warning changes to **"Offline period expired"**. Under each warning, **"Read more..."** explains what happened and what to do, and **"Verify now"** checks your license online right away. If you're still offline, Verify now tells you that an internet connection is required.
+
+    To unlock it, connect to the internet, make sure "Allow Online Access" is enabled, and click **"Verify now"**. The add-on also checks again on its own within about 2 minutes, or when you restart Blender. Your license is confirmed again and the 14-day period starts over. This does not use a new activation seat.
+
+    Setting your computer's clock back also locks the add-on (**"System clock was moved back"**). Set the correct date and time, go online, then click **"Verify now"**.
+
+    If you usually work offline, go online and open Blender at least once every 14 days to keep the add-on unlocked.
 
 ### The License File
 
@@ -83,17 +97,23 @@ Your activation is saved in a small license file (**sdp_activation.lic**) outsid
 - Linux: `~/.local/state/OrionNovember.Studio/SegmentDisplay_Pro/` (or `$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Pro/` if set)
 
 !!! warning "Do not edit, move or copy the license file"
-    Don't edit or move this file, and don't copy it to another computer. Each computer needs its own activation. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
+    Don't edit or move this file, and don't copy it to another computer. The license file is tied to the computer it was activated on, so a copied file will not unlock the add-on on any other machine. Every new or additional computer must be activated on its own by entering your license key in the add-on preferences, and each activation uses one seat of your activation limit. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
 
 ### Activation Limit
 
-Each license key has a limited number of activations, and every new device counts toward that limit.
+Your Segment Display Pro license key includes 3 activations (seats), and every new device counts toward that limit.
 
 !!! warning "Moving to a new computer?"
     **Deactivate** the license on the old machine first. Uninstalling the add-on without deactivating does **NOT** free up the activation slot. Lost access to the old machine? You can deactivate it yourself from your <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy order dashboard</a>, where you can also see and manage all your activations.
 
+!!! info "Reinstalling your operating system?"
+    Reinstalling your operating system counts as a new computer. The add-on will ask you to activate again, and the old activation keeps its slot until you remove it from your <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy order dashboard</a>.
+
 !!! privacy "Privacy Notice"
-    During license activation, your custom device name (e.g., QUEEN-WINDOWS11) is stored on our online system dashboard. This information is used exclusively by our customer support to assist you in the event of any activation issues. By activating your license, you consent to sharing this device identifier with us.
+    During license activation, your custom device name (e.g., SDPRO-QUEEN-WINDOWS11) is stored on our online system dashboard. This information is used exclusively by our customer support to assist you in the event of any activation issues. By activating your license, you consent to sharing this device identifier with us.
+
+!!! info "Device name on the dashboard"
+    The device name on your Lemon Squeezy order dashboard is your computer's name at the time you first activated. Renaming the computer later doesn't change it there, and doesn't use a new activation. Want the new name to show? Click "Deactivate", then "Activate" again. This frees the old slot and takes a new one, so your activation count stays the same.
 
 ## Updating the Add-on
 
@@ -115,4 +135,5 @@ Each license key has a limited number of activations, and every new device count
 
 !!! info "Accidentally Uninstalled the Add-on Mid-Project?"
     If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
+
 
