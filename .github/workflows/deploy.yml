@@ -1,42 +1,201 @@
-name: Deploy MkDocs to GitHub Pages
+name: Docs validation and mike publishing
 
 on:
   push:
-    branches:
-      - main
+    branches: [main, brain-support]
+    tags: ['v[0-9]*.[0-9]*.[0-9]*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      source_tag:
+        description: 'Exact docs source tag, e.g. v1.0.1 or v1.0.1-corr.1'
+        required: true
+        type: string
+      manual_version:
+        description: 'Matching public manual, e.g. v1.0'
+        required: true
+        type: string
+      promote_latest:
+        description: 'Promote latest (stable source tags only)'
+        default: false
+        type: boolean
+      dry_run:
+        description: 'Build artifact only; no push or public deployment'
+        default: true
+        type: boolean
 
 permissions:
-  contents: write
+  contents: read
+
+# Shared by ALL jobs in this workflow, including the final deployment.
+concurrency:
+  group: docs-mike-publishing
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  validate:
+    if: github.event_name != 'workflow_dispatch' && !startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - name: Build without publishing
+        run: mkdocs build
 
-      - name: Install dependencies
-        # Single source of truth; includes mike so it is available when
-        # versioning is switched on (see README "Versioning with mike").
-        run: pip install -r requirements.txt
+  prepare:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      dry_run: ${{ steps.resolve.outputs.dry_run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Load existing generated manuals
+        run: |
+          git fetch origin refs/heads/gh-pages:refs/remotes/origin/gh-pages
+          git branch gh-pages refs/remotes/origin/gh-pages
+      - name: Resolve exact source and publication policy
+        id: resolve
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PUSH_TAG: ${{ github.ref_name }}
+          SOURCE_TAG: ${{ inputs.source_tag }}
+          MANUAL_VERSION: ${{ inputs.manual_version }}
+          PROMOTE_LATEST: ${{ inputs.promote_latest }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import subprocess
 
-      # Versioned deploys (mike) - enable together with the `extra.version`
-      # block in mkdocs.yml. mike needs a git identity to commit to gh-pages:
-      # - name: Configure git for mike
-      #   run: |
-      #     git config user.name "github-actions[bot]"
-      #     git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      # - name: Deploy versioned docs
-      #   run: |
-      #     mike deploy v1.0 latest --update-aliases --push
-      #     mike set-default latest --push
-      #
-      # NOTE: once mike owns gh-pages, remove the step below. `mkdocs
-      # gh-deploy --force` pushes a flat site that would wipe all versions.
+          def fail(message):
+              raise SystemExit(message)
 
-      - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+          manual = os.environ['EVENT_NAME'] == 'workflow_dispatch'
+          tag = os.environ['SOURCE_TAG'] if manual else os.environ['PUSH_TAG']
+          m = re.fullmatch(r'v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-corr\.([1-9][0-9]*))?', tag)
+          if not m:
+              fail('Expected vX.Y.Z or vX.Y.Z-corr.N, with N >= 1.')
+          family = f'v{m[1]}.{m[2]}'
+          if manual and os.environ['MANUAL_VERSION'] != family:
+              fail('Source tag and target manual family do not match.')
+          correction = m[4] is not None
+          promote = os.environ['PROMOTE_LATEST'] == 'true' if manual else not correction
+          dry = manual and os.environ['DRY_RUN'] == 'true'
+          if correction and promote:
+              fail('Correction tags cannot promote latest.')
+
+          source = subprocess.check_output(['git', 'rev-parse', '--verify', f'refs/tags/{tag}^{{commit}}'], text=True).strip()
+          # Save this before switching source: output must extend this branch.
+          base = subprocess.check_output(['git', 'rev-parse', 'gh-pages'], text=True).strip()
+          has_metadata = subprocess.run(['git', 'cat-file', '-e', 'gh-pages:versions.json'], capture_output=True).returncode == 0
+          versions = json.loads(subprocess.check_output(['git', 'show', 'gh-pages:versions.json'], text=True)) if has_metadata else []
+          if not isinstance(versions, list):
+              fail('Invalid versions.json: expected a list.')
+          if any(not isinstance(v, dict) or not isinstance(v.get('version'), str) or not isinstance(v.get('aliases', []), list) for v in versions):
+              fail('Invalid version metadata entries.')
+          current = [v['version'] for v in versions if 'latest' in v.get('aliases', [])]
+          if len(current) > 1:
+              fail('Ambiguous latest alias.')
+          if promote and current:
+              previous = re.fullmatch(r'v([0-9]+)\.([0-9]+)', current[0])
+              if not previous:
+                  fail('Latest is not a recognized vX.Y family. Review migration.')
+              if (int(m[1]), int(m[2])) < (int(previous[1]), int(previous[2])):
+                  if manual:
+                      fail('Refusing to move latest backwards.')
+                  promote = False
+          if not current and not promote:
+              fail('First publication must establish latest with a stable source tag.')
+          if correction and not any(v['version'] == family for v in versions):
+              fail('Publish the family from a stable source tag before applying corrections.')
+          # Establish a source baseline on each successful family deployment.
+          # This rejects stale source that would discard newer corrections.
+          existing = next((v for v in versions if v['version'] == family), None)
+          previous_source = (existing or {}).get('properties', {}).get('source_commit')
+          if previous_source:
+              check = subprocess.run(['git', 'merge-base', '--is-ancestor', previous_source, source])
+              if check.returncode != 0:
+                  fail('Source is not descended from the last published source for this family. Preserve previous corrections.')
+          values = {'source_tag': tag, 'source_commit': source, 'base': base,
+                    'manual_version': family, 'promote': str(promote).lower(),
+                    'dry_run': str(dry).lower()}
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
+              for key, value in values.items():
+                  out.write(f'{key}={value}\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
+              out.write(f'## Documentation build\nSource: `{tag}`\n\nManual: `{family}`\n\nPromote latest: `{promote}`\n\nDry run: `{dry}`\n')
+          PY
+      - name: Check out the exact tagged documentation
+        env:
+          SOURCE_COMMIT: ${{ steps.resolve.outputs.source_commit }}
+        run: git switch --detach "$SOURCE_COMMIT"
+      - name: Install dependencies from the selected snapshot
+        run: python -m pip install -r requirements.txt
+      - name: Configure Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Build locally and record source provenance
+        env:
+          MANUAL_VERSION: ${{ steps.resolve.outputs.manual_version }}
+          SOURCE_TAG: ${{ steps.resolve.outputs.source_tag }}
+          SOURCE_COMMIT: ${{ steps.resolve.outputs.source_commit }}
+          PROMOTE: ${{ steps.resolve.outputs.promote }}
+        run: |
+          if [ "$PROMOTE" = "true" ]; then
+            mike deploy "$MANUAL_VERSION" latest --update-aliases --alias-type redirect
+          else
+            mike deploy "$MANUAL_VERSION" --alias-type redirect
+          fi
+          mike props "$MANUAL_VERSION" --set-string "source_tag=$SOURCE_TAG" --set-string "source_commit=$SOURCE_COMMIT"
+          mike set-default latest
+      - name: Export the complete site without Git internals
+        run: |
+          mkdir -p "$RUNNER_TEMP/pages-site"
+          git archive gh-pages | tar -x -C "$RUNNER_TEMP/pages-site"
+          test -f "$RUNNER_TEMP/pages-site/index.html"
+          test -f "$RUNNER_TEMP/pages-site/versions.json"
+      - name: Upload preview or deployable artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/pages-site
+          retention-days: 7
+      - name: Save all generated manuals without rewriting history
+        if: steps.resolve.outputs.dry_run != 'true'
+        env:
+          EXPECTED_BASE: ${{ steps.resolve.outputs.base }}
+        run: |
+          # Refuse publication if a local user or another publisher wrote meanwhile.
+          git fetch origin refs/heads/gh-pages:refs/remotes/origin/gh-pages
+          test "$(git rev-parse refs/remotes/origin/gh-pages)" = "$EXPECTED_BASE"
+          git merge-base --is-ancestor "$EXPECTED_BASE" gh-pages
+          git push origin gh-pages
+
+  deploy:
+    needs: prepare
+    if: needs.prepare.outputs.dry_run == 'false'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy complete versioned artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
