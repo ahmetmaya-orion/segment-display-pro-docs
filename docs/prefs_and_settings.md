@@ -3,7 +3,7 @@ The Settings & Preferences panel is where you manage your license activation and
 
 ## License Activation
 
-![Activation Panel in Blender Preferences](assets/images/prefs_and_settings/prefs_license_key.jpg){ align=right width="550" }
+![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.jpg){ align=right width="550" }
 
 The License Activation section displays your current activation status and allows you to manage your license key.
 
@@ -23,7 +23,7 @@ Deactivate: Removes the license activation from the current device, freeing up a
 
 ## Asset Status Panel
 
-![Activation Panel in Blender Preferences](assets/images/prefs_and_settings/prefs_asset_stats.jpg){ align=right width="550" }
+![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/prefs_asset_stats.jpg){ align=right width="550" }
 
 The Asset Status section monitors the connection between the add-on and its asset .blend file. On each Blender launch, the add-on checks whether the asset file is available in the segment_display/assets directory.
 
@@ -36,12 +36,12 @@ The SegDisp asset is stored as a .blend file in the add-on's assets folder. When
 <div class="grid" markdown>
 
 <figure markdown>
-  ![Un-linked Asset](assets/images/prefs_and_settings/asset_unlink.png){ width="400" }
+  ![Un-linked Asset](assets/images/object_settings/v1.0.0/asset_unlink.png){ width="400" }
   <figcaption>Un-linked Asset</figcaption>
 </figure>
 
 <figure markdown>
-  ![Linked Asset](assets/images/prefs_and_settings/asset_link.png){ width="400" }
+  ![Linked Asset](assets/images/object_settings/v1.0.0/asset_link.png){ width="400" }
   <figcaption>Linked Asset</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ Below the Re-link button, grayed-out text displays the current asset status:
 
 ### Linked Asset
 
-![Activation Panel in Blender Preferences](assets/images/prefs_and_settings/outliner_blender_file.jpg){ align=right width="500" }
+![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/outliner_blender_file.jpg){ align=right width="500" }
 
 You can also verify the linked asset file from Blender's Outliner area using the Blender File display mode. Filtering by the Node Tree data type makes it easier to identify.
 
@@ -79,12 +79,12 @@ The Animation Start Offset option, available in both Clock and Timer, calculates
 <div class="grid" markdown>
 
 <figure markdown>
-  ![Addon FPS](assets/images/prefs_and_settings/set_fps_addon.png){ width="400" }
+  ![Addon FPS](assets/images/object_settings/v1.0.0/set_fps_addon.png){ width="400" }
   <figcaption>Addon FPS</figcaption>
 </figure>
 
 <figure markdown>
-  ![Scene FPS](assets/images/prefs_and_settings/set_fps_blender.png){ width="400" }
+  ![Scene FPS](assets/images/object_settings/v1.0.0/set_fps_blender.png){ width="400" }
   <figcaption>Scene FPS</figcaption>
 </figure>
 

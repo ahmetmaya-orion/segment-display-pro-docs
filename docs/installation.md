@@ -33,7 +33,7 @@ The add-on ships with the asset blend file already included in the zip package. 
     Install the add-on directly from the zip file. Do not extract or rename the
     files inside it, as this can break the add-on.
 
-![Enabling the add-on in Blender Preferences](assets/images/installation/installation.png){ align=right width="350" }
+![Enabling the add-on in Blender Preferences](assets/images/preferences/v1.0.0/installation.png){ align=right width="350" }
 
 1. Open Blender.
 2. Go to **Edit** → **Preferences** → **Add-ons**.
@@ -63,7 +63,7 @@ The add-on and its related asset files will be installed in the same directory (
 
 ## Activation/Deactivation
 
-![Enabling the add-on in Blender Preferences](assets/images/prefs_and_settings/prefs_license_key.jpg){ align=right width="500" }
+![Enabling the add-on in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.jpg){ align=right width="500" }
 
 After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your Lemon Squeezy account under your order details.
 

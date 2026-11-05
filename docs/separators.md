@@ -1,5 +1,5 @@
 
-![Separators Header](assets/images/separators/sep_header_fade.png){ align=right width="350" }
+![Separators Header](assets/images/separators/v1.0.0/_sep_header_fade.png){ align=right width="350" }
 
 Separators are the characters placed between digits or display groups, such as colons, dots, dashes, and other shapes. In real-world electronics, these are commonly seen as the blinking colon on a digital clock or the decimal point on a calculator. SegDisp Pro gives you full control over which separator characters to use, their shape and style, and precisely where they sit relative to your digits. This section covers all separator-related inputs across five panels: Alphanumeric settings, Characters & Shapes, Styles, Position/Spacing/Size, and Decimal-specific options.
 
@@ -7,7 +7,7 @@ Separators are the characters placed between digits or display groups, such as c
 
 ## General Separator Options
 
-![Separators General](assets/images/separators/sep_general.png){ align=right width="350" }
+![Separators General](assets/images/separators/v1.0.0/sep_general.png){ align=right width="350" }
 
 **[1] Separators tab:** Select which separator to edit. Use this tab to switch between the different separators available in your display, allowing you to configure each one individually.
 
@@ -43,7 +43,7 @@ Each character and shape has its own dedicated settings and properties. These op
 
 ## Alphanumeric Specific Separator Options {: .clear }
 
-![Separators Alphanum Spec](assets/images/separators/sep_alphanum_spec.png){ align=right width="350" }
+![Separators Alphanum Spec](assets/images/separators/v1.0.0/sep_alphanum_spec.png){ align=right width="350" }
 
 Separators In Between Option:
 
@@ -59,9 +59,9 @@ See the [Alphanumeric Input page](in_cat_alphanum.md#multi-display-setup) for mo
 
 ## Digit-Specific Separator Character {: .clear }
 
-![Separators Digit Style Spec Display](assets/images/separators/sep_digit_style_spec_display.png){ width="1100" }
+![Separators Digit Style Spec Display](assets/images/separators/v1.0.0/sep_digit_style_spec_display.png){ width="1100" }
 
-![Separators Digit Style Spec UI](assets/images/separators/sep_digit_style_spec_ui.png){ align=right width="350" }
+![Separators Digit Style Spec UI](assets/images/separators/v1.0.0/sep_digit_style_spec_ui.png){ align=right width="350" }
 
 **[1] Display Models:** Selects the segment display model used for the separator's digit characters.
 
@@ -84,8 +84,8 @@ See the [Alphanumeric Input page](in_cat_alphanum.md#multi-display-setup) for mo
 
 ## Non-character Option {: .clear }
  
-![Separators Non-character](assets/images/separators/sep_non_character_display.png){ width="1100" }
+![Separators Non-character](assets/images/separators/v1.0.0/sep_non_character_display.png){ width="1100" }
 
-![Separators Non-character](assets/images/separators/sep_non_character_ui.png){ align=right width="350" }
+![Separators Non-character](assets/images/separators/v1.0.0/sep_non_character_ui.png){ align=right width="350" }
 
 If none of the characters are selected, the separations remain, and the spacing can still be adjusted.

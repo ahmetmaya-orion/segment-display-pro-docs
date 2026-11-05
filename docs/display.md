@@ -1,13 +1,13 @@
 
-![Display Header](assets/images/display_options/disp_header.png){ align=right width="350" }
+![Display Header](assets/images/display_options/v1.0.0/_disp_header.png){ align=right width="350" }
 
 The display is the core visual element of any segment display, the panel of illuminated segments that forms each digit or character. In real-world electronics, displays vary in segment count (7-segment for simple digits, 14 or 16-segment for full alphanumeric characters), thickness, angle, and overall styling. SegDisp Pro gives you full control over the display model, segment appearance, font variations, alignment, spacing, sizing, and material properties. This section covers all display-related inputs across four panels: Models & Styles, Segment Fonts, Align/Spacing/Size, and Appearances.
 
 ## Display | Models & Styles {: .clear }
 
-![Display Models Display](assets/images/display_options/disp_models_display.png){  width="1100" }
+![Display Models Display](assets/images/display_options/v1.0.0/disp_models_display.png){  width="1100" }
 
-![Display Models UI](assets/images/display_options/disp_models_ui.png){ align=right width="350" }
+![Display Models UI](assets/images/display_options/v1.0.0/disp_models_ui.png){ align=right width="350" }
 
 **[1] Segment Display Models:** Selects the segment display model used for your digits and letters (e.g., 7-segment, 16-segment).
 
@@ -30,18 +30,18 @@ The display is the core visual element of any segment display, the panel of illu
 <div class="grid" markdown>
 
 <figure markdown>
-  ![Addon FPS](assets/images/display_options/disp_7seg_fonts_a.png){ width="400" }
+  ![Addon FPS](assets/images/display_options/v1.0.0/disp_7seg_fonts_a.png){ width="400" }
   <figcaption>Font - A</figcaption>
 </figure>
 
 <figure markdown>
-  ![Scene FPS](assets/images/display_options/disp_7seg_fonts_b.png){ width="400" }
+  ![Scene FPS](assets/images/display_options/v1.0.0/disp_7seg_fonts_b.png){ width="400" }
   <figcaption>Font - B</figcaption>
 </figure>
 
 </div>
 
-![Display 7-seg Fonts](assets/images/display_options/disp_7seg_fonts_ui.png){ align=right width="350" }
+![Display 7-seg Fonts](assets/images/display_options/v1.0.0/disp_7seg_fonts_ui.png){ align=right width="350" }
 
 Switches to an alternative font variation. This option is limited to the digits 6, 9, and 7.
 
@@ -51,7 +51,7 @@ Switches to an alternative font variation. This option is limited to the digits 
 
 ### 16-Segment Fonts {: .clear }
 
-![Display 16-seg Fonts](assets/images/display_options/disp_16seg_fonts_v2.png){ width="1100" }
+![Display 16-seg Fonts](assets/images/display_options/v1.0.0/disp_16seg_fonts_v2.png){ width="1100" }
 
 The 16-segment display unlocks a wide range of font possibilities, thanks to its higher segment count.
 
@@ -65,9 +65,9 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 
 ## Display | Align, Spacing, and Size {: .clear }
 
-![Display Align](assets/images/display_options/disp_align_display.png){ width="1100" }
+![Display Align](assets/images/display_options/v1.0.0/disp_align_display.png){ width="1100" }
 
-![Display Align](assets/images/display_options/disp_align_ui.png){ align=right width="350" }
+![Display Align](assets/images/display_options/v1.0.0/disp_align_ui.png){ align=right width="350" }
 
 **[1] Display Horizontal & Vertical Align:** Aligns the display origin along both the horizontal and vertical axes.
 
@@ -94,7 +94,7 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 
 ## Display | Appearances {: .clear }
 
-![Display Appearances Header](assets/images/display_options/disp_appear_header.png){ align=right width="350" }
+![Display Appearances Header](assets/images/display_options/v1.0.0/_disp_appear_header.png){ align=right width="350" }
 
 **[1] Display Material:** Selects the material applied to the display.
 
@@ -103,7 +103,7 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 
 ### LED {: .clear }
 
-![Display Appearances Header](assets/images/display_options/disp_appear_ui.png){ align=right width="350" }
+![Display Appearances Header](assets/images/display_options/v1.0.0/disp_appear_ui.png){ align=right width="350" }
 
 **[2] Toggle Led:** Enables or disables the LED emission effect on the display segments.
 
@@ -127,9 +127,9 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 
 <figure class="img-hover left" markdown>
 
-  ![Minus Sign Base Style: complete digit base](assets/images/display_options/disp-minus-base-def.png){ width="400" }
+  ![Minus Sign Base Style: complete digit base](assets/images/display_options/v1.0.0/disp-minus-base-def.png){ width="400" }
   
-  ![Minus Sign Base Style: minus sign base only](assets/images/display_options/disp-minus-base-hover.png){ .hover-img width="400" aria-hidden="true" }
+  ![Minus Sign Base Style: minus sign base only](assets/images/display_options/v1.0.0/disp-minus-base-hover.png){ .hover-img width="400" aria-hidden="true" }
 
 </figure>
 

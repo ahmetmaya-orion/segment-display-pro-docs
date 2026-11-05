@@ -11,3 +11,4 @@ materials
 
 # Affinity
 *.af
+*.af~lock~
