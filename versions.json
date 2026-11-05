@@ -4,6 +4,10 @@
     "title": "v1.0",
     "aliases": [
       "latest"
-    ]
+    ],
+    "properties": {
+      "source_tag": "v1.0.0",
+      "source_commit": "f1f83036453ca4e246a3b8adf9a57662980637ba"
+    }
   }
 ]
