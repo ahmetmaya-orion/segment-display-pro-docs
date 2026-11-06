@@ -2,7 +2,7 @@ name: Docs validation and mike publishing
 
 on:
   push:
-    branches: [main, brain-support]
+    branches: [main, brain-support, develop]
     tags: ['v[0-9]*.[0-9]*.[0-9]*']
   pull_request:
     branches: [main]
