@@ -6,8 +6,8 @@
       "latest"
     ],
     "properties": {
-      "source_tag": "v1.0.0",
-      "source_commit": "f1f83036453ca4e246a3b8adf9a57662980637ba"
+      "source_tag": "v1.0.0-corr.1",
+      "source_commit": "c710847941f3a0ee5ae628f1b865e9fffadd29cb"
     }
   }
 ]
