@@ -552,6 +552,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-the-preferences-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From the Preferences Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag-drop-the-zip-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag &amp; Drop the ZIP (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1280,7 +1308,22 @@ You will also receive a license key, which is required to unlock the product.</p
 <p>Install the add-on directly from the zip file. Do not extract or rename the
 files inside it, as this can break the add-on.</p>
 </div>
-<p><img align="right" alt="Enabling the add-on in Blender Preferences" src="../assets/images/installation/installation.png" width="350" /></p>
+<!-- <div class="grid" markdown>
+
+<figure markdown>
+  ![Un-linked Asset](assets/images/preferences/v1.0.0/installation.png){ width="330" }
+  <figcaption>From Preferences Panel</figcaption>
+</figure>
+
+<figure markdown>
+  ![Linked Asset](assets/images/preferences/v1.0.0/installation_drag_drop.jpg){ width="500" }
+  <figcaption>Drag & Drop Options</figcaption>
+</figure>
+
+</div> -->
+
+<h3 id="from-the-preferences-panel">From the Preferences Panel<a class="headerlink" href="#from-the-preferences-panel" title="Permanent link">&para;</a></h3>
+<p><img align="right" alt="Installation (Preferences)" src="../assets/images/preferences/v1.0.0/installation.png" width="350" /></p>
 <ol>
 <li>Open Blender.</li>
 <li>Go to <strong>Edit</strong> → <strong>Preferences</strong> → <strong>Add-ons</strong>.</li>
@@ -1288,9 +1331,27 @@ files inside it, as this can break the add-on.</p>
 <li>In the file browser, open the settings panel (gear icon, top right). Under <strong>"Legacy Add-ons"</strong>, make sure <strong>"Target Path"</strong> is set to <strong>"Default"</strong> and <strong>"Overwrite"</strong> is ticked.</li>
 <li>Select the <strong>Segment Display Pro ZIP file</strong>, then click <strong>"Install from Disk"</strong>.</li>
 <li>Make sure <strong>"Segment Display Pro"</strong> is enabled (checkbox ticked).</li>
+<li>Restart Blender after installation to refresh the asset file.</li>
+</ol>
+<h3 id="drag-drop-the-zip-optional">Drag &amp; Drop the ZIP (Optional)<a class="headerlink" href="#drag-drop-the-zip-optional" title="Permanent link">&para;</a></h3>
+<p><img align="right" alt="Installation (Drag &amp; Drop)" src="../assets/images/preferences/v1.0.0/installation_drag_drop.jpg" width="500" /></p>
+<ol>
+<li>You can also install the add-on by dragging its ZIP file directly into Blender instead of opening Preferences first.</li>
+<li>Drag the Segment Display Pro ZIP file from your computer’s file manager onto the Blender window. You do not need to drop it in a specific editor or area.</li>
+<li>In the Install from Disk popup, leave Target set to Default.</li>
+<li>Make sure Overwrite and Enable on Install are checked, then click OK.</li>
+<li>Restart Blender after installation to refresh the asset file.</li>
 </ol>
 <p>After enabling, the add-on appears in the 3D Viewport sidebar under the
 <strong>SegDisp Pro</strong> tab.</p>
+<div class="admonition info">
+<p class="admonition-title">For Lite users</p>
+<p>Follow the same steps using the Segment Display Lite ZIP file, then open the SegDisp Lite tab.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Tip for add-on updates</p>
+<p>If you have already activated the add-on, drag and drop is a convenient way to install a newer version. Use the new ZIP file and keep Overwrite checked, then restart Blender to refresh the asset file.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Only Blender's default add-on folder is tested</p>
 <p>Installing into a custom add-on directory (a custom Target Path or custom Script Directory) may cause problems with using, activating and updating the add-on.</p>
@@ -1311,7 +1372,7 @@ files inside it, as this can break the add-on.</p>
 <p>If you use a custom add-on directory, proper linking of asset files within a scene cannot be guaranteed, even if the add-on uses relative paths to reference assets. This add-on has only been tested with the default Blender scripts directory.</p>
 </div>
 <h2 id="activationdeactivation">Activation/Deactivation<a class="headerlink" href="#activationdeactivation" title="Permanent link">&para;</a></h2>
-<p><img align="right" alt="Enabling the add-on in Blender Preferences" src="../assets/images/prefs_and_settings/prefs_license_key.jpg" width="500" /></p>
+<p><img align="right" alt="Enabling the add-on in Blender Preferences" src="../assets/images/preferences/v1.0.0/prefs_license_key.jpg" width="500" /></p>
 <p>After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your Lemon Squeezy account under your order details.</p>
 <ol>
 <li>In <strong>Edit</strong> → <strong>Preferences</strong> → <strong>Add-ons</strong>, expand <strong>"Segment Display Pro"</strong>.</li>

@@ -1350,7 +1350,7 @@
 
 <p>The Settings &amp; Preferences panel is where you manage your license activation and monitor the health of your linked asset files. Access it via Edit &gt; Preferences &gt; Add-ons, then expand the Segment Display Pro entry.</p>
 <h2 id="license-activation">License Activation<a class="headerlink" href="#license-activation" title="Permanent link">&para;</a></h2>
-<p><img align="right" alt="Activation Panel in Blender Preferences" src="../assets/images/prefs_and_settings/prefs_license_key.jpg" width="550" /></p>
+<p><img align="right" alt="Activation Panel in Blender Preferences" src="../assets/images/preferences/v1.0.0/prefs_license_key.jpg" width="550" /></p>
 <p>The License Activation section displays your current activation status and allows you to manage your license key.</p>
 <p>License notice: In the last 3 days of the offline grace period (e.g. "Offline verification: 2 days left") or when the add-on is locked (e.g. "Offline period expired"), a red message appears at the top of this section. The same notice also appears at the top of the add-on's N-panel. See the <a href="../installation/#activationdeactivation">Activation page</a> for details.
 Read more...: Opens a popup with the full explanation and the steps to fix it.
@@ -1365,19 +1365,19 @@ Deactivate: Removes the license activation from the current device, freeing up a
 <p>Always deactivate your license before uninstalling the add-on. If you skip this step, the device will still count toward your activation limit. See the <a href="../installation/#activationdeactivation">Activation page</a> for more details.</p>
 </div>
 <h2 id="asset-status-panel">Asset Status Panel<a class="headerlink" href="#asset-status-panel" title="Permanent link">&para;</a></h2>
-<p><img align="right" alt="Activation Panel in Blender Preferences" src="../assets/images/prefs_and_settings/prefs_asset_stats.jpg" width="550" /></p>
+<p><img align="right" alt="Activation Panel in Blender Preferences" src="../assets/images/preferences/v1.0.0/prefs_asset_stats.jpg" width="550" /></p>
 <p>The Asset Status section monitors the connection between the add-on and its asset .blend file. On each Blender launch, the add-on checks whether the asset file is available in the segment_display/assets directory.</p>
 <p>The asset is not linked automatically on Blender launch; instead, it links when the user adds objects to the 3D scene or clicks the "Re-link Asset" button. This mechanism safeguards your scene: if the add-on is uninstalled or the asset file is accidentally deleted, reinstalling the add-on and clicking "Re-link Asset" will restore all Segment Display objects in the scene.</p>
 <h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
 <p>The SegDisp asset is stored as a .blend file in the add-on's assets folder. When properly linked, clicking "Add Segment Display" instantly places the full Geometry Nodes-driven segment display objects into your scene. If the asset becomes unlinked (e.g. the file is missing or the add-on was removed), those objects revert to default 2×2m placeholder planes until the link is restored.</p>
 <div class="grid">
 <figure>
-<p><img alt="Un-linked Asset" src="../assets/images/prefs_and_settings/asset_unlink.png" width="400" />
+<p><img alt="Un-linked Asset" src="../assets/images/object_settings/v1.0.0/asset_unlink.png" width="400" />
   </p>
 <figcaption>Un-linked Asset</figcaption>
 </figure>
 <figure>
-<p><img alt="Linked Asset" src="../assets/images/prefs_and_settings/asset_link.png" width="400" />
+<p><img alt="Linked Asset" src="../assets/images/object_settings/v1.0.0/asset_link.png" width="400" />
   </p>
 <figcaption>Linked Asset</figcaption>
 </figure>
@@ -1390,7 +1390,7 @@ Deactivate: Removes the license activation from the current device, freeing up a
 <li><strong>Asset file:</strong> Displays the name and version of the linked blend file and the Geometry Nodes tree version.</li>
 </ul>
 <h3 id="linked-asset">Linked Asset<a class="headerlink" href="#linked-asset" title="Permanent link">&para;</a></h3>
-<p><img align="right" alt="Activation Panel in Blender Preferences" src="../assets/images/prefs_and_settings/outliner_blender_file.jpg" width="500" /></p>
+<p><img align="right" alt="Activation Panel in Blender Preferences" src="../assets/images/preferences/v1.0.0/outliner_blender_file.jpg" width="500" /></p>
 <p>You can also verify the linked asset file from Blender's Outliner area using the Blender File display mode. Filtering by the Node Tree data type makes it easier to identify.</p>
 <div class="admonition warning">
 <p class="admonition-title">Do not manually remove the asset file from the Outliner</p>
@@ -1407,12 +1407,12 @@ Set the FPS using the Addon Frame Rate dropdown menu in Addon Settings to match 
 </div>
 <div class="grid">
 <figure>
-<p><img alt="Addon FPS" src="../assets/images/prefs_and_settings/set_fps_addon.png" width="400" />
+<p><img alt="Addon FPS" src="../assets/images/object_settings/v1.0.0/set_fps_addon.png" width="400" />
   </p>
 <figcaption>Addon FPS</figcaption>
 </figure>
 <figure>
-<p><img alt="Scene FPS" src="../assets/images/prefs_and_settings/set_fps_blender.png" width="400" />
+<p><img alt="Scene FPS" src="../assets/images/object_settings/v1.0.0/set_fps_blender.png" width="400" />
   </p>
 <figcaption>Scene FPS</figcaption>
 </figure>
