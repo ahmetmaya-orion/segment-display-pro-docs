@@ -16,13 +16,13 @@ snapshots update the same public `v1.0` manual. Never move a tag. No matching
 manual release is required for a code-only patch. Describe changed patch
 behavior with notes such as "Pro v1.0.1 and later."
 
-Prepare current documentation on brain-support, review it, and merge approved
+Prepare current documentation on develop, review it, and merge approved
 source into main before tagging. An old-family correction must start from its
 latest source snapshot, preserving earlier corrections, not newer-family main.
 
 ### Automated workflow
 
-- main/brain-support pushes and PRs to main: build validation, no publication.
+- main/develop pushes and PRs to main: build validation, no publication.
 - Pushed `vX.Y.Z` source tag: publish `vX.Y`, promote latest unless latest is
   already a newer family.
 - Pushed `vX.Y.Z-corr.N` tag: update that family without moving latest elsewhere.
