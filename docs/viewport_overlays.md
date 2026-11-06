@@ -1,5 +1,5 @@
 
-![Viewport Page Header](assets/images/viewport_overlays/snap_guides_header.jpg){ align=right width="400" }
+![Viewport Page Header](assets/images/viewport_overlays/v1.0.0/_snap_guides_header.jpg){ align=right width="400" }
 
 In complex 3D scenes, constantly switching between viewport shading modes to check your segment display can slow you down. Real LED panels are visible from across a room, but in Blender's Solid viewport mode, material-based effects like emission aren't rendered. SegDisp Pro includes viewport utilities that let you preview your display without leaving Solid mode, so you don't have to switch to Material or Rendered view just to see your results, keeping performance smooth even in busy scenes. Additional overlays let you visualize inactive segments for easier layout and snap-align your display to other objects. This section covers all viewport and overlay inputs across two groups: Solid Viewport Preview and Overlay helpers.
 
@@ -7,15 +7,15 @@ In complex 3D scenes, constantly switching between viewport shading modes to che
 
 ## Viewport | Solid Preview
 
-![Viewport UI](assets/images/viewport_overlays/viewport_ui.png){ align=right width="400" }
+![Viewport UI](assets/images/viewport_overlays/v1.0.0/viewport_ui.png){ align=right width="400" }
 
-![Viewport UI](assets/images/viewport_overlays/view_blender_shading_panel.png){ align=right width="400" }
+![Viewport UI](assets/images/viewport_overlays/v1.0.0/view_blender_shading_panel.png){ align=right width="400" }
 
 <figure class="img-hover" markdown>
 
-  ![Input Alignment: left](assets/images/viewport_overlays/view_solid_view_off.png){ width="600" }
+  ![Input Alignment: left](assets/images/viewport_overlays/v1.0.0/view_solid_view_off.png){ width="600" }
 
-  ![Input Alignment: right](assets/images/viewport_overlays/view_solid_view_on.png){ .hover-img width="600" aria-hidden="true" }
+  ![Input Alignment: right](assets/images/viewport_overlays/v1.0.0/view_solid_view_on.png){ .hover-img width="600" aria-hidden="true" }
 
 </figure>
 
@@ -35,7 +35,7 @@ See the [Troubleshooting page](troubleshooting.md#viewport-solid-color-preview)
 
 ## Viewport | Overlays {: .clear }
 
-![Viewport Overlay Ghosts](assets/images/viewport_overlays/viewport_ghosts.png){ align=right width="400" }
+![Viewport Overlay Ghosts](assets/images/viewport_overlays/v1.0.0/viewport_ghosts.png){ align=right width="400" }
 
 ### Ghost Segments
 
@@ -45,7 +45,7 @@ See the [Troubleshooting page](troubleshooting.md#viewport-solid-color-preview)
 
 ### Snap Guides {: .clear}
 
-![Viewport Overlay Ghosts](assets/images/viewport_overlays/blender_snap_options.png){ align=right width="400" }
+![Viewport Overlay Ghosts](assets/images/viewport_overlays/v1.0.0/blender_snap_options.png){ align=right width="400" }
 
 **[4]** Displays alignment guidelines when 3D viewport Snap is enabled, helping you align the segment display object with other scene items.
 
@@ -54,7 +54,7 @@ See the [Troubleshooting page](troubleshooting.md#viewport-solid-color-preview)
 
 <figure class="img-auto" markdown>
 
-  ![Viewport Snap Guides](assets/images/viewport_overlays/snap_guides_header.jpg){ width="500" }
+  ![Viewport Snap Guides](assets/images/viewport_overlays/v1.0.0/_snap_guides_header.jpg){ width="500" }
 
 </figure>
 

@@ -8,3 +8,7 @@ __pycache__/
 venv/
 dev
 materials
+
+# Affinity
+*.af
+*.af~lock~

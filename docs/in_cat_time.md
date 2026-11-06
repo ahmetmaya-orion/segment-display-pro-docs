@@ -1,5 +1,5 @@
 
-![Number Precision](assets/images/in_cat_time/time_header.png){ align=right width="350" }
+![Number Precision](assets/images/in_cat_time/_time_header.png){ align=right width="350" }
 
 ## General Overview 
 
@@ -11,7 +11,7 @@ Animation Modes: You can fully automate your displays by syncing them directly t
 
 ## Clock {: .clear }
 
-![Time|Clock](assets/images/in_cat_time/clock//time_clock_ui.png){ align=right width="350" }
+![Time|Clock](assets/images/in_cat_time/clock/v1.0.0/time_clock_ui.png){ align=right width="350" }
 
 Build realistic digital clocks effortlessly. You can manually input the exact Hour, Minute, and Second, and precisely control the readout by toggling seconds on or off.
 
@@ -47,7 +47,7 @@ Build realistic digital clocks effortlessly. You can manually input the exact Ho
 
 ## Timer {: .clear }
 
-![Time|Timer](assets/images/in_cat_time/timer//time_timer_ui.png){ align=right width="350" }
+![Time|Timer](assets/images/in_cat_time/timer/v1.0.0/time_timer_ui.png){ align=right width="350" }
 
 Perfect for explosive countdowns or intricate chronometers, the Timer feature spans across days, hours, minutes, and seconds.
 
@@ -74,7 +74,7 @@ Perfect for explosive countdowns or intricate chronometers, the Timer feature sp
 
 ## Date {: .clear }
 
-![Time|Timer](assets/images/in_cat_time/date//time_date_ui.png){ align=right width="350" }
+![Time|Timer](assets/images/in_cat_time/date/v1.0.0/time_date_ui.png){ align=right width="350" }
 
 Quickly generate procedural calendar readouts with full formatting control over your display.
 
@@ -88,12 +88,12 @@ Quickly generate procedural calendar readouts with full formatting control over 
 <div class="grid" markdown>
 
 <figure markdown>
-  ![Un-linked Asset](assets/images/in_cat_time/date/month_format_num.png){ width="400" }
+  ![Un-linked Asset](assets/images/in_cat_time/date/v1.0.0/month_format_num.png){ width="400" }
   <figcaption>Numeric</figcaption>
 </figure>
 
 <figure markdown>
-  ![Linked Asset](assets/images/in_cat_time/date/month_format_alphanum.png){ width="400" }
+  ![Linked Asset](assets/images/in_cat_time/date/v1.0.0/month_format_alphanum.png){ width="400" }
   <figcaption>Alphabet</figcaption>
 </figure>
 

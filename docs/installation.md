@@ -33,7 +33,24 @@ The add-on ships with the asset blend file already included in the zip package. 
     Install the add-on directly from the zip file. Do not extract or rename the
     files inside it, as this can break the add-on.
 
-![Enabling the add-on in Blender Preferences](assets/images/installation/installation.png){ align=right width="350" }
+
+<!-- <div class="grid" markdown>
+
+<figure markdown>
+  ![Un-linked Asset](assets/images/preferences/v1.0.0/installation.png){ width="330" }
+  <figcaption>From Preferences Panel</figcaption>
+</figure>
+
+<figure markdown>
+  ![Linked Asset](assets/images/preferences/v1.0.0/installation_drag_drop.jpg){ width="500" }
+  <figcaption>Drag & Drop Options</figcaption>
+</figure>
+
+</div> -->
+
+### From the Preferences Panel
+
+![Installation (Preferences)](assets/images/preferences/v1.0.0/installation.png){ align=right width="350" }
 
 1. Open Blender.
 2. Go to **Edit** → **Preferences** → **Add-ons**.
@@ -41,9 +58,26 @@ The add-on ships with the asset blend file already included in the zip package. 
 4. In the file browser, open the settings panel (gear icon, top right). Under **"Legacy Add-ons"**, make sure **"Target Path"** is set to **"Default"** and **"Overwrite"** is ticked.
 5. Select the **Segment Display Pro ZIP file**, then click **"Install from Disk"**.
 6. Make sure **"Segment Display Pro"** is enabled (checkbox ticked).
+7. Restart Blender after installation to refresh the asset file.
+
+### Drag & Drop the ZIP (Optional)
+
+![Installation (Drag & Drop)](assets/images/preferences/v1.0.0/installation_drag_drop.jpg){ align=right width="500" }
+
+1. You can also install the add-on by dragging its ZIP file directly into Blender instead of opening Preferences first.
+2. Drag the Segment Display Pro ZIP file from your computer’s file manager onto the Blender window. You do not need to drop it in a specific editor or area.
+3. In the Install from Disk popup, leave Target set to Default.
+4. Make sure Overwrite and Enable on Install are checked, then click OK.
+5. Restart Blender after installation to refresh the asset file.
 
 After enabling, the add-on appears in the 3D Viewport sidebar under the
 **SegDisp Pro** tab.
+
+!!! info "For Lite users"
+    Follow the same steps using the Segment Display Lite ZIP file, then open the SegDisp Lite tab.
+
+!!! info "Tip for add-on updates"
+    If you have already activated the add-on, drag and drop is a convenient way to install a newer version. Use the new ZIP file and keep Overwrite checked, then restart Blender to refresh the asset file.
 
 !!! warning "Only Blender's default add-on folder is tested"
     Installing into a custom add-on directory (a custom Target Path or custom Script Directory) may cause problems with using, activating and updating the add-on.
@@ -63,7 +97,7 @@ The add-on and its related asset files will be installed in the same directory (
 
 ## Activation/Deactivation
 
-![Enabling the add-on in Blender Preferences](assets/images/prefs_and_settings/prefs_license_key.jpg){ align=right width="500" }
+![Enabling the add-on in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.jpg){ align=right width="500" }
 
 After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your Lemon Squeezy account under your order details.
 
