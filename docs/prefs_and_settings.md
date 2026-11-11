@@ -23,56 +23,106 @@ Deactivate: Removes the license activation from the current device, freeing up a
 
 ## Asset Status Panel
 
-:material-tag-outline: **Pro v1.0.1**
+### Review & Recover
 
-!!! warning "Restore Node Tree: deleted settings are not restored"
-     Restoring a node-tree assignment does not restore input settings or animations that were deleted when the node tree was removed from the Geometry Nodes panel. **Deleted input settings and animations are not restored.** Save a copy of your project before recovery, then inspect the recovered display and its animation before saving the result.
+:material-tag-outline: **Pro v1.0.1 and later**
 
-     This differs from deleting the asset through **Outliner > Blender File**: in that case, retained settings can be recovered. Whether settings survive depends on what was removed and what data remains in the project; do not deliberately delete the asset as a recovery step.
+Your displays use a linked asset file supplied with the add-on. **Review & Recover…** checks supported connections and lets you review repairs before applying them. Open **Edit > Preferences > Add-ons > Segment Display Pro > Asset Status**.
 
-     In v1.0.1, the recovery dialog displays the deleted-settings warning for missing-modifier recreation, but not for **Restore Node Tree**. The absence of that warning in the Restore Node Tree section does not mean deleted settings or animations can be recovered.
+> **Review & Recover | Image 1**
+>
+> Image slot: Asset Status and the display-needs-re-linking message. Filename to be agreed.
 
-![Asset Status](assets/images/preferences/v1.0.0/prefs_asset_stats.jpg){ align=right width="550" }
+**Available** means the installed asset file can be found, not that every display in your project is connected correctly. A separate message can report displays needing re-linking or toggle inputs needing repair. The asset name and **Asset Version** identify the installed asset.
 
-The Asset Status section monitors the connection between the add-on and its asset .blend file. On each Blender launch, the add-on checks whether the asset file is available in the segment_display/assets directory.
+**Lite users:** Lite uses a different, simplified Re-link operation. Its recovery procedure is not covered in this Pro manual. Pro recovery does not convert Lite objects into Pro objects.
 
-The asset is not linked automatically on Blender launch; instead, it links when the user adds objects to the 3D scene or clicks the "Re-link Asset" button. This mechanism safeguards your scene: if the add-on is uninstalled or the asset file is accidentally deleted, reinstalling the add-on and clicking "Re-link Asset" will restore all Segment Display objects in the scene.
+#### Before you recover
 
-### How It Works
+Save a copy of your project. If displays appear as planes after an update or reinstall, **restart Blender and reopen the project first**. Reinstalling the complete matching add-on and restarting usually restored displays automatically in testing. If the displays, settings and animation are correct, no manual recovery is needed.
 
-The SegDisp asset is stored as a .blend file in the add-on's assets folder. When properly linked, clicking "Add Segment Display" instantly places the full Geometry Nodes-driven segment display objects into your scene. If the asset becomes unlinked (e.g. the file is missing or the add-on was removed), those objects revert to default 2×2m placeholder planes until the link is restored.
+If Asset Status reports **Not Available**, follow [the missing-asset steps](#asset-not-available) before attempting recovery. Do not delete modifiers, remove node-tree assignments or edit recognition properties to repair a missing asset connection.
 
-<div class="grid" markdown>
+#### Restore Node Tree
 
-<figure markdown>
-  ![Un-linked Asset](assets/images/object_settings/v1.0.0/asset_unlink.png){ width="400" }
-  <figcaption>Un-linked Asset</figcaption>
-</figure>
+This section restores the asset-tree assignment on an existing, identified modifier. Review the listed object, scene and modifier before leaving it selected.
 
-<figure markdown>
-  ![Linked Asset](assets/images/object_settings/v1.0.0/asset_link.png){ width="400" }
-  <figcaption>Linked Asset</figcaption>
-</figure>
+> **Review & Recover | Image 2**
+>
+> Image slot: Will Recover: Restore Node Tree and the empty Segment Display modifier. Filename to be agreed.
 
-</div>
+!!! warning "Deleted settings and animation are not restored"
+    Assigning the tree again cannot restore input settings or animation already deleted when you removed the node tree from the Geometry Nodes panel. By contrast, removing the asset through **Outliner > Blender File** can leave settings that recovery can retain. Recovery depends on the data still present; do not deliberately delete the asset as a repair step.
 
-The **Re-link Asset** button performs a manual asset check. It verifies that the asset .blend file exists in the add-on's asset folder and, if found, replaces any placeholder planes in the current scene with the proper Segment Display objects. Use this if your displays appear as flat planes after a reinstall or file path change.
+    **In v1.0.1**, Restore Node Tree does not display the deleted-settings warning in the dialog. Its absence is not a promise that deleted data can be recovered.
 
-### Asset Monitor
+#### Recreate Missing Modifier (Defaults)
 
-Below the Re-link button, grayed-out text displays the current asset status:
+If a recognized, supported Pro object has no Geometry Nodes modifier, recovery can offer to create one. **This option is unchecked by default.** Select it only when you want a replacement using defaults.
 
-- **Link status:** Shows "Linked" (with a checkmark) when the asset file is properly installed and in place, or flags an issue if it is missing.
-- **Asset file:** Displays the name and version of the linked blend file and the Geometry Nodes tree version.
+> **Review & Recover | Image 3**
+>
+> Image slot: Recreate Missing Modifier (Defaults) beside an object with no modifier. Filename to be agreed.
+
+The new modifier is added at the end of the stack. **Deleted input settings, animation and the original modifier-stack position are not restored.** Not every object with a missing modifier qualifies for recreation.
+
+#### Needs Review
+
+These entries are unchecked by default because recovery cannot confidently choose the target. Select only a display you recognize, then choose its correct empty Geometry Nodes modifier from the dropdown.
+
+> **Review & Recover | Image 4**
+>
+> Image slot: Needs Review with the GeometryNodes / GeometryNodes.001 dropdown. Filename to be agreed.
+
+The object's `segdisp_*` properties can identify it as a Pro display without identifying which empty modifier belongs to it. Recovery also checks the remembered modifier name in `segdisp_modifier`. If that name no longer matches, or the target is ambiguous, a generic name such as **GeometryNodes** or **GeometryNodes.001** is not enough to choose safely. A generic name does not always require review: an exact remembered match can still identify the correct modifier.
+
+**Do not rename or delete the SegDisp modifier or change its recognition properties manually.** If you cannot identify the correct modifier, leave the entry unchecked. A name-based candidate is not proof that an object belongs to SegDisp.
+
+#### Reconnect Asset Library
+
+Use this section when a supported project library link is broken or points to an asset outside the current installation. Check the stored path, installed target and affected displays, then review **Reconnect this library**.
+
+> **Review & Recover | Image 5**
+>
+> Image slot: Reconnect Asset Library, stored path and Outliner library reference. Filename to be agreed.
+
+**Reconnecting a library affects every display using it, in every scene.** When the original modifiers and stored settings/animation remain intact, reconnecting restores the displays using that retained data.
+
+Blender may temporarily stop responding while relocating and reloading linked asset data, particularly for paths outside the current installation. Allow it to finish; a temporary not-responding message does not necessarily mean Blender has crashed. Duration varies.
+
+#### Other results
+
+- **Will Fix: Toggle Inputs:** Repairs supported Boolean inputs stored as numbers while preserving their on/off values.
+- **Not Changed:** Reports unsupported or excluded items, such as other-edition objects, local asset-tree copies, unknown asset sources, non-editable or source-linked objects, and missing modifiers that do not qualify for recreation. Recovery does not directly edit source-linked modifiers; repair and save the owning project instead.
+
+Only sections relevant to your project appear. Recovery can be unavailable if the license is inactive, the installed asset is missing or there is nothing supported to recover.
+
+#### Backup, recover and save
+
+1. Review the selected actions. Leave uncertain entries unchecked.
+2. Keep **Save a backup copy to your current project location first** enabled when possible. A backup requires a project already saved to disk; an unsaved project shows **File not saved yet, no backup copy possible**. Save it first if you want a backup.
+3. Click **Recover**. If a requested backup fails, recovery cancels without making changes.
+4. Read the result, including skipped/failed repairs or settings that could not be restored. Inspect the displays, settings and animation.
+5. **Save your project** to retain successful repairs. Creating a backup does not save the repaired project automatically.
+
+#### Asset Not Available
+
+> **Review & Recover | Image 6**
+>
+> Image slot: Not Available, Asset file info not loaded and Asset Version: Unknown. Filename to be agreed.
+
+If your displays appear as planes and you see these messages, **do not panic or try to fix the Modifiers panel**. The installed asset may be missing, damaged or outside the expected add-on `assets` location. This does not by itself mean your stored display settings are lost.
+
+1. Preserve a project copy and leave existing modifiers, node-tree assignments and recognition properties untouched.
+2. Reinstall the complete matching Pro ZIP with the shipped asset included, then restart Blender and reopen the project.
+3. Check the displays first. Reinstalling and restarting is often sufficient; if they are restored correctly, no recovery operation is needed.
+4. If supported connection problems remain, use **Review & Recover…** once the installed asset is available. Inspect the result and save.
+
+The recovery button can remain disabled until the installed asset is available. Reconnection preserves data still present; it cannot restore deleted settings or animation. See [Troubleshooting](troubleshooting.md#the-asset-file) for related issues.
 
 ### Linked Asset
 
-![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/outliner_blender_file.jpg){ align=right width="500" }
-
-You can also verify the linked asset file from Blender's Outliner area using the Blender File display mode. Filtering by the Node Tree data type makes it easier to identify.
-
-!!! warning "Do not manually remove the asset file from the Outliner"
-     Removing the asset can break your displays. Retained settings may be recoverable, but recovery is not a substitute for a project backup. Removing the node tree from the Geometry Nodes panel is a different case: deleted input settings and animations are not restored by Restore Node Tree. See the Pro v1.0.1 warning above.
+You can inspect the linked library in **Outliner > Blender File**. Do not remove it as a cleanup or recovery shortcut. Do not open, modify, re-save, rename or move the shipped asset file; reinstall the original ZIP if it was altered.
 
 ## Addon N-panel Settings
 ### Time Synchronization
