@@ -31,6 +31,8 @@ Blender may pause while recovery relocates and reloads an asset library pointing
 !!! warning "Do not open or modify the asset file!"
     Do not open, modify, re-save, rename or move the shipped .blend asset. Re-saving changes its byte-level fingerprint even if it looks unchanged. Reinstall the original complete ZIP if the file was altered. This is asset-safety guidance, not a claim that installed files are read-only or that an in-add-on runtime hash check protects them.
 
+    **Why this matters for support:** OrionNovember.Studio cannot provide support for modified asset files. Opening and re-saving the shipped asset changes its digital fingerprint, even if you make no visible changes. If the asset has been modified, reinstall the complete add-on from the original ZIP before requesting support.
+
 **Lite users:** Lite recovery differs and is not covered in this Pro manual.
 
 ---

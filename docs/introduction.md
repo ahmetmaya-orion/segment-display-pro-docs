@@ -62,6 +62,8 @@ Preserve a project copy, reinstall the complete matching add-on and restart Blen
 
     Do not open, modify, re-save, rename or move the shipped asset file. Re-saving changes its byte-level fingerprint even if it looks unchanged. Reinstall the original ZIP if it was altered. See [asset safety and recovery limits](troubleshooting.md#the-asset-file).
 
+    **Why this matters for support:** OrionNovember.Studio cannot provide support for modified asset files. Opening and re-saving the shipped asset changes its digital fingerprint, even if you make no visible changes. If the asset has been modified, reinstall the complete add-on from the original ZIP before requesting support.
+
 ## The Segment Display Object
 
 - The "Add Segment Display" button in the N-panel interface only appears when you click on an empty space in the 3D scene. The object is always added at the current **3D cursor** location.
