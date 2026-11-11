@@ -48,3 +48,19 @@ A side-by-side look at what ships in **Segment Display Pro** and **Segment Displ
 **\*\*** Locate the "Separators" panel. Because of the alphanumeric display count limitation in the Lite version, this feature is only available in Segment Display Pro.
 
 **\*\*\*** More styles will be available in future updates for Segment Display Pro.
+
+## Asset Recovery
+
+:material-tag-outline: **v1.0.1 and later**
+
+| Capability | LITE | PRO |
+| ---------- | ---- | --- |
+| Recovery interface | Simplified Re-link Asset | Review & Recover preview |
+| Supported library reconnection | Limited project-wide Re-link | Selectable library reconnection across scenes |
+| Supported missing node-tree assignments | Limited identification-based recovery | Restore Node Tree; ambiguous targets require review |
+| Recreate a deleted modifier | Not supported | Opt-in for qualifying marked objects, using defaults |
+| Saved-project backup option in recovery dialog | No Pro recovery dialog | Available; requested backup failure cancels recovery |
+| Numeric-toggle input repair | No Pro selectable repair preview | Supported toggle repair retaining on/off values |
+| Direct repair of source-linked modifiers | No | No |
+
+Reconnection uses data still present; deleted settings and animation are not restored by assigning a tree or creating a default modifier. Reinstalling the matching add-on and restarting Blender may restore displays without manual recovery. Lite's recovery procedure is not covered in this manual. See [Pro Review & Recover](prefs_and_settings.md#review-recover).

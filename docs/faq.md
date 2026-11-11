@@ -31,7 +31,23 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
 ??? question "How do I update the add-on without losing my activation?"
 
-    Just install the new ZIP right over the old one; no need to uninstall first. Use "Install from Disk" with "Target Path" set to "Default" and "Overwrite" ticked, then restart Blender. Your license stays activated because the license file is stored outside the add-on folder and updates never touch it. If your Segment Display objects don't come back after the restart, click "Re-link Asset" in Preferences > Add-ons > Segment Display Pro > "Asset Status". See [Updating the Add-on](installation.md#updating-the-add-on) for details.
+    Install the complete matching ZIP over the old version with Target Path set to Default and Overwrite enabled, then restart Blender. Your activation file is outside the add-on folder. Reopen and inspect your project first: displays often return automatically. For Pro v1.0.1 and later, use **Review & Recover…** only if supported issues remain after the installed asset is available. See [Updating the Add-on](installation.md#updating-the-add-on).
+
+??? question "How do I repair displays after an update or reinstall?"
+
+    :material-tag-outline: **Pro v1.0.1 and later**
+
+    If displays appear as planes, preserve a project copy and leave their modifiers untouched. Reinstall the complete matching add-on and restart Blender first; this often restores displays without manual recovery. If problems remain, use **Preferences > Add-ons > Segment Display Pro > Asset Status > Review & Recover…**. Review the actions and backup option, recover, inspect settings/animation and save.
+
+    Reconnection uses data still present. Deleted settings and animation cannot be restored by assigning a node tree again or recreating a modifier with defaults. Lite uses a different recovery procedure, not covered here. See [Review & Recover](prefs_and_settings.md#review-recover).
+
+??? question "Why is Add unavailable after updating?"
+
+    Restart Blender first, then check Asset Status. **Not Available** means the installed asset cannot be used; **Unknown** version information needs checking, and a known asset/add-on version mismatch can block adding displays. Reinstall the complete matching package rather than mixing asset/script versions or editing modifiers. See [asset troubleshooting](troubleshooting.md#the-asset-file).
+
+??? question "Why did Blender stop responding during recovery?"
+
+    Blender can pause while relocating and reloading an asset library whose path points outside the current installation. Allow it to finish; duration varies and a temporary not-responding message does not necessarily mean a crash. This involves Blender's library handling; the exact bottleneck is unconfirmed. See [recovery pauses](troubleshooting.md#blender-temporarily-stops-responding).
 
 ## Licensing & Usage
 
@@ -64,6 +80,10 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 ??? question "Why does the add-on link assets instead of appending them to the scene?"
 
     The Segment Display Geometry Nodes asset references numerous external objects and collections required for correct functionality. Appending the asset would automatically import all of those external objects into the scene, with no way to preserve the original collections and sub-collections hierarchy, leaving the Outliner cluttered and difficult to manage. Linking also offers an additional advantage: any future updates made to the asset in the source file are automatically reflected in the scene, eliminating the need to re-import.
+
+??? question "What are the segdisp_* custom properties on my Pro object?"
+
+    They are recognition/recovery metadata, not display controls. Leave `segdisp_type`, `segdisp_schema`, `segdisp_edition` and `segdisp_modifier` intact, and do not manually rename/delete the SegDisp modifier. An object's identity does not always identify its correct empty modifier; ambiguous targets require **Needs Review**. See [recognition properties](troubleshooting.md#pro-recognition-properties-and-modifiers).
 
 ??? question "Why are segment value results not shown in solid shading mode when the display base is toggled?"
 
@@ -98,6 +118,10 @@ Quick answers to the most common questions about Segment Display Pro and Segment
     The auto time animations (Clock, Timer) and the Animation Start Offset only work correctly with whole-number frame rates such as 24, 25, 30, or 60. Decimal frame rates like 23.98 or 29.97 cause small timing errors because of how Blender converts frames to time. Also, make sure the "Addon Frame Rate" dropdown in the N-panel matches your scene's frame rate. See the [Preferences & Settings](prefs_and_settings.md#time-synchronization) page for details.
 
 ## Sharing & Exporting
+
+??? question "Can I link a SegDisp object from another project?"
+
+    This workflow is not currently validated. Configure and animate displays in their owning project; repair and save that source before reloading its library in the destination. Recovery does not directly edit source-linked modifiers. Lite testing showed input-type errors after library reload; restarting cleared the observed error but is not a guaranteed fix or a confirmed Pro defect. Linked-object still and animation rendering remain unverified. See [linking limitations](troubleshooting.md#linking-displays-from-another-project).
 
 ??? question "Can I share my .blend file with someone who doesn't own the add-on?"
 

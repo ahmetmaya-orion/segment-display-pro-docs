@@ -1,19 +1,37 @@
 
 ## The Asset File
 
-When you add a segment display object to the scene via the N-Panel interface, the Segment Display asset blend file appears in Outliner > Blender File as linked. No matter how many segment display objects you have in the scene, they all share the same single linked asset data. 
+Displays use the .blend asset linked from the add-on's `assets` folder. Multiple displays, including those in other scenes, can share the same library. Do not delete that library from **Outliner > Blender File** as a repair or cleanup shortcut. Only purge unused data after you no longer need the displays and their dependencies.
 
-!!! warning "Do not delete the linked blend file directly from the Outliner!"
-    Doing so will cause you to lose all your object settings. If you need to clean up your project file, make sure there are no segment display objects remaining in the scene, then use Blender > Purge Unused Data — this will automatically remove the asset file from the current blend file.
+:material-tag-outline: **Pro v1.0.1 and later**
 
-If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
+### Displays appear as planes / Asset Not Available
+
+**Do not panic or edit the Modifiers panel.** Planes after launch, together with **Not Available**, **Asset file info not loaded** and **Asset Version: Unknown**, can mean the installed asset is missing, damaged or outside its expected location. The messages do not by themselves mean your stored settings are lost.
+
+1. Preserve a project copy; leave modifiers, node-tree assignments and recognition properties untouched.
+2. Reinstall the complete matching Pro ZIP and restart Blender.
+3. Reopen and inspect the project. Displays often return automatically; if they are correct, no recovery operation is needed.
+4. If supported connection issues remain, use **Preferences > Add-ons > Segment Display Pro > Asset Status > Review & Recover…** once the installed asset is available. Review repairs, inspect the result and save.
+
+The recovery button may be disabled while the installed asset is unavailable. **Available** only confirms the installed asset can be found, not that every project connection is healthy. For **Unknown** version information or known asset/add-on version mismatches, restart after updating first; if the issue persists, reinstall the complete matching package. A known mismatch can block **Add Segment Display**. Do not mix asset/script versions, edit the asset or change licensing to bypass the check.
+
+### Recovery limits and lost settings
+
+Reconnecting a library restores displays using settings and animation still present. **Restore Node Tree** assigns the tree to an existing supported modifier; it cannot restore settings or animation already deleted by removing the assignment in the Geometry Nodes panel. Removing the asset through **Outliner > Blender File** can leave recoverable settings, but is not a recommended repair method.
+
+**Recreate Missing Modifier (Defaults)** is opt-in and adds a new modifier at the end of the stack. It does not restore deleted settings, animation or the original stack position. In v1.0.1, the deleted-settings warning is not yet shown under Restore Node Tree; its absence does not guarantee recovery. See the [full walkthrough](prefs_and_settings.md#review-recover).
+
+### Blender temporarily stops responding
+
+Blender may pause while recovery relocates and reloads an asset library pointing outside the current installation. Allow it to finish; a temporary not-responding message does not necessarily mean a crash. Duration varies. This operation involves Blender's library handling, not solely add-on processing; its precise bottleneck and whether pauses are limited to relocation have not been established.
+
+### Asset safety
 
 !!! warning "Do not open or modify the asset file!"
-    The add-on includes a .blend asset file. The add-on **links** to this file (it doesn't append it), so it has to stay exactly as shipped. Do not open, edit, re-save, rename or move it. Even opening and saving it in Blender without changing anything can break the add-on.
+    Do not open, modify, re-save, rename or move the shipped .blend asset. Re-saving changes its byte-level fingerprint even if it looks unchanged. Reinstall the original complete ZIP if the file was altered. This is asset-safety guidance, not a claim that installed files are read-only or that an in-add-on runtime hash check protects them.
 
-    **Why this matters for support:** every shipped asset file has its own unique ID (a digital fingerprint) that we use to check it's the original. Opening or re-saving the file, even without changing anything, breaks that ID. Think of it like a laptop warranty: once you open the case, it's no longer covered. If the asset file has been modified, we can't provide support until you reinstall the add-on from the original ZIP.
-
-    If displays start acting strange or won't load, uninstall the add-on and reinstall it from the original ZIP.
+**Lite users:** Lite recovery differs and is not covered in this Pro manual.
 
 ---
 
@@ -27,6 +45,18 @@ The object settings will only appear if a Segment Display object is active or se
 
 !!! info "Important"
     Each edition can only control objects created with that edition. SegDisp Pro cannot control SegDisp Lite objects, and SegDisp Lite cannot control SegDisp Pro objects. Use the matching add-on's N-panel to adjust each object.
+
+### Pro recognition properties and modifiers
+
+Local Pro objects can contain `segdisp_type`, `segdisp_schema`, `segdisp_edition` and `segdisp_modifier`. These are recognition/recovery metadata, not display inputs or the asset file's fingerprint. **Do not change/delete them or manually rename/delete the display modifier.**
+
+An object can be recognized while its empty modifier remains ambiguous. Names such as **GeometryNodes** are not proof of a SegDisp modifier. If the remembered modifier name no longer matches, select the correct target only if you recognize it in **Needs Review**; otherwise leave it unchecked. An exact remembered match can still identify a generically named modifier. See [Needs Review](prefs_and_settings.md#needs-review).
+
+### Linking displays from another project
+
+Linking SegDisp objects from another project is not currently a validated workflow. Configure and animate displays in their owning project. Changes saved there do not live-update an already open destination; reload the source library after repairing and saving the source.
+
+Lite testing showed modifier input-type errors after a source-library reload. Restarting Blender cleared the observed error, but is not a guaranteed fix or a confirmed Pro defect. Neither still nor animated rendering through this nested-link workflow has been validated. Recovery does not directly edit source-linked modifiers, although reconnecting a shared asset library can affect linked displays visually.
 
 ---
 
@@ -137,4 +167,5 @@ Linking or re-importing the display asset from a library.
 To resolve: Simply save and restart Blender, or open a fresh file. Since the add-on's functionality is not affected, you can safely ignore these messages during your workflow.
 
 <a href="https://projects.blender.org/blender/blender/issues/154517" target="_blank" rel="noopener">See the current issue on Blender Developer</a>
+
 
