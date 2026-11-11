@@ -32,7 +32,7 @@ Deactivate: Removes the license activation from the current device, freeing up a
 
      In v1.0.1, the recovery dialog displays the deleted-settings warning for missing-modifier recreation, but not for **Restore Node Tree**. The absence of that warning in the Restore Node Tree section does not mean deleted settings or animations can be recovered.
 
-![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/prefs_asset_stats.jpg){ align=right width="550" }
+![Asset Status](assets/images/preferences/v1.0.0/prefs_asset_stats.jpg){ align=right width="550" }
 
 The Asset Status section monitors the connection between the add-on and its asset .blend file. On each Blender launch, the add-on checks whether the asset file is available in the segment_display/assets directory.
 
