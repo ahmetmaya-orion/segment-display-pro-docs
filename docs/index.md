@@ -3,7 +3,7 @@
 *User manual for **SegDisp v1.0.x** · Compatible with Blender 5.1 (minimum 5.1.1).*
 
 !!! note "Note for Lite edition users:" 
-     The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
+     The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. **Exception: Lite's asset recovery procedure differs from Pro's and is not covered in this manual.** The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
 
 ## Overview
 
