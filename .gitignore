@@ -12,3 +12,5 @@ materials
 # Affinity
 *.af
 *.af~lock~
+*.blend
+*.blend1
