@@ -151,13 +151,18 @@ Activation limits per license key: **Pro: 3 activation seats; Lite: 1 activation
 
 ## Updating the Add-on
 
-1. No need to remove the old version. Install the new ZIP right over it (see [Installation](#installation) above) with **"Target Path"** set to **"Default"** and **"Overwrite"** ticked, then restart Blender.
-2. Your license stays activated, no need to reactivate. The license file is stored outside the add-on folder (see [Activation/Deactivation](#activationdeactivation) above), so updates don't touch it.
-3. Open your project. Your Segment Display objects are restored with the updated asset, and your current add-on panel settings are kept.
-4. Objects didn't come back after restarting Blender? Go to **Edit** → **Preferences** → **Add-ons**, expand **"Segment Display Pro"**, and click **"Re-link Asset"** in the **"Asset Status"** section.
+:material-tag-outline: **Pro v1.0.1 and later**
 
-!!! info "Re-link Asset only works within the same Blender version"
-    If the new version of the add-on requires a newer version of Blender, you will be notified. Blender keeps add-ons in a separate folder for each version, so the asset file path changes when you switch Blender versions.
+1. Save a backup copy of your project before updating or repairing connections.
+2. Install the complete new ZIP over the existing add-on with **Target Path: Default** and **Overwrite** enabled. No uninstall is needed. Your activation file is outside the add-on folder, so reinstalling does not normally require reactivation.
+3. **Restart Blender**, reopen your project and inspect the displays, settings and animation. Reinstalling and restarting often restores displays automatically; if everything is correct, no manual recovery is needed.
+4. If Asset Status shows **Not Available**, reinstall the matching complete package to restore the shipped asset in the add-on's `assets` folder, then restart again. Do not delete modifiers or remove node-tree assignments to fix this state.
+5. If supported connection issues remain while the installed asset is available, open **Edit > Preferences > Add-ons > Segment Display Pro > Asset Status > Review & Recover…**. Review the proposed actions, recover, inspect the result and save the project. See [the recovery walkthrough](prefs_and_settings.md#review-recover).
+
+Reconnection uses settings and animation still present in your project. It cannot restore data already deleted by removing a modifier or node-tree assignment. **Lite recovery differs and is not covered in this Pro manual.**
+
+!!! info "Changing Blender versions"
+    Blender keeps installations in version-specific folders, so changing Blender versions can change asset paths. Install a matching, supported package in the target Blender version and restart before checking the project. Recovery is not a guarantee of compatibility with an untested Blender version.
 
 !!! warning "Custom add-on directories are not tested"
     If you installed the add-on into a custom Target Path or Script Directory, updating may not work properly. Use the default add-on folder.
@@ -168,4 +173,4 @@ Activation limits per license key: **Pro: 3 activation seats; Lite: 1 activation
     If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender does not allow add-ons to prevent or intercept the uninstall action. If you accidentally uninstall without deactivating, you can manage your activation seats yourself by logging into the <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy customer portal</a> with your purchase email. Under your order's license key details, you can view all active devices and deactivate any instance to free up a seat. If you need help with this, please reach out to our support email for guidance.
 
 !!! info "Accidentally Uninstalled the Add-on Mid-Project?"
-    If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
+    Displays can appear as planes because the linked asset is unavailable; this does not by itself mean their stored settings are lost. Preserve the project and leave its modifiers untouched. Reinstall the complete matching add-on, restart Blender and check the project first. Displays often return without manual recovery. If supported issues remain, use Pro **Review & Recover…** once the asset is available. Inspect settings and animation before saving; deleted data cannot be guaranteed recoverable. See [Review & Recover](prefs_and_settings.md#review-recover).
