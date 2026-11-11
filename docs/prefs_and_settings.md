@@ -23,6 +23,15 @@ Deactivate: Removes the license activation from the current device, freeing up a
 
 ## Asset Status Panel
 
+:material-tag-outline: **Pro v1.0.1**
+
+!!! warning "Restore Node Tree: deleted settings are not restored"
+     Restoring a node-tree assignment does not restore input settings or animations that were deleted when the node tree was removed from the Geometry Nodes panel. **Deleted input settings and animations are not restored.** Save a copy of your project before recovery, then inspect the recovered display and its animation before saving the result.
+
+     This differs from deleting the asset through **Outliner > Blender File**: in that case, retained settings can be recovered. Whether settings survive depends on what was removed and what data remains in the project; do not deliberately delete the asset as a recovery step.
+
+     In v1.0.1, the recovery dialog displays the deleted-settings warning for missing-modifier recreation, but not for **Restore Node Tree**. The absence of that warning in the Restore Node Tree section does not mean deleted settings or animations can be recovered.
+
 ![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/prefs_asset_stats.jpg){ align=right width="550" }
 
 The Asset Status section monitors the connection between the add-on and its asset .blend file. On each Blender launch, the add-on checks whether the asset file is available in the segment_display/assets directory.
@@ -63,7 +72,7 @@ Below the Re-link button, grayed-out text displays the current asset status:
 You can also verify the linked asset file from Blender's Outliner area using the Blender File display mode. Filtering by the Node Tree data type makes it easier to identify.
 
 !!! warning "Do not manually remove the asset file from the Outliner"
-     As doing so will cause you to lose your current Segment Display object settings and Geometry Nodes Modifier configuration.
+     Removing the asset can break your displays. Retained settings may be recoverable, but recovery is not a substitute for a project backup. Removing the node tree from the Geometry Nodes panel is a different case: deleted input settings and animations are not restored by Restore Node Tree. See the Pro v1.0.1 warning above.
 
 ## Addon N-panel Settings
 ### Time Synchronization
