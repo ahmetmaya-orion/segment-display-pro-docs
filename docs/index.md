@@ -11,8 +11,6 @@ Segment Display Pro is a Blender add-on that lets you create, customize, and ani
 
 Whether you're building digital clocks, calculators, speedometers, control panels, scoreboards, or price tags, the add-on handles the full pipeline: from generating the display geometry to controlling individual characters, styles, colors, and animations, all from a dedicated N-panel interface without any manual modeling.
 
-
-
 ## Getting Started
 
 - [Introduction](introduction.md) — What Segment Display Pro is and what it can do
