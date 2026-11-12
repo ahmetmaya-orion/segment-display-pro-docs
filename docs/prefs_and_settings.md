@@ -125,7 +125,11 @@ The recovery button can remain disabled until the installed asset is available. 
 
 You can inspect the linked library in **Outliner > Blender File**. Do not remove it as a cleanup or recovery shortcut. Do not open, modify, re-save, rename or move the shipped asset file; reinstall the original ZIP if it was altered.
 
-## About
+## About Panel
+
+
+![About Panel](assets\images\preferences\v1.0.1\pref_about_panel.png)
+
 
 :material-tag-outline: **v1.0.1 and later**
 
@@ -149,7 +153,7 @@ Click **Check for Updates** to request a check. The add-on also checks automatic
 - **Checking… / Checking for updates...:** A request is running. Wait for it to finish; repeat checks are disabled while it runs.
 - **You're using the latest version.:** The check found no newer release.
 - **Update available: v…:** A newer release was found. Check for Updates is disabled while a confirmed downloadable update is already available; use **Open Downloads** instead.
-- **Couldn't check for updates. Try again.:** The request failed. Check your connection and online-access permission, then retry. A previous successful result may remain visible as **Previous result**; it is not a fresh check.
+- **Couldn't check for updates. Try again.:** The request failed. Check your connection and Blender online-access permission, then retry. A previous successful result may remain visible as **Previous result**; it is not a fresh check.
 
 **Open Downloads** opens the release download page in your browser; it does not download or install the add-on or restart Blender. An activated license is required to use this button. If a **Before you update** dialog appears, read its release notice before continuing. Install the downloaded ZIP yourself and restart Blender. See [Updating the Add-on](installation.md#updating-the-add-on).
 
