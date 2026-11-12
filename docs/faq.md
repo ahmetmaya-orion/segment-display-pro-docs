@@ -26,7 +26,9 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
 ??? question "Which Blender versions are supported?"
     
-    Segment Display Pro v1.0.0 is built for Blender 5.1, with Blender 5.1.1 as the minimum version. It runs on Windows, macOS and Linux, and works with both the Cycles and EEVEE render engines. If a future add-on update needs a newer Blender version, the add-on will notify you. See the [Installation & Activation](installation.md#requirements) page for the full system requirements.
+    :material-tag-outline: **v1.0.1 and later**
+
+    SegDisp v1.0.1 has been tested with **Blender 5.1.2**, the recommended version for this release. The declared minimum is **Blender 5.1.1**, but v1.0.1 has not yet been re-tested on that version. Newer Blender versions are not confirmed as supported yet. The add-on runs on Windows, macOS and Linux (tested on Windows 11 only), and works with both the Cycles and EEVEE render engines. If a future add-on update needs a newer Blender version, the add-on will notify you. See the [Installation & Activation](installation.md#requirements) page for the full system requirements.
 
 
 ??? question "How do I update the add-on without losing my activation?"
