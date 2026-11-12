@@ -51,7 +51,7 @@ The object settings will only appear if a Segment Display object is active or se
 ### Pro recognition properties and modifiers
 
 
-![SegDisp Object Properties](assets\images\object_settings\v1.0.0\segdisp_object_properties.png){ align=right width="350" }
+![SegDisp Object Properties](assets\images\object_settings\v1.0.0\segdisp_object_properties_v1.png){ align=right width="350" }
 
 
 Local Pro objects can contain `segdisp_type`, `segdisp_schema`, `segdisp_edition` and `segdisp_modifier`. These are recognition/recovery metadata, not display inputs or the asset file's fingerprint. **Do not change/delete them or manually rename/delete the display modifier.**
