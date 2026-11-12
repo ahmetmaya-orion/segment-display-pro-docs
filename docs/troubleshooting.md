@@ -138,7 +138,7 @@ The Solid Viewport Preview feature may not display correctly in certain conditio
 With some of the Matcap lighting methods in the 3D Viewport's solid shading mode.
 If Snap Guides are enabled (this is handled internally with a state toggle).
 
-If your Segment Display object looks glitchy from a distance when Solid Viewport Preview is enabled, increase the Clip Start value (near clipping distance) in the Blender N-Panel View options. The add-on also makes a slight adjustment to the LED Base to prevent this geometry face clipping issue. The temporary LED Base adjustment applies exclusivelyively to the Solid Viewport Preview and will not appear in still image or animation renders.
+If your Segment Display object looks glitchy from a distance when Solid Viewport Preview is enabled, increase the Clip Start value (near clipping distance) in the Blender N-Panel View options. The add-on also makes a slight adjustment to the LED Base to prevent this geometry face clipping issue. The temporary LED Base adjustment applies exclusively to the Solid Viewport Preview and will not appear in still image or animation renders.
 
 For more details on this feature, see the  [Viewport & Overlays page](viewport_overlays.md#viewport-solid-preview)
 
