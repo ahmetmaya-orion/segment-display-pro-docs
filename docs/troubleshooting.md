@@ -56,6 +56,8 @@ The object settings will only appear if a Segment Display object is active or se
 
 Local Pro objects can contain `segdisp_type`, `segdisp_schema`, `segdisp_edition` and `segdisp_modifier`. These are recognition/recovery metadata, not display inputs or the asset file's fingerprint. **Do not change/delete them or manually rename/delete the display modifier.**
 
+**Where to review these IDs:** Select the SegDisp Pro object in the 3D Viewport, press **N** to open the sidebar, then open **Item > Properties** to inspect its `segdisp_*` custom properties. Review them without changing or deleting their values.
+
 **Why these IDs matter:** Review & Recover uses these properties to recognize a SegDisp Pro object and help determine which repairs are safe, especially when its asset-tree assignment or modifier is missing. `segdisp_type` and `segdisp_edition` identify the object as a Pro display, `segdisp_schema` records the recognition-data format, and `segdisp_modifier` remembers the display modifier's name. Changing or deleting them can prevent confident identification, send an object to **Needs Review**, or make supported recovery unavailable. They do not store a backup of your input settings or animation, so keeping them intact does not restore data that has already been deleted.
 
 An object can be recognized while its empty modifier remains ambiguous. Names such as **GeometryNodes** are not proof of a SegDisp modifier. If the remembered modifier name no longer matches, select the correct target only if you recognize it in **Needs Review**; otherwise leave it unchecked. An exact remembered match can still identify a generically named modifier. See [Needs Review](prefs_and_settings.md#needs-review).
