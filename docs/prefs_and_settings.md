@@ -125,6 +125,23 @@ The recovery button can remain disabled until the installed asset is available. 
 
 You can inspect the linked library in **Outliner > Blender File**. Do not remove it as a cleanup or recovery shortcut. Do not open, modify, re-save, rename or move the shipped asset file; reinstall the original ZIP if it was altered.
 
+## Resources & Support
+
+The **Resources & Support** box in the add-on preferences collects quick links to help and account pages. Each link opens in your web browser unless noted otherwise.
+
+- **Documentation Home:** Opens this manual.
+- **Activation/Deactivation:** Opens the [activation steps](installation.md#activationdeactivation).
+- **Get Started:** Opens the [Introduction](introduction.md).
+- **User Guide:** Opens the Input Categories pages, starting with [Numbers](in_cat_numbers.md).
+- **Troubleshooting:** Opens the [Troubleshooting](troubleshooting.md) page.
+- **Orion November Studio:** Opens the studio website.
+- **SegDisp Pro Overview Video:** Opens the add-on overview video on YouTube.
+- **Email Support:** :material-tag-outline: **Pro v1.0.1 and later.** Opens your default email app with a new message to **support@orionnovemberstudio.com**. If nothing opens, your computer has no default email app set up; send your message to that address from any email account.
+- **Manage My Orders:** Opens your Lemon Squeezy order dashboard, where you can find your license key and manage your activations.
+
+!!! info "Contacting support"
+    Include your Blender version, operating system and add-on version (shown in [About](#about-panel)) so we can help you faster.
+
 ## About Panel
 
 
