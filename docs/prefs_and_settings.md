@@ -30,7 +30,7 @@ Deactivate: Removes the license activation from the current device, freeing up a
 Your displays use a linked asset file supplied with the add-on. **Review & Recover…** checks supported connections and lets you review repairs before applying them. Open **Edit > Preferences > Add-ons > Segment Display Pro > Asset Status**.
 
 
-![Review & Recover - Disp needs re-link](assets\images\preferences\v1.0.1\r&r_disp_needs_relink.png)
+![Review & Recover - Disp needs re-link](assets\images\preferences\v1.0.1\r&r_disp_needs_relink.png){ align=right width="550" }
 
 
 **Available** means the installed asset file can be found, not that every display in your project is connected correctly. A separate message can report displays needing re-linking or toggle inputs needing repair. The asset name and **Asset Version** identify the installed asset.
@@ -178,13 +178,17 @@ Update checks require internet access and **Preferences > System > Network > All
 
 ### N-panel update notifications
 
+
+![Update Available Not.](assets\images\preferences\v1.0.1\pref_update_available_not.png){ align=right width="350" }
+
+
 An automatic check can show **Update Available** at the top of the N-panel. **Dismiss** asks whether to hide these header notices. You can change the same preference under **Edit > Preferences > Add-ons > Segment Display Pro > N-panel Options > Hide "Update Available" Notifications on the N-Panel Header**.
 
 This hides only the N-panel header update notice. Update information remains available in About and Preferences; license and asset-status warnings are not hidden.
 
 The notification preference is saved in `addon_userpref.json` beside the activation file, outside the installed add-on folder, so it can survive normal updates and reinstalls. **In v1.0.1, this file stores only the header update-notice preference, not all add-on preferences or per-object display settings.** Change it through Blender rather than editing the file manually. See [The License File](installation.md#the-license-file) for the Pro storage directory; the preference file is separate from the activation file and does not activate the add-on.
 
-## Addon N-panel Settings
+## Addon N-panel Settings {: .clear }
 ### Time Synchronization
 
 Time Synchronization syncs the Clock and Timer display values to Blender's timeline, matching the add-on's FPS with the scene FPS so the displayed time updates accurately as the animation plays.
