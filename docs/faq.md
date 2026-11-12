@@ -33,6 +33,12 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
     Install the complete matching ZIP over the old version with Target Path set to Default and Overwrite enabled, then restart Blender. Your activation file is outside the add-on folder. Reopen and inspect your project first: displays often return automatically. For Pro v1.0.1 and later, use **Review & Recover…** only if supported issues remain after the installed asset is available. See [Updating the Add-on](installation.md#updating-the-add-on).
 
+??? question "Does Check for Updates install the update?"
+
+    :material-tag-outline: **v1.0.1 and later**
+
+    No. **Check for Updates** only checks whether a newer version is available. If there is one, **Open Downloads** opens the download page in your browser. Nothing is downloaded, installed or restarted for you. Download the new ZIP, install it over your current version, then restart Blender. See [Add-on Update](prefs_and_settings.md#add-on-update) and [Updating the Add-on](installation.md#updating-the-add-on).
+
 ??? question "How do I repair displays after an update or reinstall?"
 
     :material-tag-outline: **Pro v1.0.1 and later**
