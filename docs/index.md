@@ -4,6 +4,10 @@
 
 :material-tag-outline: **Patch-specific instructions:** A tag icon followed by a version label identifies instructions that apply only to the stated patch version or version range (for example, **v1.0.1 only** or **v1.0.1 and later**).
 
+!!! info "Blender Compatibility"
+    SegDisp v1.0.1 has been tested with **Blender 5.1.2**, the recommended version for this release.
+    The declared minimum requirement remains **Blender 5.1.1**, but v1.0.1 has not yet been re-tested on that version.
+
 !!! note "Note for Lite edition users:" 
      The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. **Exception: Lite's asset recovery procedure differs from Pro's and is not covered in this manual.** The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
 
