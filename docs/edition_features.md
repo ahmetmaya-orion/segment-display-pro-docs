@@ -53,14 +53,18 @@ A side-by-side look at what ships in **Segment Display Pro** and **Segment Displ
 
 :material-tag-outline: **v1.0.1 and later**
 
-| Capability | LITE | PRO |
-| ---------- | ---- | --- |
-| Recovery interface | Simplified Re-link Asset | Review & Recover preview |
-| Supported library reconnection | Limited project-wide Re-link | Selectable library reconnection across scenes |
-| Supported missing node-tree assignments | Limited identification-based recovery | Restore Node Tree; ambiguous targets require review |
-| Recreate a deleted modifier | Not supported | Opt-in for qualifying marked objects, using defaults |
-| Saved-project backup option in recovery dialog | No Pro recovery dialog | Available; requested backup failure cancels recovery |
-| Numeric-toggle input repair | No Pro selectable repair preview | Supported toggle repair retaining on/off values |
-| Direct repair of source-linked modifiers | No | No |
+| What you can do | LITE | PRO |
+| --------------- | ---- | --- |
+| Recovery tool | Simple **Re-link Asset** button | **Review & Recover** panel that previews every fix |
+| Reconnect the asset file | Re-links the whole project in one go | You pick which library to reconnect, across all scenes |
+| Reconnect a display's missing node setup | Basic: only displays it can recognize | **Restore Node Tree**; asks you to confirm when it isn't sure which modifier to fix |
+| Rebuild a deleted SegDisp modifier | No | Optional, only for SegDisp objects, rebuilt with default settings |
+| Back up your project before recovery | No (Lite has no recovery dialog) | Yes; if the backup fails, recovery stops and nothing changes |
+| Fix on/off switches that turned into number fields | No | Yes, and it keeps your on/off choices |
+| Fix displays linked from another .blend file | No | No (fix them in the original file) |
 
-Reconnection uses data still present; deleted settings and animation are not restored by assigning a tree or creating a default modifier. Reinstalling the matching add-on and restarting Blender may restore displays without manual recovery. Lite's recovery procedure is not covered in this manual. See [Pro Review & Recover](prefs_and_settings.md#review-recover).
+Recovery only reconnects what's still in your file. It can't bring back deleted settings or animation.
+
+**Tip:** Reinstalling the matching add-on version and restarting Blender often fixes displays without any recovery.
+
+Lite's recovery steps aren't covered in this manual. See [Pro Review & Recover](prefs_and_settings.md#review-recover).
