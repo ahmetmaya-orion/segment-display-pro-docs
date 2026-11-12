@@ -65,10 +65,13 @@ The add-on ships with the asset blend file already included in the zip package. 
 ![Installation (Drag & Drop)](assets/images/preferences/v1.0.0/installation_drag_drop.jpg){ align=right width="500" }
 
 1. You can also install the add-on by dragging its ZIP file directly into Blender instead of opening Preferences first.
-2. Drag the Segment Display Pro ZIP file from your computer’s file manager onto the Blender window. You do not need to drop it in a specific editor or area.
+2. Drag the Segment Display Pro ZIP file from your computer’s file manager onto the Blender window. You do not need to drop it in a specific editor or area. Do not extract it first.
 3. In the Install from Disk popup, leave Target set to Default.
 4. Make sure Overwrite and Enable on Install are checked, then click OK.
-5. Restart Blender after installation to refresh the asset file.
+5. Check that **"Segment Display Pro"** is enabled in **Edit** → **Preferences** → **Add-ons** (checkbox ticked).
+6. Restart Blender after installation to refresh the asset file.
+
+Dropping the ZIP doesn't open the install popup? Use [Install from Disk...](#from-the-preferences-panel) instead.
 
 After enabling, the add-on appears in the 3D Viewport sidebar under the
 **SegDisp Pro** tab.
@@ -130,6 +133,15 @@ Your activation is saved in a small license file (**sdp_activation.lic**) outsid
 - macOS: `~/Library/Application Support/OrionNovember.Studio/SegmentDisplay_Pro/`
 - Linux: `~/.local/state/OrionNovember.Studio/SegmentDisplay_Pro/` (or `$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Pro/` if set)
 
+!!! info "For Lite users"
+    Lite saves its activation in **sdl_activation.lic**, in its own folder:
+
+    - Windows: `%LOCALAPPDATA%\OrionNovember.Studio\SegmentDisplay_Lite\`
+    - macOS: `~/Library/Application Support/OrionNovember.Studio/SegmentDisplay_Lite/`
+    - Linux: `~/.local/state/OrionNovember.Studio/SegmentDisplay_Lite/` (or `$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Lite/` if set)
+
+    The same rules below apply to the Lite file.
+
 !!! warning "Do not edit, move or copy the license file"
     Don't edit or move this file, and don't copy it to another computer. The license file is tied to the computer it was activated on, so a copied file will not unlock the add-on on any other machine. Every new or additional computer must be activated on its own by entering your license key in the add-on preferences, and each activation uses one seat of your activation limit. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
 
@@ -154,7 +166,7 @@ Activation limits per license key: **Pro: 3 activation seats; Lite: 1 activation
 :material-tag-outline: **Pro v1.0.1 and later**
 
 1. Save a backup copy of your project before updating or repairing connections.
-2. Install the complete new ZIP over the existing add-on with **Target Path: Default** and **Overwrite** enabled. No uninstall is needed. Your activation file is outside the add-on folder, so reinstalling does not normally require reactivation.
+2. Install the complete new ZIP over the existing add-on with **Target Path: Default** and **Overwrite** enabled. No uninstall is needed. Dragging the new ZIP into Blender also works (see [Drag & Drop the ZIP](#drag-drop-the-zip-optional)). Your activation file is outside the add-on folder, so reinstalling does not normally require reactivation.
 3. **Restart Blender**, reopen your project and inspect the displays, settings and animation. Reinstalling and restarting often restores displays automatically; if everything is correct, no manual recovery is needed.
 4. If Asset Status shows **Not Available**, reinstall the matching complete package to restore the shipped asset in the add-on's `assets` folder, then restart again. Do not delete modifiers or remove node-tree assignments to fix this state.
 5. If supported connection issues remain while the installed asset is available, open **Edit > Preferences > Add-ons > Segment Display Pro > Asset Status > Review & Recover…**. Review the proposed actions, recover, inspect the result and save the project. See [the recovery walkthrough](prefs_and_settings.md#review-recover).
