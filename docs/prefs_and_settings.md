@@ -125,6 +125,44 @@ The recovery button can remain disabled until the installed asset is available. 
 
 You can inspect the linked library in **Outliner > Blender File**. Do not remove it as a cleanup or recovery shortcut. Do not open, modify, re-save, rename or move the shipped asset file; reinstall the original ZIP if it was altered.
 
+## About
+
+:material-tag-outline: **v1.0.1 and later**
+
+About shows your installed product information and update-check results. Open **Edit > Preferences > Add-ons > Segment Display Pro > About**, or expand **About** at the bottom of the **SegDisp Pro** N-panel. The N-panel section starts collapsed; the Preferences section is not collapsible. If the N-panel hides About while an unrelated object is selected, deselect it or use Preferences.
+
+### Add-on Credits
+
+The v1.0.1 interface labels this group **Add-on Credits**.
+
+- **Add-on Version:** The version of the code currently running in Blender.
+- **Assets Version:** The version reported by the installed asset file. **Unknown** means its version information is unavailable, not that the asset is current.
+- **Compatible Blender:** The add-on's declared minimum Blender version, not a list of every tested or recommended version. See [Requirements](installation.md#requirements).
+- **Developer:** The product's developer credit.
+
+**The add-on and asset versions must match.** If you see **Doesn’t match add-on version** or **Restart Blender to finish updating to…**, restart Blender first: replacing installed files does not immediately replace code already loaded in memory. If a mismatch remains after restarting, reinstall the complete matching Pro ZIP. Do not mix script and asset files from different versions or editions. A known mismatch can block adding a display; **Unknown** is not confirmation that the versions match.
+
+### Add-on Update
+
+Click **Check for Updates** to request a check. The add-on also checks automatically at startup; opening About does not itself start another check.
+
+- **Checking… / Checking for updates...:** A request is running. Wait for it to finish; repeat checks are disabled while it runs.
+- **You're using the latest version.:** The check found no newer release.
+- **Update available: v…:** A newer release was found. Check for Updates is disabled while a confirmed downloadable update is already available; use **Open Downloads** instead.
+- **Couldn't check for updates. Try again.:** The request failed. Check your connection and online-access permission, then retry. A previous successful result may remain visible as **Previous result**; it is not a fresh check.
+
+**Open Downloads** opens the release download page in your browser; it does not download or install the add-on or restart Blender. An activated license is required to use this button. If a **Before you update** dialog appears, read its release notice before continuing. Install the downloaded ZIP yourself and restart Blender. See [Updating the Add-on](installation.md#updating-the-add-on).
+
+Update checks require internet access and **Preferences > System > Network > Allow Online Access**. If Blender was launched with `--offline-mode`, restart without that flag before checking again.
+
+### N-panel update notifications
+
+An automatic check can show **Update Available** at the top of the N-panel. **Dismiss** asks whether to hide these header notices. You can change the same preference under **Edit > Preferences > Add-ons > Segment Display Pro > N-panel Options > Hide "Update Available" Notifications on the N-Panel Header**.
+
+This hides only the N-panel header update notice. Update information remains available in About and Preferences; license and asset-status warnings are not hidden.
+
+The notification preference is saved in `addon_userpref.json` beside the activation file, outside the installed add-on folder, so it can survive normal updates and reinstalls. **In v1.0.1, this file stores only the header update-notice preference, not all add-on preferences or per-object display settings.** Change it through Blender rather than editing the file manually. See [The License File](installation.md#the-license-file) for the Pro storage directory; the preference file is separate from the activation file and does not activate the add-on.
+
 ## Addon N-panel Settings
 ### Time Synchronization
 
