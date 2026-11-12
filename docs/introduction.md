@@ -29,8 +29,10 @@ display geometry stays procedural and adjustable after creation.
 | ----------------- | ------------------------------------------------------------ |
 | Full Name           | Segment Display Pro           |
 | N-panel Label       | SegDisp Pro                   |
-| Add-on version      | 1.0.0                         |
-| Compatible Blender  | 5.1 (Minimum 5.1.1)           |
+| Add-on Version      | 1.0.1                         |
+| Assets Version      | 1.0.1 (must match the add-on version) |
+| Compatible Blender  | 5.1 (Minimum 5.1.1)***        |
+| Developer           | Orion November Studio         |
 | Render Engines      | Eevee, Cycles                 |
 | OS Platforms        | Windows*, Linux, macOS        |
 | Location in UI      | `3D View` → Sidebar (`N`) → **SegDisp Pro** tab   |
@@ -42,6 +44,12 @@ display geometry stays procedural and adjustable after creation.
     * The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
     
     ** File sizes may change over time with future updates.
+
+    *** 5.1.1 is the minimum Blender version the add-on declares. The add-on and its asset file are built for Blender 5.1; newer Blender versions are not confirmed as supported yet.
+
+:material-tag-outline: **v1.0.1 and later**
+
+To see the versions installed on your computer, open **About** in the add-on preferences or at the bottom of the N-panel. See [Add-on Credits](prefs_and_settings.md#add-on-credits).
 
 ## Where to find it in Blender
 
@@ -82,5 +90,6 @@ Preserve a project copy, reinstall the complete matching add-on and restart Blen
 Segment Display Pro is a commercial add-on. It uses license-key activation, so a
 valid key is required to unlock the full feature set. See the [installation and
 Activation](installation.md) pages for details.
+
 
 
