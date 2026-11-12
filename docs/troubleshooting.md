@@ -56,6 +56,8 @@ The object settings will only appear if a Segment Display object is active or se
 
 Local Pro objects can contain `segdisp_type`, `segdisp_schema`, `segdisp_edition` and `segdisp_modifier`. These are recognition/recovery metadata, not display inputs or the asset file's fingerprint. **Do not change/delete them or manually rename/delete the display modifier.**
 
+**Why these IDs matter:** Review & Recover uses these properties to recognize a SegDisp Pro object and help determine which repairs are safe, especially when its asset-tree assignment or modifier is missing. `segdisp_type` and `segdisp_edition` identify the object as a Pro display, `segdisp_schema` records the recognition-data format, and `segdisp_modifier` remembers the display modifier's name. Changing or deleting them can prevent confident identification, send an object to **Needs Review**, or make supported recovery unavailable. They do not store a backup of your input settings or animation, so keeping them intact does not restore data that has already been deleted.
+
 An object can be recognized while its empty modifier remains ambiguous. Names such as **GeometryNodes** are not proof of a SegDisp modifier. If the remembered modifier name no longer matches, select the correct target only if you recognize it in **Needs Review**; otherwise leave it unchecked. An exact remembered match can still identify a generically named modifier. See [Needs Review](prefs_and_settings.md#needs-review).
 
 ### Linking displays from another project {: .clear }
@@ -136,7 +138,7 @@ The Solid Viewport Preview feature may not display correctly in certain conditio
 With some of the Matcap lighting methods in the 3D Viewport's solid shading mode.
 If Snap Guides are enabled (this is handled internally with a state toggle).
 
-If your Segment Display object looks glitchy from a distance when Solid Viewport Preview is enabled, increase the Clip Start value (near clipping distance) in the Blender N-Panel View options. The add-on also makes a slight adjustment to the LED Base to prevent this geometry face clipping issue. The temporary LED Base adjustment applies exclusively to the Solid Viewport Preview and will not appear in still image or animation renders.
+If your Segment Display object looks glitchy from a distance when Solid Viewport Preview is enabled, increase the Clip Start value (near clipping distance) in the Blender N-Panel View options. The add-on also makes a slight adjustment to the LED Base to prevent this geometry face clipping issue. The temporary LED Base adjustment applies exclusivelyively to the Solid Viewport Preview and will not appear in still image or animation renders.
 
 For more details on this feature, see the  [Viewport & Overlays page](viewport_overlays.md#viewport-solid-preview)
 
