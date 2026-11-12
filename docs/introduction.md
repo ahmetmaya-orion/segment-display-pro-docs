@@ -31,21 +31,21 @@ display geometry stays procedural and adjustable after creation.
 | N-panel Label       | SegDisp Pro                   |
 | Add-on Version      | 1.0.1                         |
 | Assets Version      | 1.0.1 (must match the add-on version) |
-| Compatible Blender  | 5.1 (Minimum 5.1.1)*          |
+| Compatible Blender  | 5.1 (Minimum 5.1.1)\*         |
 | Developer           | Orion November Studio         |
 | Render Engines      | Eevee, Cycles                 |
-| OS Platforms        | Windows**, Linux, macOS       |
+| OS Platforms        | Windows\*\*, Linux, macOS     |
 | Location in UI      | `3D View` → Sidebar (`N`) → **SegDisp Pro** tab   |
 | Add-on Type/Format  | Legacy/zip                     |
-| Script Size         | 492 – 575 KB***                |
-| Asset Size          | 170 – 200 MB***                |
+| Script Size         | 492 – 575 KB\*\*\*             |
+| Asset Size          | 170 – 200 MB\*\*\*             |
 
 !!! info "Important"
-    [*] 5.1.1 is the minimum Blender version the add-on declares. SegDisp v1.0.1 has been tested with **Blender 5.1.2**, the recommended version for this release, but has not yet been re-tested on 5.1.1. Newer Blender versions are not confirmed as supported yet.
+    [\*] 5.1.1 is the minimum Blender version the add-on declares. SegDisp v1.0.1 has been tested with **Blender 5.1.2**, the recommended version for this release, but has not yet been re-tested on 5.1.1. Newer Blender versions are not confirmed as supported yet.
 
-    [**] The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
+    [\*\*] The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
     
-    [***] File sizes may change over time with future updates.
+    [\*\*\*] File sizes may change over time with future updates.
 
 :material-tag-outline: **v1.0.1 and later**
 
