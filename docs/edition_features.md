@@ -24,30 +24,30 @@ A side-by-side look at what ships in **Segment Display Pro** and **Segment Displ
 | Clock Animation | Auto (Scene Time) | Auto / Manual \| Time Direction |
 | Timer Options | ✕ | ✓ |
 | Date Format | ✓ | ✓ |
-| Date - Month Format | ✕ \* | ✓ |
+| Date - Month Format | ✕ ¹ | ✓ |
 | Date - Year Format | ✓ | ✓ |
 | **ALPHANUMERIC** | | |
 | Display Count | Single | Up to 3 |
 | Display Length | 6 | 16 |
 | Input Align | ✓ | ✓ |
 | Input Options | Single Input | Single / Multi (Presets) Input |
-| Separators In Between \*\* | Characters | Characters / Displays |
+| Separators In Between ² | Characters | Characters / Displays |
 | **SEPARATORS** | | |
 | Characters | 3 | 7 |
 | Shapes | 2 | 5 |
 | Shape Options | Limited | Full |
-| Separators In Between \*\* | Characters | Characters / Displays |
+| Separators In Between ² | Characters | Characters / Displays |
 | **DISPLAY** | | |
 | Segment Display Models | 7-Segment | 7 / 16 Segment |
-| Model Styles | Single | Single \*\*\* |
+| Model Styles | Single | Single ³ |
 | Segment Fonts | Numbers Only | Numbers & Alphabet |
 | Appearances | ✓ | ✓ |
 
-**\*** Month format: Numbers or alphanumeric. The alphanumeric format is only compatible with the 16-segment display model, which is only included in the Pro version.
+¹ Month format: Numbers or alphanumeric. The alphanumeric format is only compatible with the 16-segment display model, which is only included in the Pro version.
 
-**\*\*** Locate the "Separators" panel. Because of the alphanumeric display count limitation in the Lite version, this feature is only available in Segment Display Pro.
+² Locate the "Separators" panel. Because of the alphanumeric display count limitation in the Lite version, this feature is only available in Segment Display Pro.
 
-**\*\*\*** More styles will be available in future updates for Segment Display Pro.
+³ More styles will be available in future updates for Segment Display Pro.
 
 ## Asset Recovery
 
