@@ -41,11 +41,11 @@ display geometry stays procedural and adjustable after creation.
 | Asset Size          | 170 – 200 MB**                 |
 
 !!! info "Important"
-    * The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
+    [*] The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
     
-    ** File sizes may change over time with future updates.
+    [**] File sizes may change over time with future updates.
 
-    *** 5.1.1 is the minimum Blender version the add-on declares. The add-on and its asset file are built for Blender 5.1; newer Blender versions are not confirmed as supported yet.
+    [***] 5.1.1 is the minimum Blender version the add-on declares. The add-on and its asset file are built for Blender 5.1; newer Blender versions are not confirmed as supported yet.
 
 :material-tag-outline: **v1.0.1 and later**
 
