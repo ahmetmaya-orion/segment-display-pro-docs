@@ -50,11 +50,15 @@ The object settings will only appear if a Segment Display object is active or se
 
 ### Pro recognition properties and modifiers
 
+
+![SegDisp Object Properties](assets\images\object_settings\v1.0.0\segdisp_object_properties.png){ align=right width="350" }
+
+
 Local Pro objects can contain `segdisp_type`, `segdisp_schema`, `segdisp_edition` and `segdisp_modifier`. These are recognition/recovery metadata, not display inputs or the asset file's fingerprint. **Do not change/delete them or manually rename/delete the display modifier.**
 
 An object can be recognized while its empty modifier remains ambiguous. Names such as **GeometryNodes** are not proof of a SegDisp modifier. If the remembered modifier name no longer matches, select the correct target only if you recognize it in **Needs Review**; otherwise leave it unchecked. An exact remembered match can still identify a generically named modifier. See [Needs Review](prefs_and_settings.md#needs-review).
 
-### Linking displays from another project
+### Linking displays from another project {: .clear }
 
 Linking SegDisp objects from another project is not currently a validated workflow. Configure and animate displays in their owning project. Changes saved there do not live-update an already open destination; reload the source library after repairing and saving the source.
 
