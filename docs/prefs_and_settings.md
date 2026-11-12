@@ -29,9 +29,9 @@ Deactivate: Removes the license activation from the current device, freeing up a
 
 Your displays use a linked asset file supplied with the add-on. **Review & Recover…** checks supported connections and lets you review repairs before applying them. Open **Edit > Preferences > Add-ons > Segment Display Pro > Asset Status**.
 
-> **Review & Recover | Image 1**
->
-> Image slot: Asset Status and the display-needs-re-linking message. Filename to be agreed.
+
+![Review & Recover - Disp needs re-link](assets\images\preferences\v1.0.1\r&r_disp_needs_relink.png)
+
 
 **Available** means the installed asset file can be found, not that every display in your project is connected correctly. A separate message can report displays needing re-linking or toggle inputs needing repair. The asset name and **Asset Version** identify the installed asset.
 
@@ -47,9 +47,9 @@ If Asset Status reports **Not Available**, follow [the missing-asset steps](#ass
 
 This section restores the asset-tree assignment on an existing, identified modifier. Review the listed object, scene and modifier before leaving it selected.
 
-> **Review & Recover | Image 2**
->
-> Image slot: Will Recover: Restore Node Tree and the empty Segment Display modifier. Filename to be agreed.
+
+![Restore Node Tree | Empty Modifier](assets\images\preferences\v1.0.1\r&r_restore_node_tree_empty_modifier.png)
+
 
 !!! warning "Deleted settings and animation are not restored"
     Assigning the tree again cannot restore input settings or animation already deleted when you removed the node tree from the Geometry Nodes panel. By contrast, removing the asset through **Outliner > Blender File** can leave settings that recovery can retain. Recovery depends on the data still present; do not deliberately delete the asset as a repair step.
@@ -60,9 +60,9 @@ This section restores the asset-tree assignment on an existing, identified modif
 
 If a recognized, supported Pro object has no Geometry Nodes modifier, recovery can offer to create one. **This option is unchecked by default.** Select it only when you want a replacement using defaults.
 
-> **Review & Recover | Image 3**
->
-> Image slot: Recreate Missing Modifier (Defaults) beside an object with no modifier. Filename to be agreed.
+
+![Review & Recover | Recreate Missing Modifier](assets\images\preferences\v1.0.1\r&r_recreate_missing_modifier.png)
+
 
 The new modifier is added at the end of the stack. **Deleted input settings, animation and the original modifier-stack position are not restored.** Not every object with a missing modifier qualifies for recreation.
 
@@ -70,9 +70,9 @@ The new modifier is added at the end of the stack. **Deleted input settings, ani
 
 These entries are unchecked by default because recovery cannot confidently choose the target. Select only a display you recognize, then choose its correct empty Geometry Nodes modifier from the dropdown.
 
-> **Review & Recover | Image 4**
->
-> Image slot: Needs Review with the GeometryNodes / GeometryNodes.001 dropdown. Filename to be agreed.
+
+![Review & Recover | Needs Review with the GeometryNodes](assets\images\preferences\v1.0.1\r&r_needs_review_restore_geonodes_tree.png)
+
 
 The object's `segdisp_*` properties can identify it as a Pro display without identifying which empty modifier belongs to it. Recovery also checks the remembered modifier name in `segdisp_modifier`. If that name no longer matches, or the target is ambiguous, a generic name such as **GeometryNodes** or **GeometryNodes.001** is not enough to choose safely. A generic name does not always require review: an exact remembered match can still identify the correct modifier.
 
@@ -82,9 +82,9 @@ The object's `segdisp_*` properties can identify it as a Pro display without ide
 
 Use this section when a supported project library link is broken or points to an asset outside the current installation. Check the stored path, installed target and affected displays, then review **Reconnect this library**.
 
-> **Review & Recover | Image 5**
->
-> Image slot: Reconnect Asset Library, stored path and Outliner library reference. Filename to be agreed.
+
+![Review & Recover | Reconnect Asset Library](assets\images\preferences\v1.0.1\r&r_reconnect_asset_library.png)
+
 
 **Reconnecting a library affects every display using it, in every scene.** When the original modifiers and stored settings/animation remain intact, reconnecting restores the displays using that retained data.
 
@@ -105,11 +105,12 @@ Only sections relevant to your project appear. Recovery can be unavailable if th
 4. Read the result, including skipped/failed repairs or settings that could not be restored. Inspect the displays, settings and animation.
 5. **Save your project** to retain successful repairs. Creating a backup does not save the repaired project automatically.
 
+
 #### Asset Not Available
 
-> **Review & Recover | Image 6**
->
-> Image slot: Not Available, Asset file info not loaded and Asset Version: Unknown. Filename to be agreed.
+
+![Asset Status | Not Available](assets\images\preferences\v1.0.1\asset_status_not_available.png)
+
 
 If your displays appear as planes and you see these messages, **do not panic or try to fix the Modifiers panel**. The installed asset may be missing, damaged or outside the expected add-on `assets` location. This does not by itself mean your stored display settings are lost.
 
