@@ -61,8 +61,14 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 
 **[3] Font Alternatives:** Selects alternative font variations for numeric and alphabetic characters.
 
-- **Number Fonts:** Sets the font variation per digit. Only the digits 0, 1, 2, 7, 8, and 9 have alternatives.
+- **Number Fonts:** Sets the font variation per digit. The digit list changes with Font Width and Font Align, because each layout has a different number of segments to work with. Some digits also have more variations than others.
+    - **Wide:** All digits, 0 to 9.
+    - **Narrow + Left:** 2, 5, 6, 7, and 9.
+    - **Narrow + Right:** 1, 2, 4, 5, 6, 7, and 9.
 - **Alphanum Fonts:** Sets the font variation (A, B, or C) for letters. The 3A, 3B, and 3C rows in the image show each variation.
+
+!!! info wrap
+    The UI in the image above is cropped to fit the layout. Your panel may show more rows, depending on the selected Font Width and Font Align.
 
 ---
 
