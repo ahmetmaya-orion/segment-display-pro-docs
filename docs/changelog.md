@@ -14,7 +14,7 @@ A patch release with an About section and manual update checks, a Pro-only Revie
 - **Hide update notifications:** an option to hide the N-panel header update notice. Update information remains available in About and Preferences. The preference is saved in `addon_userpref.json` outside the add-on folder, so it survives normal updates; for now it stores only this preference.
 - **Review & Recover (Pro):** in **Preferences > Asset Status**. Preview supported library reconnections and missing node-tree repairs, review uncertain cases and pick the right modifier, optionally recreate a missing modifier with default settings, back up an already saved project first, and repair toggle inputs stored as numbers while keeping their on/off values. See [Review & Recover](prefs_and_settings.md#review-recover).
 - **Recognition properties:** `segdisp_*` custom properties on Pro objects help recovery recognize displays. See [Pro recognition properties](troubleshooting.md#pro-recognition-properties-and-modifiers).
-- **Email Support:** a new button in Resources & Support that opens your default mail app. See [Resources & Support](prefs_and_settings.md#resources-support).
+- **Email Support:** a new button in Resources & Support that opens your default mail app. See [Resources & Support](prefs_and_settings.md#resources-support-panel).
 
 ### Improved
 
