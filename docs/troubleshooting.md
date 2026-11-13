@@ -16,6 +16,8 @@ Displays use the .blend asset linked from the add-on's `assets` folder. Multiple
 
 The recovery button may be disabled while the installed asset is unavailable. **Available** only confirms the installed asset can be found, not that every project connection is healthy. For **Unknown** version information or known asset/add-on version mismatches, restart after updating first; if the issue persists, reinstall the complete matching package. A known mismatch can block **Add Segment Display**. Do not mix asset/script versions, edit the asset or change licensing to bypass the check.
 
+In About, these cases appear as **Doesn’t match add-on version** next to Assets Version, or **Restart Blender to finish updating to…** after installing an update while Blender is running. See [Add-on Credits](prefs_and_settings.md#add-on-credits).
+
 ### Recovery limits and lost settings
 
 Reconnecting a library restores displays using settings and animation still present. **Restore Node Tree** assigns the tree to an existing supported modifier; it cannot restore settings or animation already deleted by removing the assignment in the Geometry Nodes panel. Removing the asset through **Outliner > Blender File** can leave recoverable settings, but is not a recommended repair method.
@@ -66,7 +68,7 @@ An object can be recognized while its empty modifier remains ambiguous. Names su
 
 Linking SegDisp objects from another project is not currently a validated workflow. Configure and animate displays in their owning project. Changes saved there do not live-update an already open destination; reload the source library after repairing and saving the source.
 
-Lite testing showed modifier input-type errors after a source-library reload. Restarting Blender cleared the observed error, but is not a guaranteed fix or a confirmed Pro defect. Neither still nor animated rendering through this nested-link workflow has been validated. Recovery does not directly edit source-linked modifiers, although reconnecting a shared asset library can affect linked displays visually.
+Lite testing showed modifier input-type errors after a source-library reload (**Property type does not match input socket**, for example on Show Separator Origin Point). Restarting Blender cleared the observed error, but is not a guaranteed fix or a confirmed Pro defect. Neither still nor animated rendering through this nested-link workflow has been validated. Recovery does not directly edit source-linked modifiers, although reconnecting a shared asset library can affect linked displays visually.
 
 ---
 
@@ -177,5 +179,6 @@ Linking or re-importing the display asset from a library.
 To resolve: Simply save and restart Blender, or open a fresh file. Since the add-on's functionality is not affected, you can safely ignore these messages during your workflow.
 
 <a href="https://projects.blender.org/blender/blender/issues/154517" target="_blank" rel="noopener">See the current issue on Blender Developer</a>
+
 
 
