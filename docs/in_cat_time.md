@@ -1,5 +1,5 @@
 
-![Number Precision](assets/images/in_cat_time/_time_header.png){ align=right width="350" }
+![Time Overview](assets/images/in_cat_time/_time_header.png){ align=right width="350" }
 
 ## General Overview 
 
@@ -74,7 +74,7 @@ Perfect for explosive countdowns or intricate chronometers, the Timer feature sp
 
 ## Date {: .clear }
 
-![Time|Timer](assets/images/in_cat_time/date/v1.0.0/time_date_ui.png){ align=right width="350" }
+![Time|Date](assets/images/in_cat_time/date/v1.0.0/time_date_ui.png){ align=right width="350" }
 
 Quickly generate procedural calendar readouts with full formatting control over your display.
 
@@ -88,12 +88,12 @@ Quickly generate procedural calendar readouts with full formatting control over 
 <div class="grid" markdown>
 
 <figure markdown>
-  ![Un-linked Asset](assets/images/in_cat_time/date/v1.0.0/month_format_num.png){ width="400" }
+  ![Numeric month format](assets/images/in_cat_time/date/v1.0.0/month_format_num.png){ width="400" }
   <figcaption>Numeric</figcaption>
 </figure>
 
 <figure markdown>
-  ![Linked Asset](assets/images/in_cat_time/date/v1.0.0/month_format_alphanum.png){ width="400" }
+  ![Alphabetic month format](assets/images/in_cat_time/date/v1.0.0/month_format_alphanum.png){ width="400" }
   <figcaption>Alphabet</figcaption>
 </figure>
 

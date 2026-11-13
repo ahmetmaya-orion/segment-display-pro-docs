@@ -35,7 +35,9 @@ Each character and shape has its own dedicated settings and properties. These op
 
 **[8] Horizontal Position:** Sets the separator's horizontal alignment. Can be centered automatically within the digit spaces or offset based on your preferred value. **Manual Horizontal Offset:** Applies a manual horizontal offset to fine-tune the separator's left/right placement.
 
-**[9] Separator Size:** Scales the overall size of the separator character. There is an additional specific size option for the decimal-side separators **[10]** that allows you to link the separator size to the decimal digit size. Decimal digit size options can be found on the Display page. **Note:** Not available for dash, slash, and line characters since they have their own dedicated size settings.
+**[9] Separator Size:** Scales the overall size of the separator character. **Note:** Not available for dash, slash, and line characters since they have their own dedicated size settings.
+
+**[10] Decimal Separator Size:** An extra size option for the decimal-side separators. It lets you link the separator size to the decimal digit size. Decimal digit size options can be found on the [Display page](display.md#display-align-spacing-and-size).
 
 **[11] Separation Spaces:** Controls the spacing around separators. The same option is labeled "First/Second Separation Spaces" for the Alphanumeric input category. 
 
@@ -72,9 +74,9 @@ See the [Alphanumeric Input page](in_cat_alphanum.md#multi-display-setup) for mo
 
 **[3] Digit Segment Count:** Sets the number of segments used for the segment variation presets.
 
-**[4] Segment Variations:** Sets the number of segments used for the segment variation presets.
+**[4] Segment Variations:** Selects which segment variation preset the separator's digit character uses.
 
-**[5] Additional Style Options for the Digit Character:** Sets the number of segments used for the segment variation presets.
+**[5] Additional Style Options for the Digit Character:** Fine-tunes the look of the separator's digit character:
 
 - Segment Thickness: Controls the pre-defined thickness of the individual segments used in the separator display.
 

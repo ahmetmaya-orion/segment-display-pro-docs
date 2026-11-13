@@ -9,13 +9,13 @@ In complex 3D scenes, constantly switching between viewport shading modes to che
 
 ![Viewport UI](assets/images/viewport_overlays/v1.0.0/viewport_ui.png){ align=right width="400" }
 
-![Viewport UI](assets/images/viewport_overlays/v1.0.0/view_blender_shading_panel.png){ align=right width="400" }
+![Blender Viewport Shading Panel](assets/images/viewport_overlays/v1.0.0/view_blender_shading_panel.png){ align=right width="400" }
 
 <figure class="img-hover" markdown>
 
-  ![Input Alignment: left](assets/images/viewport_overlays/v1.0.0/view_solid_view_off.png){ width="600" }
+  ![Solid Viewport Preview disabled](assets/images/viewport_overlays/v1.0.0/view_solid_view_off.png){ width="600" }
 
-  ![Input Alignment: right](assets/images/viewport_overlays/v1.0.0/view_solid_view_on.png){ .hover-img width="600" aria-hidden="true" }
+  ![Solid Viewport Preview enabled](assets/images/viewport_overlays/v1.0.0/view_solid_view_on.png){ .hover-img width="600" aria-hidden="true" }
 
 </figure>
 
@@ -29,7 +29,7 @@ In complex 3D scenes, constantly switching between viewport shading modes to che
 !!! info wrap
     If you switch the Object Color Type to Attribute manually from the Blender > Viewport Shading panel, the vertex color on the segment display object may not appear. This is because the Solid Viewport Preview button has not been toggled.
 
-See the [Troubleshooting page](troubleshooting.md#viewport-solid-color-preview) for the Solid Viewport Preview
+See the [Troubleshooting page](troubleshooting.md#viewport-solid-color-preview) for the Solid Viewport Preview
 
 
 
@@ -45,7 +45,7 @@ See the [Troubleshooting page](troubleshooting.md#viewport-solid-color-preview)
 
 ### Snap Guides {: .clear}
 
-![Viewport Overlay Ghosts](assets/images/viewport_overlays/v1.0.0/blender_snap_options.png){ align=right width="400" }
+![Blender Snap Options](assets/images/viewport_overlays/v1.0.0/blender_snap_options.png){ align=right width="400" }
 
 **[4]** Displays alignment guidelines when 3D viewport Snap is enabled, helping you align the segment display object with other scene items.
 
