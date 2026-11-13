@@ -135,7 +135,7 @@ Make sure the Addon Frame Rate dropdown in the add-on's N-panel settings matches
 
 ## Viewport | Solid Color Preview
 
-![Activation Panel in Blender Preferences](assets/images/troubleshoot/solid_view_preview.png){ align=right width="500" }
+![Solid Viewport Preview in Blender](assets/images/troubleshoot/solid_view_preview.png){ align=right width="500" }
 
 
 The Solid Viewport Preview feature may not display correctly in certain conditions:
@@ -152,7 +152,7 @@ For more details on this feature, see the  [Viewport & Overlays page](viewport_o
 
 To allow the Segment Display emission to interact with the scene in EEVEE — similar to the Cycles engine — enable the Raytracing option in Properties > Render Properties.
 
-![Activation Panel in Blender Preferences](assets/images/troubleshoot/eevee_raytracing.jpg){width="400"}
+![EEVEE Raytracing option in Render Properties](assets/images/troubleshoot/eevee_raytracing.jpg){width="400"}
 
 ---
 
@@ -179,6 +179,7 @@ Linking or re-importing the display asset from a library.
 To resolve: Simply save and restart Blender, or open a fresh file. Since the add-on's functionality is not affected, you can safely ignore these messages during your workflow.
 
 <a href="https://projects.blender.org/blender/blender/issues/154517" target="_blank" rel="noopener">See the current issue on Blender Developer</a>
+
 
 
 
