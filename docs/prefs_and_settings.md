@@ -73,6 +73,8 @@ These entries are unchecked by default because recovery cannot confidently choos
 
 ![Review & Recover | Needs Review with the GeometryNodes](assets/images/preferences/v1.0.1/r&r_needs_review_restore_geonodes_tree.png)
 
+*segdisp_pro.002 selected here after review.*
+
 
 The object's `segdisp_*` properties can identify it as a Pro display without identifying which empty modifier belongs to it. Recovery also checks the remembered modifier name in `segdisp_modifier`. If that name no longer matches, or the target is ambiguous, a generic name such as **GeometryNodes** or **GeometryNodes.001** is not enough to choose safely. A generic name does not always require review: an exact remembered match can still identify the correct modifier.
 
