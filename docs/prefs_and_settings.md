@@ -184,7 +184,7 @@ Update checks require internet access and **Preferences > System > Network > All
 ![Update Available Not.](assets/images/preferences/v1.0.1/pref_update_available_not.png){ align=right width="350" }
 
 
-An automatic check can show **Update Available** at the top of the N-panel. **Dismiss** asks whether to hide these header notices. You can change the same preference under **Edit > Preferences > Add-ons > Segment Display Pro > N-panel Options > Hide "Update Available" Notifications on the N-Panel Header**.
+An automatic check can show **Update Available** at the top of the N-panel, with the installed and latest versions. **Open Downloads** opens the release page, the same as in About. **Dismiss** asks whether to hide these header notices. You can change the same preference under **Edit > Preferences > Add-ons > Segment Display Pro > N-panel Options > Hide "Update Available" Notifications on the N-Panel Header**.
 
 This hides only the N-panel header update notice. Update information remains available in About and Preferences; license and asset-status warnings are not hidden.
 
