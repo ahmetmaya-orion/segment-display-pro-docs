@@ -37,7 +37,7 @@ Each character and shape has its own dedicated settings and properties. These op
 
 **[9] Separator Size:** Scales the overall size of the separator character. **Note:** Not available for dash, slash, and line characters since they have their own dedicated size settings.
 
-**[10] Decimal Separator Size:** An extra size option for the decimal-side separators. It lets you link the separator size to the decimal digit size. Decimal digit size options can be found on the [Display page](display.md#display-align-spacing-and-size).
+**[10] Size Link to Decimal / Manual:** Only on the Decimal Number tab. "Size Link to Decimal" links the separator size to the decimal digit size; "Manual" lets you set it yourself. Decimal digit size options can be found on the [Display page](display.md#display-align-spacing-and-size).
 
 **[11] Separation Spaces:** Controls the spacing around separators. The same option is labeled "First/Second Separation Spaces" for the Alphanumeric input category. 
 
@@ -72,15 +72,15 @@ See the [Alphanumeric Input page](in_cat_alphanum.md#multi-display-setup) for mo
 !!! info wrap "¹ Info"
     There is only a single style currently available. The remaining styles are still under development and will be included in future versions.
 
-**[3] Digit Segment Count:** Sets the number of segments used for the segment variation presets.
+**[3] Segment Count:** Sets the number of segments used for the segment variation presets.
 
-**[4] Segment Variations:** Selects which segment variation preset the separator's digit character uses.
+**[4] Segment Vari:** Selects which segment variation preset the separator's digit character uses.
 
-**[5] Additional Style Options for the Digit Character:** Fine-tunes the look of the separator's digit character:
+**[5] Style Options:** Fine-tunes the look of the separator's digit character in the "Whole Sep. | Style Options" panel:
 
-- Segment Thickness: Controls the pre-defined thickness of the individual segments used in the separator display.
+- **Regular / Bold:** Sets the pre-defined thickness of the individual segments used in the separator display.
 
-- Segment Gap: Adjusts the gap between individual segments within the separator's digit characters.
+- **1 – 4:** Adjusts the gap between individual segments within the separator's digit characters.
 
 
 
