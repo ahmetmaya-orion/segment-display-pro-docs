@@ -1,7 +1,7 @@
 
 The Settings & Preferences panel is where you manage your license activation and monitor the health of your linked asset files. Access it via Edit > Preferences > Add-ons, then expand the Segment Display Pro entry.
 
-## License Activation
+## License Activation Panel
 
 ![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.jpg){ align=right width="550" }
 
@@ -125,7 +125,7 @@ The recovery button can remain disabled until the installed asset is available. 
 
 You can inspect the linked library in **Outliner > Blender File**. Do not remove it as a cleanup or recovery shortcut. Do not open, modify, re-save, rename or move the shipped asset file; reinstall the original ZIP if it was altered.
 
-## Resources & Support
+## Resources & Support Panel
 
 The **Resources & Support** box in the add-on preferences collects quick links to help and account pages. Each link opens in your web browser unless noted otherwise.
 
