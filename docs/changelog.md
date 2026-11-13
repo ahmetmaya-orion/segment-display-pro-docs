@@ -1,6 +1,40 @@
 
 All notable changes to Segment Display Pro are listed here, newest first.
 
+## v1.0.1
+
+**Released:** 2026/11/08 &nbsp;·&nbsp; **Requires:** Blender 5.1 (Minimum 5.1.1) &nbsp;·&nbsp; **Tested and recommended:** Blender 5.1.2
+
+A patch release with an About section and manual update checks, a Pro-only Review & Recover workflow for asset problems, and clearer asset and version notices. This patch has not yet been re-tested on Blender 5.1.1.
+
+### Added
+
+- **About:** in Preferences and at the bottom of the N-panel, showing Add-on Version, Assets Version, Compatible Blender and developer credits. See [About Panel](prefs_and_settings.md#about-panel).
+- **Check for Updates:** a manual check in About, alongside the existing startup check. **Open Downloads** opens the release page; installation stays manual. See [Add-on Update](prefs_and_settings.md#add-on-update).
+- **Hide update notifications:** an option to hide the N-panel header update notice. Update information remains available in About and Preferences. The preference is saved in `addon_userpref.json` outside the add-on folder, so it survives normal updates; for now it stores only this preference.
+- **Review & Recover (Pro):** in **Preferences > Asset Status**. Preview supported library reconnections and missing node-tree repairs, review uncertain cases and pick the right modifier, optionally recreate a missing modifier with default settings, back up an already saved project first, and repair toggle inputs stored as numbers while keeping their on/off values. See [Review & Recover](prefs_and_settings.md#review-recover).
+- **Recognition properties:** `segdisp_*` custom properties on Pro objects help recovery recognize displays. See [Pro recognition properties](troubleshooting.md#pro-recognition-properties-and-modifiers).
+- **Email Support:** a new button in Resources & Support that opens your default mail app. See [Resources & Support](prefs_and_settings.md#resources-support).
+
+### Improved
+
+- **Review & Recover** replaces the visible **Re-link Asset** button in Pro. Library reconnections can affect displays across scenes, and results show which items were left unchanged and which settings could not be restored.
+- **Add Segment Display** checks for a missing asset or a known asset/add-on version mismatch before adding a display.
+- Clearer asset availability, version mismatch and restart-required notices. Unavailable asset versions show as **Unknown** instead of a misleading value.
+- N-panel asset warnings include a shortcut to Preferences.
+- **About** and **Viewport & Overlays** start collapsed in the N-panel.
+- Resources & Support documentation links point to the versioned v1.0 manual.
+
+### Update Notes
+
+!!! warning "Before and after updating"
+    - Install the new complete Pro ZIP over the existing add-on, then **restart Blender** before troubleshooting. Keep a project backup before running any repair. See [Updating the Add-on](installation.md#updating-the-add-on).
+    - Recovery does not save over your open project or guarantee that deleted settings come back. Review the result, then save.
+    - Blender may stop responding for a while during asset processing. Let it finish.
+    - Local asset copies, objects from the other edition and source-linked modifiers are not repaired directly. Linking displays from another project is not a validated workflow.
+    - **Do not modify** the `segdisp_type`, `segdisp_schema`, `segdisp_edition` or `segdisp_modifier` custom properties.
+    - License seat limits and the 14-day offline policy are unchanged.
+
 ## v1.0.0 (Initial Release)
 
 **Released:** 2026/10/18 &nbsp;·&nbsp; **Requires:** Blender 5.1 (Minimum 5.1.1)
@@ -51,5 +85,6 @@ The first public release of Segment Display Pro.
     - Only one Display Style is available for now. More styles are planned.
     - Harmless "VFont -> Node" warnings may appear in the System Console after reloading scripts or relinking assets.
     - Only tested on Windows 11 and Blender's default add-on folder.
+
 
 
