@@ -89,8 +89,9 @@ nav:
     - Preferences & Settings: prefs_and_settings.md
   - Reference:
     - Edition Features Table: edition_features.md
-    - Changelog (Add-on): changelog.md
+    - Changelog (Add-on): changelog_addon.md
     - Changelog (Documentation): changelog_documentation.md
     - Troubleshooting: troubleshooting.md
     - FAQ: faq.md
+
 
