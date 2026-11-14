@@ -145,7 +145,7 @@ Your activation is saved in a small license file (**sdp_activation.lic**) outsid
     The same rules below apply to the Lite file.
 
 !!! warning "Do not edit, move or copy the license file"
-    Don't edit or move this file, and don't copy it to another computer. The license file is tied to the computer it was activated on, so a copied file will not unlock the add-on on any other machine. Every new or additional computer must be activated on its own by entering the license key in the add-on preferences, and each activation uses one seat of your activation limit. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
+    Don't edit or move this file, and don't copy it to another computer. The license file is tied to the computer it was activated on, so a copied file will not unlock the add-on on any other machine. Every new or additional computer must be activated on its own by entering your license key in the add-on preferences, and each activation uses one seat of your activation limit. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
 
 ### Activation Limit
 
@@ -188,4 +188,3 @@ Reconnection uses settings and animation still present in your project. It canno
 
 !!! info "Accidentally Uninstalled the Add-on Mid-Project?"
     Displays can appear as planes because the linked asset is unavailable; this does not by itself mean their stored settings are lost. Preserve the project and leave its modifiers untouched. Reinstall the complete matching add-on, restart Blender and check the project first. Displays often return without manual recovery. If supported issues remain, use Pro **Review & Recover…** once the asset is available. Inspect settings and animation before saving; deleted data cannot be guaranteed recoverable. See [Review & Recover](prefs_and_settings.md#review-recover).
-
