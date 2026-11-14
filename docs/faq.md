@@ -79,9 +79,9 @@ Quick answers to the most common questions about Segment Display Pro and Segment
     Yes. Segment Display Pro uses a dual license:
 
     - **Add-on code (GPL v3):** You're free to use, copy, and modify the code for your own pipeline. If you distribute a modified version, you must pass on the same freedoms and source code.
-    - **Assets (Single User Commercial License):** The .blend files, 3D models, and textures remain the property of Orion November Studio. You can use them to produce videos and animations for commercial use and to build your personal portfolio. You can't sell, share, sub-license, or upload the assets, in original or modified form, as standalone files or as part of another tool or add-on.
+    - **Assets (Single User Commercial License):** The supplied asset .blend file remains the property of Orion November Studio and must not be redistributed, sold, shared, sub-licensed, or uploaded, in original or modified form. This restriction does not prevent you from using your generated SegDisp objects in commercial projects, including applying their modifiers and exporting the resulting meshes for use in game engines or other software.
 
-    In short: your renders are yours to sell, the asset files are not. Full details are in our <a href="https://www.orionnovemberstudio.com/integrated-governance-and-license-framework" target="_blank" rel="noopener">license terms</a>.
+    In short: you can use your renders and generated display meshes in your projects; you cannot redistribute the supplied asset .blend file. Full details are in our <a href="https://www.orionnovemberstudio.com/integrated-governance-and-license-framework" target="_blank" rel="noopener">license terms</a>.
 
 ## Add-on In Action
 
@@ -133,8 +133,12 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
 ??? question "Can I share my .blend file with someone who doesn't own the add-on?"
 
-    Your renders and videos are yours to share with anyone. The .blend project itself is a different story: Segment Display objects link to the asset file inside the add-on installation, so on a computer without Segment Display Pro they show up as flat planes. A teammate who owns their own copy of Segment Display Pro can open and edit your project normally (Lite can't open Pro objects). Since the assets are covered by a single-user license, they can't be shared inside a .blend file in original, converted, or modified form.
+    Yes, if you share the generated display as an applied or converted mesh rather than redistributing the supplied asset .blend file. Work on a copy if you want to keep the original procedural display editable.
+
+    An unapplied SegDisp object still depends on the linked asset file in the add-on installation and may appear as a plane when that file is unavailable. To continue editing it procedurally, your teammate needs their own copy of the matching add-on edition and its assets; Lite cannot control Pro objects. Do not pack or include the supplied asset .blend file as a way to bypass that requirement.
 
 ??? question "Can I export to Unity, Unreal or FBX?"
 
-    Not in the current version. Segment Display Pro is built for rendering inside Blender: the displays are generated procedurally with Geometry Nodes and linked assets, which can't be exported to other software with their animation. Exporting the assets as models for use in games or other tools would also fall outside the asset license, which only covers videos, animations, and portfolio work made in Blender.
+    Yes. Apply the SegDisp object's Geometry Nodes modifier to convert the generated display into a mesh, then export it in a format supported by your target software, such as FBX, for use in Unity, Unreal or other game engines. Work on a copy if you want to retain the original procedural display.
+
+    Applying the modifier captures the current geometry; it does not automatically transfer SegDisp's procedural controls or Geometry Nodes-driven animation to another application. Exporting your generated display mesh is allowed. **The restriction is on redistributing the supplied asset .blend file, not on exporting SegDisp objects.**
