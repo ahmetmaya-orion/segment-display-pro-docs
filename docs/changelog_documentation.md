@@ -2,18 +2,6 @@
 
 Notable changes to the SegDisp Pro user manual. This history covers documentation, screenshots and instructions, not changes to the add-on code. Entries are grouped into patch and minor documentation updates; routine editorial corrections are not logged separately.
 
-## v1.0.0 (Initial Release)
-
-The initial user manual for Segment Display Pro.
-
-### Included
-
-- Installation, license activation/deactivation, updating and uninstalling guidance.
-- Descriptions of Numbers, Alphanumeric and Time inputs, including Clock, Timer and Date.
-- Display models, segment fonts, materials, alignment, spacing, sizing and separator controls.
-- Viewport preview and overlay instructions, with annotated interface screenshots and display examples.
-- Requirements, edition comparisons, licensing information, troubleshooting and frequently asked questions.
-
 ## v1.0.1
 
 Updated documentation for the SegDisp v1.0.1 release.
@@ -40,3 +28,15 @@ Updated documentation for the SegDisp v1.0.1 release.
 - Updated annotated Clock, license-activation, About, update-notification and recovery screenshots.
 - Updated display/font examples and labelled image comparisons to support the revised instructions.
 - Embedded the matching screenshots in the ClickUp manual in place of image-placeholder text.
+
+## v1.0.0 (Initial Release)
+
+The initial user manual for Segment Display Pro.
+
+### Included
+
+- Installation, license activation/deactivation, updating and uninstalling guidance.
+- Descriptions of Numbers, Alphanumeric and Time inputs, including Clock, Timer and Date.
+- Display models, segment fonts, materials, alignment, spacing, sizing and separator controls.
+- Viewport preview and overlay instructions, with annotated interface screenshots and display examples.
+- Requirements, edition comparisons, licensing information, troubleshooting and frequently asked questions.
