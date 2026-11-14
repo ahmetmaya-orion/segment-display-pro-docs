@@ -72,7 +72,9 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
 ??? question "Does the add-on work on render farms?"
 
-    Your own render machines, yes. Your Pro license comes with 3 activation seats, so you can use it on your main workstation, a laptop, and a dedicated render machine. Every machine that renders your scene needs Segment Display Pro installed in Blender's default add-on folder, using the same Blender version, and its own activation (the license file can't be copied between machines). Cloud render farms that don't let you install add-ons are not supported.
+    Render-farm workflows have not been tested with SegDisp, so compatibility, setup requirements and activation requirements for render nodes are not confirmed. We cannot currently guarantee that projects using live procedural SegDisp objects will render correctly on a cloud or network render farm.
+
+    You can apply the display's Geometry Nodes modifier and use the resulting mesh outside Blender, as explained under **Sharing & Exporting**. This is allowed, but it is not a tested render-farm workflow.
 
 ??? question "Can I use the add-on in commercial projects?"
 
