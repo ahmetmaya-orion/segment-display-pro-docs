@@ -8,7 +8,7 @@ The Settings & Preferences panel is where you manage your license activation and
 <!-- MkDocs does not has a center align for images. The only option is to use figure format with blank caption -->
 
 <figure markdown="span">
-  ![Image title](assets/images/preferences/v1.0.0/prefs_license_key.png){ width="750" }
+  ![License activation in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.png){ width="750" }
   <figcaption></figcaption>
 </figure>
 
@@ -25,6 +25,8 @@ Activations: Displays how many device slots you've used out of your total allowa
 License Key: The masked key field where you enter or view your license key.
 Activate: Activates your license key on this device. If this device was activated before, its existing seat is reused instead of taking a new one.
 Deactivate: Removes the license activation from the current device, freeing up a slot for use on another machine.
+
+**Click to read this before uninstalling the add-on:** Opens a popup explaining why you must deactivate your license before uninstalling.
 
 !!! warning
      Always deactivate your license before uninstalling the add-on. If you skip this step, the device will still count toward your activation limit. See the [Activation page](installation.md#activationdeactivation) for more details.
@@ -204,10 +206,10 @@ The notification preference is saved in `addon_userpref.json` beside the activat
 Time Synchronization syncs the Clock and Timer display values to Blender's timeline, matching the add-on's FPS with the scene FPS so the displayed time updates accurately as the animation plays.
 Set the FPS using the Addon Frame Rate dropdown menu in Addon Settings to match your project's frame rate.
 
-The Animation Start Offset option, available in both Clock and Timer, calculates its timing based on the scene FPS and the add-on's internal FPS. See the [Input Categories/ Time Page](in_cat_time.md#general-overview) for more details.
+The **Clock Start Frame** and **Timer Start Frame** options set the starting frame for their respective auto animations. Their timing depends on the scene FPS and the add-on's internal FPS. See the [Input Categories/ Time Page](in_cat_time.md#general-overview) for more details.
 
 !!! info
-     This option only works correctly with whole-number frame rates (e.g., 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate results due to mathematical limitations.
+     These options only work correctly with whole-number frame rates (e.g., 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate results due to mathematical limitations.
 
 <div class="grid" markdown>
 

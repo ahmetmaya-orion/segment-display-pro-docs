@@ -21,7 +21,7 @@ In complex 3D scenes, constantly switching between viewport shading modes to che
 
 **[1] Solid Viewport Preview:** Allows the display results to be shown in Blender's "Solid" viewport shading mode by switching the Object Color Type to Attribute/Vertex. Useful when working in busy scenes where switching to Material or Rendered view would impact performance. 
 
-**[2] Solid Viewport Preview:** Sets the temporary vertex color used for LED (active) segments and the Display Base in Solid viewport mode.
+**[2] Led Color / Base Color:** Sets the temporary vertex colors used for LED (active) segments and the Display Base, respectively, in Solid viewport mode.
 
 !!! warning wrap "Solid Viewport Preview operates at the Blender level, outside the add-on itself."
     Enabling it switches the Object Color Type to Attribute/Vertex across the entire scene — not just for the segment display object. As a result, all other objects in your scene will also adopt this color method, which may alter their appearance in Solid viewport mode. Use this option as a temporary result checker.

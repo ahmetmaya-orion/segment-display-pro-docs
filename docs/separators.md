@@ -27,7 +27,7 @@ Each character and shape has its own dedicated settings and properties. These op
 
 **[4] Shape Corners:** Toggles between sharp or rounded corners on the separator character shapes. **Round Style:** Selects the rounding style applied to dash or slash/line rectangle-shaped characters.
 
-**[5] Character Angle:** Tilts the separator character to a custom angle. Note: Not available for slash and line characters.
+**[5] Character Angle:** Switches the separator character between **Straight** and **Shear**. **Note:** Not available for slash and line characters.
 
 **[6] Vertical Position:** Sets the separator's vertical alignment. The character can be automatically aligned to the decimal digit position or manually adjusted to your preference. Decimal digit position options can be found on the [Display page](display.md#display-align-spacing-and-size).
 
@@ -39,7 +39,7 @@ Each character and shape has its own dedicated settings and properties. These op
 
 **[10] Size Link to Decimal / Manual:** Only on the Decimal Number tab. "Size Link to Decimal" links the separator size to the decimal digit size; "Manual" lets you set it yourself. Decimal digit size options can be found on the [Display page](display.md#display-align-spacing-and-size).
 
-**[11] Separation Spaces:** Controls the spacing around separators. The same option is labeled "First/Second Separation Spaces" for the Alphanumeric input category. 
+**[11] Separation Space:** Controls the spacing for the selected separator. The decimal separator has its own space control. In the Alphanumeric category, use **First Separation Space** and **Second Separation Space** for the two separators.
 
 
 

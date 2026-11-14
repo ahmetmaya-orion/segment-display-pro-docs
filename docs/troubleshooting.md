@@ -111,11 +111,11 @@ After you click **Verify now**, the add-on checks your license online and shows 
 
 ## Numbers
 
-Blender uses single-precision floating point (float32) internally. Because of this, the Segment Display add-on cannot produce correct digit results beyond 7 digits, even when using whole integers. If you enter a number with more than 7 digits, expect rounding errors or incorrect segment values.
+Blender uses single-precision floating point (float32) internally, which limits the precision of a single number input. SegDisp Pro's **Simple** input supports values up to **10,000,000**. Its 8-digit display length is not a promise that every 8-digit value is supported; use **Complex** input for larger values rather than relying on rounded results.
 
 ![Number Precision](assets/images/troubleshoot/num_precision.png){ width="1000" }
 
-To work around this, the add-on provides a Complex Number Input option. Instead of typing a large number into a single input field (which Blender would corrupt beyond 7 digits), you enter values into manageable three-digit blocks (0–999) categorized by their place value. This allows the display to safely represent numbers up to the hundred trillions (15 digits) without precision loss. See the [Numbers Page](in_cat_numbers.md) for details.
+Complex input splits the current number into five three-digit input groups, each accepting **0-999**, for up to **15 display digits**. These groups are not fixed decimal or place-value separator groups: Display Length controls which groups are active, and Decimal Length controls decimal formatting. Group **[1]** also remains active for whole numbers when Decimals is off. See the [Numbers Page](in_cat_numbers.md) for details.
 
 ---
 
@@ -127,7 +127,7 @@ To work around this, the add-on provides a Complex Number Input option. Instead 
 
 ## Time FPS
 
-The auto time animations (Clock, Timer) and the Animation Start Offset feature only work correctly with whole-number frame rates (e.g. 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate timing results due to mathematical limitations in how Blender calculates frame-to-time conversions.
+The auto time animations (Clock, Timer), including **Clock Start Frame** and **Timer Start Frame**, only work correctly with whole-number frame rates (e.g. 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate timing results due to mathematical limitations in how Blender calculates frame-to-time conversions.
 
 Make sure the Addon Frame Rate dropdown in the add-on's N-panel settings matches your project's scene frame rate for accurate time synchronization. For more information, see the [Settings Page](prefs_and_settings.md#time-synchronization).
 
@@ -179,6 +179,7 @@ Linking or re-importing the display asset from a library.
 To resolve: Simply save and restart Blender, or open a fresh file. Since the add-on's functionality is not affected, you can safely ignore these messages during your workflow.
 
 <a href="https://projects.blender.org/blender/blender/issues/154517" target="_blank" rel="noopener">See the current issue on Blender Developer</a>
+
 
 
 
