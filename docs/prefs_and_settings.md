@@ -40,7 +40,13 @@ Deactivate: Removes the license activation from the current device, freeing up a
 Your displays use a linked asset file supplied with the add-on. **Review & Recover…** checks supported connections and lets you review repairs before applying them. Open **Edit > Preferences > Add-ons > Segment Display Pro > Asset Status**.
 
 
-![Review & Recover - Disp needs re-link](assets/images/preferences/v1.0.1/r&r_disp_needs_relink.png){ align=right width="550" }
+<!-- ![Review & Recover - Disp needs re-link](assets/images/preferences/v1.0.1/r&r_disp_needs_relink.png){ align=right } -->
+
+
+<figure markdown="span">
+  ![License activation in Blender Preferences](assets/images/preferences/v1.0.1/r&r_disp_needs_relink.png){ width="750" }
+  <figcaption></figcaption>
+</figure>
 
 
 **Available** means the installed asset file can be found, not that every display in your project is connected correctly. A separate message can report displays needing re-linking or toggle inputs needing repair. The asset name and **Asset Version** identify the installed asset.
@@ -95,7 +101,13 @@ The object's `segdisp_*` properties can identify it as a Pro display without ide
 Use this section when a supported project library link is broken or points to an asset outside the current installation. Check the stored path, installed target and affected displays, then review **Reconnect this library**.
 
 
-![Review & Recover | Reconnect Asset Library](assets/images/preferences/v1.0.1/r&r_reconnect_asset_library.png)
+<!-- ![Review & Recover | Reconnect Asset Library](assets/images/preferences/v1.0.1/r&r_reconnect_asset_library.png) -->
+
+
+<figure markdown="span">
+  ![License activation in Blender Preferences](assets/images/preferences/v1.0.1/r&r_reconnect_asset_library.png){ width="750" }
+  <figcaption></figcaption>
+</figure>
 
 
 **Reconnecting a library affects every display using it, in every scene.** When the original modifiers and stored settings/animation remain intact, reconnecting restores the displays using that retained data.
@@ -121,7 +133,12 @@ Only sections relevant to your project appear. Recovery can be unavailable if th
 #### Asset Not Available
 
 
-![Asset Status | Not Available](assets/images/preferences/v1.0.1/asset_status_not_available.png)
+<figure markdown="span">
+  ![License activation in Blender Preferences](assets/images/preferences/v1.0.1/asset_status_not_available.png){ width="650" }
+  <figcaption></figcaption>
+</figure>
+
+<!-- ![Asset Status | Not Available](assets/images/preferences/v1.0.1/asset_status_not_available.png) -->
 
 
 If your displays appear as planes and you see these messages, **do not panic or try to fix the Modifiers panel**. The installed asset may be missing, damaged or outside the expected add-on `assets` location. This does not by itself mean your stored display settings are lost.
@@ -157,7 +174,13 @@ The **Resources & Support** box in the add-on preferences collects quick links t
 ## About Panel
 
 
-![About Panel](assets/images/preferences/v1.0.1/pref_about_panel.png)
+<!-- ![About Panel](assets/images/preferences/v1.0.1/pref_about_panel.png) -->
+
+
+<figure markdown="span">
+  ![License activation in Blender Preferences](assets/images/preferences/v1.0.1/pref_about_panel.png){ width="650" }
+  <figcaption></figcaption>
+</figure>
 
 
 :material-tag-outline: **v1.0.1 and later**
