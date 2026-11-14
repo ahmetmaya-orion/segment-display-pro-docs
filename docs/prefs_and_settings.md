@@ -3,7 +3,15 @@ The Settings & Preferences panel is where you manage your license activation and
 
 ## License Activation Panel
 
-![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.jpg){ align=right width="550" }
+<!-- ![Activation Panel in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.png){ align=center width="550" } -->
+
+<!-- MkDocs does not has a center align for images. The only option is to use figure format with blank caption -->
+
+<figure markdown="span">
+  ![Image title](assets/images/preferences/v1.0.0/prefs_license_key.png){ width="750" }
+  <figcaption></figcaption>
+</figure>
+
 
 The License Activation section displays your current activation status and allows you to manage your license key.
 
