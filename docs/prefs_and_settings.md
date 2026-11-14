@@ -44,7 +44,7 @@ Your displays use a linked asset file supplied with the add-on. **Review & Recov
 
 
 <figure markdown="span">
-  ![License activation in Blender Preferences](assets/images/preferences/v1.0.1/r&r_disp_needs_relink.png){ width="750" }
+  ![Asset Status panel showing displays needing re-linking](assets/images/preferences/v1.0.1/r&r_disp_needs_relink.png){ width="750" }
   <figcaption></figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ Use this section when a supported project library link is broken or points to an
 
 
 <figure markdown="span">
-  ![License activation in Blender Preferences](assets/images/preferences/v1.0.1/r&r_reconnect_asset_library.png){ width="750" }
+  ![Review & Recover dialog showing Reconnect Asset Library](assets/images/preferences/v1.0.1/r&r_reconnect_asset_library.png){ width="750" }
   <figcaption></figcaption>
 </figure>
 
@@ -134,7 +134,7 @@ Only sections relevant to your project appear. Recovery can be unavailable if th
 
 
 <figure markdown="span">
-  ![License activation in Blender Preferences](assets/images/preferences/v1.0.1/asset_status_not_available.png){ width="650" }
+  ![Asset Status panel showing Not Available, Asset file info not loaded and Asset Version Unknown](assets/images/preferences/v1.0.1/asset_status_not_available.png){ width="650" }
   <figcaption></figcaption>
 </figure>
 
@@ -178,7 +178,7 @@ The **Resources & Support** box in the add-on preferences collects quick links t
 
 
 <figure markdown="span">
-  ![License activation in Blender Preferences](assets/images/preferences/v1.0.1/pref_about_panel.png){ width="650" }
+  ![About panel showing Add-on Credits and Add-on Update](assets/images/preferences/v1.0.1/pref_about_panel.png){ width="650" }
   <figcaption></figcaption>
 </figure>
 
