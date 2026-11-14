@@ -55,7 +55,7 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
 ??? question "Why did Blender stop responding during recovery?"
 
-    Blender can pause while relocating and reloading an asset library whose path points outside the current installation. Allow it to finish; duration varies and a temporary not-responding message does not necessarily mean a crash. This involves Blender's library handling; the exact bottleneck is unconfirmed. See [recovery pauses](troubleshooting.md#blender-temporarily-stops-responding).
+    Blender can pause while recovery relocates and reloads an asset library whose path points outside the current installation. Allow it to finish; duration varies and a temporary not-responding message does not necessarily mean a crash. This involves Blender's library handling; the exact bottleneck is unconfirmed. See [recovery pauses](troubleshooting.md#blender-temporarily-stops-responding).
 
 ## Licensing & Usage
 
@@ -102,12 +102,12 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
 ??? question "Why are there two different options for the Numbers category?"
 
-    Blender stores number inputs as single-precision floats (float32), which can only hold about 7 significant digits. Beyond that, even whole integers get rounded, so a long number typed into a single field would show wrong digits on the display.
+    Blender stores number inputs as single-precision floats (float32), which limit the precision of a single input. SegDisp Pro's Simple input supports values up to **10,000,000**; an 8-digit display does not mean every 8-digit value is supported.
 
     That's why the Numbers category offers two input options:
 
-    - **Simple:** A single input field for everyday values, up to 8 digits.
-    - **Complex:** The number is split into five three-digit groups (0 to 999), one for each place value (ones, thousands, millions, billions, trillions). Each group stays well within Blender's safe precision range, and the add-on procedurally combines them on the display. This lets you show numbers up to 15 digits (hundred trillions) without any precision loss.
+    - **Simple:** A single input field for everyday values, with up to 8 display digits and a maximum input value of **10,000,000**.
+    - **Complex:** Builds the current number from five three-digit input groups, each accepting **0-999**, for up to **15 display digits**. These are not fixed decimal or place-value separator groups. Display Length determines which groups remain active, while Decimals and Decimal Length determine decimal formatting. The rightmost group [1] remains active for whole numbers when Decimals is off.
 
     See the [Troubleshooting](troubleshooting.md#numbers) page for details.
 
@@ -123,7 +123,7 @@ Quick answers to the most common questions about Segment Display Pro and Segment
 
 ??? question "Why is my timer drifting at 29.97 fps?"
 
-    The auto time animations (Clock, Timer) and the Animation Start Offset only work correctly with whole-number frame rates such as 24, 25, 30, or 60. Decimal frame rates like 23.98 or 29.97 cause small timing errors because of how Blender converts frames to time. Also, make sure the "Addon Frame Rate" dropdown in the N-panel matches your scene's frame rate. See the [Preferences & Settings](prefs_and_settings.md#time-synchronization) page for details.
+    The auto time animations (Clock, Timer), including **Clock Start Frame** and **Timer Start Frame**, only work correctly with whole-number frame rates such as 24, 25, 30, or 60. Decimal frame rates like 23.98 or 29.97 cause small timing errors because of how Blender converts frames to time. Also, make sure the "Addon Frame Rate" dropdown in the N-panel matches your scene's frame rate. See the [Preferences & Settings](prefs_and_settings.md#time-synchronization) page for details.
 
 ## Sharing & Exporting
 
