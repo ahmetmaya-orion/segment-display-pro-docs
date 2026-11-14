@@ -5,7 +5,7 @@
 
 **[1] Number Input Option:**
 
-- **Simple:** Up to 8 display digits with a single input. The maximum input value is **10,000,000**; an 8-digit display does not mean every 8-digit value is supported.
+- **Simple:** Up to 8 display digits with a single input. The maximum input value is **10,000,000**; an 8-digit display does not mean every 8-digit value is supported. See [Troubleshooting: Numbers](troubleshooting.md#numbers) for details.
 
 - **Complex:** Up to 15 display digits using five input groups.
 
