@@ -1,19 +1,41 @@
 
 ## The Asset File
 
-When you add a segment display object to the scene via the N-Panel interface, the Segment Display asset blend file appears in Outliner > Blender File as linked. No matter how many segment display objects you have in the scene, they all share the same single linked asset data. 
+Displays use the .blend asset linked from the add-on's `assets` folder. Multiple displays, including those in other scenes, can share the same library. Do not delete that library from **Outliner > Blender File** as a repair or cleanup shortcut. Only purge unused data after you no longer need the displays and their dependencies.
 
-!!! warning "Do not delete the linked blend file directly from the Outliner!"
-    Doing so will cause you to lose all your object settings. If you need to clean up your project file, make sure there are no segment display objects remaining in the scene, then use Blender > Purge Unused Data — this will automatically remove the asset file from the current blend file.
+:material-tag-outline: **Pro v1.0.1 and later**
 
-If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
+### Displays appear as planes / Asset Not Available
+
+**Do not panic or edit the Modifiers panel.** Planes after launch, together with **Not Available**, **Asset file info not loaded** and **Asset Version: Unknown**, can mean the installed asset is missing, damaged or outside its expected location. The messages do not by themselves mean your stored settings are lost.
+
+1. Preserve a project copy; leave modifiers, node-tree assignments and recognition properties untouched.
+2. Reinstall the complete matching Pro ZIP and restart Blender.
+3. Reopen and inspect the project. Displays often return automatically; if they are correct, no recovery operation is needed.
+4. If supported connection issues remain, use **Preferences > Add-ons > Segment Display Pro > Asset Status > Review & Recover…** once the installed asset is available. Review repairs, inspect the result and save.
+
+The recovery button may be disabled while the installed asset is unavailable. **Available** only confirms the installed asset can be found, not that every project connection is healthy. For **Unknown** version information or known asset/add-on version mismatches, restart after updating first; if the issue persists, reinstall the complete matching package. A known mismatch can block **Add Segment Display**. Do not mix asset/script versions, edit the asset or change licensing to bypass the check.
+
+In About, these cases appear as **Doesn’t match add-on version** next to Assets Version, or **Restart Blender to finish updating to…** after installing an update while Blender is running. See [Add-on Credits](prefs_and_settings.md#add-on-credits).
+
+### Recovery limits and lost settings
+
+Reconnecting a library restores displays using settings and animation still present. **Restore Node Tree** assigns the tree to an existing supported modifier; it cannot restore settings or animation already deleted by removing the assignment in the Geometry Nodes panel. Removing the asset through **Outliner > Blender File** can leave recoverable settings, but is not a recommended repair method.
+
+**Recreate Missing Modifier (Defaults)** is opt-in and adds a new modifier at the end of the stack. It does not restore deleted settings, animation or the original stack position. In v1.0.1, the deleted-settings warning is not yet shown under Restore Node Tree; its absence does not guarantee recovery. See the [full walkthrough](prefs_and_settings.md#review-recover).
+
+### Blender temporarily stops responding
+
+Blender may pause while recovery relocates and reloads an asset library pointing outside the current installation. Allow it to finish; a temporary not-responding message does not necessarily mean a crash. Duration varies. This operation involves Blender's library handling, not solely add-on processing; its precise bottleneck and whether pauses are limited to relocation have not been established.
+
+### Asset safety
 
 !!! warning "Do not open or modify the asset file!"
-    The add-on includes a .blend asset file. The add-on **links** to this file (it doesn't append it), so it has to stay exactly as shipped. Do not open, edit, re-save, rename or move it. Even opening and saving it in Blender without changing anything can break the add-on.
+    Do not open, modify, re-save, rename or move the shipped .blend asset. Re-saving changes its byte-level fingerprint even if it looks unchanged. Reinstall the original complete ZIP if the file was altered. This is asset-safety guidance, not a claim that installed files are read-only or that an in-add-on runtime hash check protects them.
 
-    **Why this matters for support:** every shipped asset file has its own unique ID (a digital fingerprint) that we use to check it's the original. Opening or re-saving the file, even without changing anything, breaks that ID. Think of it like a laptop warranty: once you open the case, it's no longer covered. If the asset file has been modified, we can't provide support until you reinstall the add-on from the original ZIP.
+    **Why this matters for support:** OrionNovember.Studio cannot provide support for modified asset files. Opening and re-saving the shipped asset changes its digital fingerprint, even if you make no visible changes. If the asset has been modified, reinstall the complete add-on from the original ZIP before requesting support.
 
-    If displays start acting strange or won't load, uninstall the add-on and reinstall it from the original ZIP.
+**Lite users:** Lite recovery differs and is not covered in this Pro manual.
 
 ---
 
@@ -27,6 +49,26 @@ The object settings will only appear if a Segment Display object is active or se
 
 !!! info "Important"
     Each edition can only control objects created with that edition. SegDisp Pro cannot control SegDisp Lite objects, and SegDisp Lite cannot control SegDisp Pro objects. Use the matching add-on's N-panel to adjust each object.
+
+### Pro recognition properties and modifiers
+
+
+![SegDisp Object Properties](assets/images/object_settings/v1.0.0/segdisp_object_properties_v1.png){ align=right width="350" }
+
+
+Local Pro objects can contain `segdisp_type`, `segdisp_schema`, `segdisp_edition` and `segdisp_modifier`. These are recognition/recovery metadata, not display inputs or the asset file's fingerprint. **Do not change/delete them or manually rename/delete the display modifier.**
+
+**Where to review these IDs:** Select the SegDisp Pro object in the 3D Viewport, press **N** to open the sidebar, then open **Item > Properties** to inspect its `segdisp_*` custom properties. Review them without changing or deleting their values.
+
+**Why these IDs matter:** Review & Recover uses these properties to recognize a SegDisp Pro object and help determine which repairs are safe, especially when its asset-tree assignment or modifier is missing. `segdisp_type` and `segdisp_edition` identify the object as a Pro display, `segdisp_schema` records the recognition-data format, and `segdisp_modifier` remembers the display modifier's name. Changing or deleting them can prevent confident identification, send an object to **Needs Review**, or make supported recovery unavailable. They do not store a backup of your input settings or animation, so keeping them intact does not restore data that has already been deleted.
+
+An object can be recognized while its empty modifier remains ambiguous. Names such as **GeometryNodes** are not proof of a SegDisp modifier. If the remembered modifier name no longer matches, select the correct target only if you recognize it in **Needs Review**; otherwise leave it unchecked. An exact remembered match can still identify a generically named modifier. See [Needs Review](prefs_and_settings.md#needs-review).
+
+### Linking displays from another project {: .clear }
+
+Linking SegDisp objects from another project is not currently a validated workflow. Configure and animate displays in their owning project. Changes saved there do not live-update an already open destination; reload the source library after repairing and saving the source.
+
+Lite testing showed modifier input-type errors after a source-library reload (**Property type does not match input socket**, for example on Show Separator Origin Point). Restarting Blender cleared the observed error, but is not a guaranteed fix or a confirmed Pro defect. Neither still nor animated rendering through this nested-link workflow has been validated. Recovery does not directly edit source-linked modifiers, although reconnecting a shared asset library can affect linked displays visually.
 
 ---
 
@@ -69,11 +111,11 @@ After you click **Verify now**, the add-on checks your license online and shows 
 
 ## Numbers
 
-Blender uses single-precision floating point (float32) internally. Because of this, the Segment Display add-on cannot produce correct digit results beyond 7 digits, even when using whole integers. If you enter a number with more than 7 digits, expect rounding errors or incorrect segment values.
+Blender uses single-precision floating point (float32) internally, which limits the precision of a single number input. SegDisp Pro's **Simple** input supports values up to **10,000,000**. Its 8-digit display length is not a promise that every 8-digit value is supported; use **Complex** input for larger values rather than relying on rounded results.
 
 ![Number Precision](assets/images/troubleshoot/num_precision.png){ width="1000" }
 
-To work around this, the add-on provides a Complex Number Input option. Instead of typing a large number into a single input field (which Blender would corrupt beyond 7 digits), you enter values into manageable three-digit blocks (0–999) categorized by their place value. This allows the display to safely represent numbers up to the hundred trillions (15 digits) without precision loss. See the [Numbers Page](in_cat_numbers.md) for details.
+Complex input splits the current number into five three-digit input groups, each accepting **0-999**, for up to **15 display digits**. These groups are not fixed decimal or place-value separator groups: Display Length controls which groups are active, and Decimal Length controls decimal formatting. Group **[1]** also remains active for whole numbers when Decimals is off. See the [Numbers Page](in_cat_numbers.md) for details.
 
 ---
 
@@ -85,7 +127,7 @@ To work around this, the add-on provides a Complex Number Input option. Instead 
 
 ## Time FPS
 
-The auto time animations (Clock, Timer) and the Animation Start Offset feature only work correctly with whole-number frame rates (e.g. 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate timing results due to mathematical limitations in how Blender calculates frame-to-time conversions.
+The auto time animations (Clock, Timer), including **Clock Start Frame** and **Timer Start Frame**, only work correctly with whole-number frame rates (e.g. 24, 25, 30, 60). Decimal frame rates such as 23.98 or 29.97 will produce slightly inaccurate timing results due to mathematical limitations in how Blender calculates frame-to-time conversions.
 
 Make sure the Addon Frame Rate dropdown in the add-on's N-panel settings matches your project's scene frame rate for accurate time synchronization. For more information, see the [Settings Page](prefs_and_settings.md#time-synchronization).
 
@@ -93,7 +135,7 @@ Make sure the Addon Frame Rate dropdown in the add-on's N-panel settings matches
 
 ## Viewport | Solid Color Preview
 
-![Activation Panel in Blender Preferences](assets/images/troubleshoot/solid_view_preview.png){ align=right width="500" }
+![Solid Viewport Preview in Blender](assets/images/troubleshoot/solid_view_preview.png){ align=right width="500" }
 
 
 The Solid Viewport Preview feature may not display correctly in certain conditions:
@@ -110,7 +152,7 @@ For more details on this feature, see the  [Viewport & Overlays page](viewport_o
 
 To allow the Segment Display emission to interact with the scene in EEVEE — similar to the Cycles engine — enable the Raytracing option in Properties > Render Properties.
 
-![Activation Panel in Blender Preferences](assets/images/troubleshoot/eevee_raytracing.jpg){width="400"}
+![EEVEE Raytracing option in Render Properties](assets/images/troubleshoot/eevee_raytracing.jpg){width="400"}
 
 ---
 
@@ -137,4 +179,8 @@ Linking or re-importing the display asset from a library.
 To resolve: Simply save and restart Blender, or open a fresh file. Since the add-on's functionality is not affected, you can safely ignore these messages during your workflow.
 
 <a href="https://projects.blender.org/blender/blender/issues/154517" target="_blank" rel="noopener">See the current issue on Blender Developer</a>
+
+
+
+
 

@@ -27,13 +27,18 @@
 
 **[6] [7] Preset Selector & Slots:** Because Blender does not natively support the animation of string (text) inputs, the add-on includes a built-in multi-input preset system. By switching your input option to "Multi," you can type different words and numbers into a pre-defined list of up to 10 preset slots. You can then keyframe the "Preset Selector" number to animate the text changing over time. Please note that blank spaces and separator characters are not synced between presets. For a realistic result, you will need to configure them manually for each preset.
 
-**[8] Preset Focus Mode:** To keep your add-on panel clean while working, you can focus on the currently selected preset and collapse the rest of the list. After defining your presets, click "Show Selected" for quick UI Management.
+**[8] Preset Focus Mode:** Use the two icon buttons beside **Preset Selector** to choose which preset inputs are visible:
+
+- **Show as List** (list icon): Shows all preset inputs for this display.
+- **Show Selected** (minus icon): Shows only the selected preset input.
 
 ## Alphanumeric Separators (Using Spaces) {: .clear }
 
 **[1] [2] Creating Separators:** To add a separator character between your data points, simply type a space directly between your inputs in the text field. Do not attempt to enter separator characters (like dots or dashes) directly into the input field, as this will cause an error.
 
 **[3] Independent Separator Controls:** Each space you type automatically activates a dedicated tab ("Alphanum 1" and "Alphanum 2") in the Separators panel. By default, the first space generates a dot, and the second space generates a comma.
+
+**Note:** In the separator demo below, **Alphanum 2** was changed to a dot, so the `BL_EN_DER` example shows two dots rather than the default dot and comma.
 
 **[4] Simulating True Spaces:** If you want an actual blank space rather than a symbol, select "X" from the Separator panel's character menu. This will insert an extra, empty digit to simulate a blank space.
 

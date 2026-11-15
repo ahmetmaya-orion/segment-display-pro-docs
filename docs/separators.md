@@ -27,17 +27,19 @@ Each character and shape has its own dedicated settings and properties. These op
 
 **[4] Shape Corners:** Toggles between sharp or rounded corners on the separator character shapes. **Round Style:** Selects the rounding style applied to dash or slash/line rectangle-shaped characters.
 
-**[5] Character Angle:** Tilts the separator character to a custom angle. Note: Not available for slash and line characters.
+**[5] Character Angle:** Switches the separator character between **Straight** and **Shear**. **Note:** Not available for slash and line characters.
 
-**[6] Vertical Position:** Sets the separator's vertical alignment. The character can be automatically aligned to the decimal digit position or manually adjusted to your preference. Decimal digit position options can be found on the [Display page](display.md#display-align-spacing-and-size).
+**[6] Vertical Position:** Sets the separator's vertical alignment. The character can be automatically aligned to the decimal digit position or manually adjusted to your preference. Decimal digit position options can be found on the [Display page](display.md#display-align-spacing-and-size).
 
 **[7] Custom Vertical Position:** Provides a custom vertical position value when automatic alignment is not selected. **Manual Vertical Offset:** Manually adjusts the vertical offset of the separator character.
 
 **[8] Horizontal Position:** Sets the separator's horizontal alignment. Can be centered automatically within the digit spaces or offset based on your preferred value. **Manual Horizontal Offset:** Applies a manual horizontal offset to fine-tune the separator's left/right placement.
 
-**[9] Separator Size:** Scales the overall size of the separator character. There is an additional specific size option for the decimal-side separators **[10]** that allows you to link the separator size to the decimal digit size. Decimal digit size options can be found on the Display page. **Note:** Not available for dash, slash, and line characters since they have their own dedicated size settings.
+**[9] Separator Size:** Scales the overall size of the separator character. **Note:** Not available for dash, slash, and line characters since they have their own dedicated size settings.
 
-**[11] Separation Spaces:** Controls the spacing around separators. The same option is labeled "First/Second Separation Spaces" for the Alphanumeric input category. 
+**[10] Size Link to Decimal / Manual:** Only on the Decimal Number tab. "Size Link to Decimal" links the separator size to the decimal digit size; "Manual" lets you set it yourself. Decimal digit size options can be found on the [Display page](display.md#display-align-spacing-and-size).
+
+**[11] Separation Space:** Controls the spacing for the selected separator. The decimal separator has its own space control. In the Alphanumeric category, use **First Separation Space** and **Second Separation Space** for the two separators.
 
 
 
@@ -65,20 +67,20 @@ See the [Alphanumeric Input page](in_cat_alphanum.md#multi-display-setup) for mo
 
 **[1] Display Models:** Selects the segment display model used for the separator's digit characters.
 
-**[2] Display Styles:** Selects a visual style preset for the digit separator characters.*
+**[2] Display Styles:** Selects a visual style preset for the digit separator characters.¹
 
-!!! info wrap "* Info"
+!!! info wrap "¹ Info"
     There is only a single style currently available. The remaining styles are still under development and will be included in future versions.
 
-**[3] Digit Segment Count:** Sets the number of segments used for the segment variation presets.
+**[3] Segment Count:** Sets the number of segments used for the segment variation presets.
 
-**[4] Segment Variations:** Sets the number of segments used for the segment variation presets.
+**[4] Segment Vari:** Selects which segment variation preset the separator's digit character uses.
 
-**[5] Additional Style Options for the Digit Character:** Sets the number of segments used for the segment variation presets.
+**[5] Style Options:** Fine-tunes the look of the separator's digit character in the "Whole Sep. | Style Options" panel:
 
-- Segment Thickness: Controls the pre-defined thickness of the individual segments used in the separator display.
+- **Regular / Bold:** Sets the pre-defined thickness of the individual segments used in the separator display.
 
-- Segment Gap: Adjusts the gap between individual segments within the separator's digit characters.
+- **1 – 4:** Adjusts the gap between individual segments within the separator's digit characters.
 
 
 

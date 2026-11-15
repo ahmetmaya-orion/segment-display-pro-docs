@@ -65,10 +65,13 @@ The add-on ships with the asset blend file already included in the zip package. 
 ![Installation (Drag & Drop)](assets/images/preferences/v1.0.0/installation_drag_drop.jpg){ align=right width="500" }
 
 1. You can also install the add-on by dragging its ZIP file directly into Blender instead of opening Preferences first.
-2. Drag the Segment Display Pro ZIP file from your computer’s file manager onto the Blender window. You do not need to drop it in a specific editor or area.
+2. Drag the Segment Display Pro ZIP file from your computer’s file manager onto the Blender window. You do not need to drop it in a specific editor or area. Do not extract it first.
 3. In the Install from Disk popup, leave Target set to Default.
 4. Make sure Overwrite and Enable on Install are checked, then click OK.
-5. Restart Blender after installation to refresh the asset file.
+5. Check that **"Segment Display Pro"** is enabled in **Edit** → **Preferences** → **Add-ons** (checkbox ticked).
+6. Restart Blender after installation to refresh the asset file.
+
+Dropping the ZIP doesn't open the install popup? Use [Install from Disk...](#from-the-preferences-panel) instead.
 
 After enabling, the add-on appears in the 3D Viewport sidebar under the
 **SegDisp Pro** tab.
@@ -97,7 +100,7 @@ The add-on and its related asset files will be installed in the same directory (
 
 ## Activation/Deactivation
 
-![Enabling the add-on in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.jpg){ align=right width="500" }
+![License activation in Blender Preferences](assets/images/preferences/v1.0.0/prefs_license_key.png){ align=right width="500" }
 
 After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your Lemon Squeezy account under your order details.
 
@@ -107,6 +110,8 @@ After purchasing Segment Display Pro, you will receive an order confirmation ema
 4. When it shows as activated, you're done. Activation stays active after you restart Blender, update or reinstall the add-on, or move to a newer Blender version.
 
 The status monitor above the key field displays your current activation status (top-left) and your activation limit/seats (top-right).
+
+**Click to read this before uninstalling the add-on:** Opens a popup explaining why you must deactivate your license before uninstalling.
 
 !!! internet "Internet Connection Required"
     License activation and deactivation both require an internet connection. Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences > System > Network.
@@ -130,6 +135,15 @@ Your activation is saved in a small license file (**sdp_activation.lic**) outsid
 - macOS: `~/Library/Application Support/OrionNovember.Studio/SegmentDisplay_Pro/`
 - Linux: `~/.local/state/OrionNovember.Studio/SegmentDisplay_Pro/` (or `$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Pro/` if set)
 
+!!! info "For Lite users"
+    Lite saves its activation in **sdl_activation.lic**, in its own folder:
+
+    - Windows: `%LOCALAPPDATA%\OrionNovember.Studio\SegmentDisplay_Lite\`
+    - macOS: `~/Library/Application Support/OrionNovember.Studio/SegmentDisplay_Lite/`
+    - Linux: `~/.local/state/OrionNovember.Studio/SegmentDisplay_Lite/` (or `$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Lite/` if set)
+
+    The same rules below apply to the Lite file.
+
 !!! warning "Do not edit, move or copy the license file"
     Don't edit or move this file, and don't copy it to another computer. The license file is tied to the computer it was activated on, so a copied file will not unlock the add-on on any other machine. Every new or additional computer must be activated on its own by entering your license key in the add-on preferences, and each activation uses one seat of your activation limit. Deleting the file does **NOT** free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.
 
@@ -151,13 +165,18 @@ Activation limits per license key: **Pro: 3 activation seats; Lite: 1 activation
 
 ## Updating the Add-on
 
-1. No need to remove the old version. Install the new ZIP right over it (see [Installation](#installation) above) with **"Target Path"** set to **"Default"** and **"Overwrite"** ticked, then restart Blender.
-2. Your license stays activated, no need to reactivate. The license file is stored outside the add-on folder (see [Activation/Deactivation](#activationdeactivation) above), so updates don't touch it.
-3. Open your project. Your Segment Display objects are restored with the updated asset, and your current add-on panel settings are kept.
-4. Objects didn't come back after restarting Blender? Go to **Edit** → **Preferences** → **Add-ons**, expand **"Segment Display Pro"**, and click **"Re-link Asset"** in the **"Asset Status"** section.
+:material-tag-outline: **Pro v1.0.1 and later**
 
-!!! info "Re-link Asset only works within the same Blender version"
-    If the new version of the add-on requires a newer version of Blender, you will be notified. Blender keeps add-ons in a separate folder for each version, so the asset file path changes when you switch Blender versions.
+1. Save a backup copy of your project before updating or repairing connections.
+2. Install the complete new ZIP over the existing add-on with **Target Path: Default** and **Overwrite** enabled. No uninstall is needed. Dragging the new ZIP into Blender also works (see [Drag & Drop the ZIP](#drag-drop-the-zip-optional)). Your activation file is outside the add-on folder, so reinstalling does not normally require reactivation.
+3. **Restart Blender**, reopen your project and inspect the displays, settings and animation. Reinstalling and restarting often restores displays automatically; if everything is correct, no manual recovery is needed.
+4. If Asset Status shows **Not Available**, reinstall the matching complete package to restore the shipped asset in the add-on's `assets` folder, then restart again. Do not delete modifiers or remove node-tree assignments to fix this state.
+5. If supported connection issues remain while the installed asset is available, open **Edit > Preferences > Add-ons > Segment Display Pro > Asset Status > Review & Recover…**. Review the proposed actions, recover, inspect the result and save the project. See [the recovery walkthrough](prefs_and_settings.md#review-recover).
+
+Reconnection uses settings and animation still present in your project. It cannot restore data already deleted by removing a modifier or node-tree assignment. **Lite recovery differs and is not covered in this Pro manual.**
+
+!!! info "Changing Blender versions"
+    Blender keeps installations in version-specific folders, so changing Blender versions can change asset paths. Install a matching, supported package in the target Blender version and restart before checking the project. Recovery is not a guarantee of compatibility with an untested Blender version.
 
 !!! warning "Custom add-on directories are not tested"
     If you installed the add-on into a custom Target Path or Script Directory, updating may not work properly. Use the default add-on folder.
@@ -168,4 +187,4 @@ Activation limits per license key: **Pro: 3 activation seats; Lite: 1 activation
     If you remove the add-on without deactivating first, the device will still count toward your activation limit. Unfortunately, Blender does not allow add-ons to prevent or intercept the uninstall action. If you accidentally uninstall without deactivating, you can manage your activation seats yourself by logging into the <a href="https://app.lemonsqueezy.com/my-orders" target="_blank" rel="noopener">Lemon Squeezy customer portal</a> with your purchase email. Under your order's license key details, you can view all active devices and deactivate any instance to free up a seat. If you need help with this, please reach out to our support email for guidance.
 
 !!! info "Accidentally Uninstalled the Add-on Mid-Project?"
-    If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
+    Displays can appear as planes because the linked asset is unavailable; this does not by itself mean their stored settings are lost. Preserve the project and leave its modifiers untouched. Reinstall the complete matching add-on, restart Blender and check the project first. Displays often return without manual recovery. If supported issues remain, use Pro **Review & Recover…** once the asset is available. Inspect settings and animation before saving; deleted data cannot be guaranteed recoverable. See [Review & Recover](prefs_and_settings.md#review-recover).

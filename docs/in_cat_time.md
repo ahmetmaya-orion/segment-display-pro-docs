@@ -1,5 +1,5 @@
 
-![Number Precision](assets/images/in_cat_time/_time_header.png){ align=right width="350" }
+![Time Overview](assets/images/in_cat_time/_time_header.png){ align=right width="350" }
 
 ## General Overview 
 
@@ -68,13 +68,13 @@ Perfect for explosive countdowns or intricate chronometers, the Timer feature sp
 - Standard Precision (Centiseconds - Default): The recommended setting for most workflows. It provides faster slider responsiveness and is the optimal choice if you are primarily animating whole-time units (like seconds, minutes, or hours).
 
 !!! info "True Zero Offset"
-     If you want your timer to start from a true zero time, adjust the **Timer Start Offset:** set it to `2` if your timeline playhead starts at keyframe 1, or set it to `1` if your playhead starts at keyframe 0.
+     If you want your timer to start from a true zero time, adjust the **Timer Start Frame:** set it to `2` if your timeline playhead starts at keyframe 1, or set it to `1` if your playhead starts at keyframe 0.
 
 
 
 ## Date {: .clear }
 
-![Time|Timer](assets/images/in_cat_time/date/v1.0.0/time_date_ui.png){ align=right width="350" }
+![Time|Date](assets/images/in_cat_time/date/v1.0.0/time_date_ui.png){ align=right width="350" }
 
 Quickly generate procedural calendar readouts with full formatting control over your display.
 
@@ -82,18 +82,18 @@ Quickly generate procedural calendar readouts with full formatting control over 
 
 **[2] Year Format:** Choose to display the year as either a minimal 2-digit or a full 4-digit readout.
 
-**[3] Month Format:** You can represent the month as a standard numeric value or switch to a 3-digit alphabetic value for a more advanced UI aesthetic. Note: The alphabetic month format is exclusively available when using the 16-Segment Display Model, due to the segment count limitations of the 7-Segment model.
+**[3] Month Format:** You can represent the month as a standard numeric value or select **Alphabet** for a 3-letter month abbreviation. **Note:** The alphabetic month format is exclusively available when using the 16-Segment Display Model, due to the segment count limitations of the 7-Segment model.
 
 
 <div class="grid" markdown>
 
 <figure markdown>
-  ![Un-linked Asset](assets/images/in_cat_time/date/v1.0.0/month_format_num.png){ width="400" }
+  ![Numeric month format](assets/images/in_cat_time/date/v1.0.0/month_format_num.png){ width="400" }
   <figcaption>Numeric</figcaption>
 </figure>
 
 <figure markdown>
-  ![Linked Asset](assets/images/in_cat_time/date/v1.0.0/month_format_alphanum.png){ width="400" }
+  ![Alphabetic month format](assets/images/in_cat_time/date/v1.0.0/month_format_alphanum.png){ width="400" }
   <figcaption>Alphabet</figcaption>
 </figure>
 

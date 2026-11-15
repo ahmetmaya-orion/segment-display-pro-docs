@@ -30,12 +30,12 @@ The display is the core visual element of any segment display, the panel of illu
 <div class="grid" markdown>
 
 <figure markdown>
-  ![Addon FPS](assets/images/display_options/v1.0.0/disp_7seg_fonts_a.png){ width="400" }
+  ![7-Segment Font A](assets/images/display_options/v1.0.0/disp_7seg_fonts_a.png){ width="400" }
   <figcaption>Font - A</figcaption>
 </figure>
 
 <figure markdown>
-  ![Scene FPS](assets/images/display_options/v1.0.0/disp_7seg_fonts_b.png){ width="400" }
+  ![7-Segment Font B](assets/images/display_options/v1.0.0/disp_7seg_fonts_b.png){ width="400" }
   <figcaption>Font - B</figcaption>
 </figure>
 
@@ -55,11 +55,20 @@ Switches to an alternative font variation. This option is limited to the digits 
 
 The 16-segment display unlocks a wide range of font possibilities, thanks to its higher segment count.
 
-**[1] Font Width:** Adjusts the font to occupy either the full width or half of the display base. **Note:** Not available with the 7-Segment Display Model due to segment count limitations.
+**[1] Font Width:** Sets the font to "Wide" (full width of the display base) or "Narrow" (half width). **Note:** Not available with the 7-Segment Display Model due to segment count limitations.
 
 **[2] Font Align:** Aligns the font to the left or right side of the display base when "Narrow" is selected as the font width.
 
-**[3] Font Alternatives:** Selects alternative font variations for numeric and alphabetic characters.
+**[3] Font Alternatives:** Selects alternative font variations for numeric and alphabetic characters.
+
+- **Number Fonts:** Sets the font variation per digit. The digit list changes with Font Width and Font Align, because each layout has a different number of segments to work with. Some digits also have more variations than others.
+    - **Wide:** All digits, 0 to 9.
+    - **Narrow + Left:** 2, 5, 6, 7, and 9.
+    - **Narrow + Right:** 1, 2, 4, 5, 6, 7, and 9.
+- **Alphanum Fonts:** Sets the font variation (A, B, or C) for letters. The 3A, 3B, and 3C rows in the image show each variation.
+
+!!! info wrap
+    The UI in the image above is cropped to fit the layout. Your panel may show more rows, depending on the selected Font Width and Font Align.
 
 ---
 
@@ -76,11 +85,11 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 !!! tip wrap
     Alignment and sizing options can be used to stack multiple display objects together.
 
-**[3] Digit Spaces:** Controls the distance between digits of whole and decimal numbers in the `Numbers` and `Time` categories. 
+**[3] Digit Spaces:** Controls the distance between digits of whole and decimal numbers in the `Numbers` and `Time` categories. 
 
 !!! info wrap "To enable spacing  options, you need a display and a decimal length of at least two."
 
-**[3] Character Space:** Controls the distance between character spaces in the `Alphanumeric` category. 
+**[3] Character Space:** Controls the distance between character spaces in the `Alphanumeric` category. 
 
 !!! info wrap "This option appears only if the Alphanumeric category is selected."
 
@@ -108,7 +117,7 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 **[2] Toggle Led:** Enables or disables the LED emission effect on the display segments.
 
 !!! info wrap
-    This option is currently located in the Appearances panel, which has no direct relationship to it. A new feature called "Actions" is planned for the Segment Display Pro edition. All animation-related toggles will be moved to the new panel when it is implemented in the future.
+    This option is currently located in the Appearances panel, which has no direct relationship to it. A new feature called "Actions" is planned for the Segment Display Pro edition. All animation-related toggles will be moved to the new panel when it is implemented in the future.
 
 **[3] Emission Color & Strength:** Sets the color and intensity of the LED emission on active (lit) segments.
 

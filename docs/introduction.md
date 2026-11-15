@@ -5,7 +5,7 @@ Segment Display Pro is a procedural Blender add-on that lets you create fully cu
 This manual covers everything you need to get started: installation, activation, the N-panel interface, and a detailed breakdown of every input and setting available to you. Whether you're building a retro dashboard or a sci-fi HUD, this guide will help you get the most out of the add-on.
 
 !!! note "Note for Lite edition users:" 
-     The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
+     The Segment Display Lite edition does not have a separate user manual. However, Lite users can still reference this manual for the Installation, Activation, Troubleshooting, and Settings & Preferences sections, as they apply to both editions. **Exception: Lite's asset recovery procedure differs from Pro's and is not covered in this manual.** The remaining sections (such as Input Categories) cover Pro-specific features, but may still be useful as a general reference.
 
 ## What it does
 
@@ -29,19 +29,27 @@ display geometry stays procedural and adjustable after creation.
 | ----------------- | ------------------------------------------------------------ |
 | Full Name           | Segment Display Pro           |
 | N-panel Label       | SegDisp Pro                   |
-| Add-on version      | 1.0.0                         |
-| Compatible Blender  | 5.1 (Minimum 5.1.1)           |
+| Add-on Version      | 1.0.1                         |
+| Assets Version      | 1.0.1 (must match the add-on version) |
+| Compatible Blender  | 5.1 (Minimum 5.1.1)¹          |
+| Developer           | Orion November Studio         |
 | Render Engines      | Eevee, Cycles                 |
-| OS Platforms        | Windows*, Linux, macOS        |
+| OS Platforms        | Windows², Linux, macOS        |
 | Location in UI      | `3D View` → Sidebar (`N`) → **SegDisp Pro** tab   |
 | Add-on Type/Format  | Legacy/zip                     |
-| Script Size         | 492 – 575 KB**                 |
-| Asset Size          | 170 – 200 MB**                 |
+| Script Size         | 492 – 575 KB³                  |
+| Asset Size          | 170 – 200 MB³                  |
 
 !!! info "Important"
-    * The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
+    ¹ 5.1.1 is the minimum Blender version the add-on declares. SegDisp v1.0.1 has been tested with **Blender 5.1.2**, the recommended version for this release, but has not yet been re-tested on 5.1.1. Newer Blender versions are not confirmed as supported yet.
+
+    ² The Segment Display add-on was not developed for a specific operating system. However, it has only been tested on a Windows 11 system. Before purchasing the Pro edition, we recommend testing your system with the free Lite edition.
     
-    ** File sizes may change over time with future updates.
+    ³ File sizes may change over time with future updates.
+
+:material-tag-outline: **v1.0.1 and later**
+
+To see the versions installed on your computer, open **About** in the add-on preferences or at the bottom of the N-panel. See [Add-on Credits](prefs_and_settings.md#add-on-credits).
 
 ## Where to find it in Blender
 
@@ -51,19 +59,18 @@ Blender's other N-panel categories.
 
 ## The Asset File
 
-- When you add a segment display object to the scene via the N-Panel interface, the Segment Display asset blend file appears in Outliner > Blender File as linked. No matter how many segment display objects you have in the scene, they all share the same single linked asset data. 
+When you add a display, its Geometry Nodes setup uses the .blend asset linked from the add-on's `assets` folder. Displays can share this library, including across scenes. If the asset is missing or its path changes, displays may appear as planes without their stored modifier settings being lost.
 
-!!! warning "Linked Blend Data"
-    Do not delete the linked blend file directly from the Outliner — doing so will cause you to lose all your object settings. If you need to clean up your project file, make sure there are no segment display objects remaining in the scene, then use Blender > Purge Unused Data — this will automatically remove the asset file from the current blend file.
+:material-tag-outline: **Pro v1.0.1 and later**
 
-- If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences > "Asset Status" panel — all your objects will be restored with their original settings.
+Preserve a project copy, reinstall the complete matching add-on and restart Blender first. Displays often reconnect automatically; if they are correct, no manual recovery is needed. If supported problems remain, use **Preferences > Add-ons > Segment Display Pro > Asset Status > Review & Recover…**. Reconnecting a library retains data still present; restoring an empty node-tree assignment and recreating a deleted modifier are different operations. Recreation uses defaults, not deleted settings or animation. See [Review & Recover](prefs_and_settings.md#review-recover).
 
-!!! warning "Do not open or modify the asset file!"
-    The add-on includes a .blend asset file. The add-on **links** to this file (it doesn't append it), so it has to stay exactly as shipped. Do not open, edit, re-save, rename or move it. Even opening and saving it in Blender without changing anything can break the add-on.
+!!! warning "Protect your project and shipped asset"
+    Do not delete the linked library, remove node-tree assignments or rename/delete display modifiers as a repair shortcut. Recovery cannot guarantee restoration of missing settings or animation. Each edition controls its own objects; Pro recovery does not convert Lite objects.
 
-    **Why this matters for support:** every shipped asset file has its own unique ID (a digital fingerprint) that we use to check it's the original. Opening or re-saving the file, even without changing anything, breaks that ID. Think of it like a laptop warranty: once you open the case, it's no longer covered. If the asset file has been modified, we can't provide support until you reinstall the add-on from the original ZIP.
+    Do not open, modify, re-save, rename or move the shipped asset file. Re-saving changes its byte-level fingerprint even if it looks unchanged. Reinstall the original ZIP if it was altered. See [asset safety and recovery limits](troubleshooting.md#the-asset-file).
 
-    If displays start acting strange or won't load, uninstall the add-on and reinstall it from the original ZIP.
+    **Why this matters for support:** OrionNovember.Studio cannot provide support for modified asset files. Opening and re-saving the shipped asset changes its digital fingerprint, even if you make no visible changes. If the asset has been modified, reinstall the complete add-on from the original ZIP before requesting support.
 
 ## The Segment Display Object
 
@@ -83,5 +90,6 @@ Blender's other N-panel categories.
 Segment Display Pro is a commercial add-on. It uses license-key activation, so a
 valid key is required to unlock the full feature set. See the [installation and
 Activation](installation.md) pages for details.
+
 
 
