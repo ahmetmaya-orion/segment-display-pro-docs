@@ -185,3 +185,25 @@
 .md-typeset .hover-row .hover-row-text > p:first-child {
   margin-top: 0;
 }
+
+/* Tables: Material's default table has an unshaded header and no row
+   striping, so it reads like a plain list (especially in the dark slate
+   scheme). Shade the header row and stripe every other body row. Colors are
+   derived from the theme foreground, so they work in light and dark mode.
+   Material's own row hover highlight still applies on top. */
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  font-weight: 700;
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: color-mix(in srgb, var(--md-default-fg-color) 4%, transparent);
+}
+
+/* Category rows in the features table (a bold first cell with empty
+   neighbors, e.g. GENERAL, NUMBERS) get the header shade so sections stand
+   out. :has() is supported in all current browsers; older ones simply fall
+   back to the striped look. */
+.md-typeset table:not([class]) tbody tr:has(td:first-child > strong:only-child):has(td:nth-child(2):empty) {
+  background-color: var(--md-default-fg-color--lightest);
+}

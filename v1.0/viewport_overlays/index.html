@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -1018,14 +1018,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../changelog_addon/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog (Documentation)
   
 
     
@@ -1181,13 +1209,13 @@
 <p>In complex 3D scenes, constantly switching between viewport shading modes to check your segment display can slow you down. Real LED panels are visible from across a room, but in Blender's Solid viewport mode, material-based effects like emission aren't rendered. SegDisp Pro includes viewport utilities that let you preview your display without leaving Solid mode, so you don't have to switch to Material or Rendered view just to see your results, keeping performance smooth even in busy scenes. Additional overlays let you visualize inactive segments for easier layout and snap-align your display to other objects. This section covers all viewport and overlay inputs across two groups: Solid Viewport Preview and Overlay helpers.</p>
 <h2 id="viewport-solid-preview">Viewport | Solid Preview<a class="headerlink" href="#viewport-solid-preview" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="Viewport UI" src="../assets/images/viewport_overlays/v1.0.0/viewport_ui.png" width="400" /></p>
-<p><img align="right" alt="Viewport UI" src="../assets/images/viewport_overlays/v1.0.0/view_blender_shading_panel.png" width="400" /></p>
+<p><img align="right" alt="Blender Viewport Shading Panel" src="../assets/images/viewport_overlays/v1.0.0/view_blender_shading_panel.png" width="400" /></p>
 <figure class="img-hover">
-<p><img alt="Input Alignment: left" src="../assets/images/viewport_overlays/v1.0.0/view_solid_view_off.png" width="600" /></p>
-<p><img alt="Input Alignment: right" aria-hidden="true" class="hover-img" src="../assets/images/viewport_overlays/v1.0.0/view_solid_view_on.png" width="600" /></p>
+<p><img alt="Solid Viewport Preview disabled" src="../assets/images/viewport_overlays/v1.0.0/view_solid_view_off.png" width="600" /></p>
+<p><img alt="Solid Viewport Preview enabled" aria-hidden="true" class="hover-img" src="../assets/images/viewport_overlays/v1.0.0/view_solid_view_on.png" width="600" /></p>
 </figure>
 <p><strong>[1] Solid Viewport Preview:</strong> Allows the display results to be shown in Blender's "Solid" viewport shading mode by switching the Object Color Type to Attribute/Vertex. Useful when working in busy scenes where switching to Material or Rendered view would impact performance. </p>
-<p><strong>[2] Solid Viewport Preview:</strong> Sets the temporary vertex color used for LED (active) segments and the Display Base in Solid viewport mode.</p>
+<p><strong>[2] Led Color / Base Color:</strong> Sets the temporary vertex colors used for LED (active) segments and the Display Base, respectively, in Solid viewport mode.</p>
 <div class="admonition warning wrap">
 <p class="admonition-title">Solid Viewport Preview operates at the Blender level, outside the add-on itself.</p>
 <p>Enabling it switches the Object Color Type to Attribute/Vertex across the entire scene — not just for the segment display object. As a result, all other objects in your scene will also adopt this color method, which may alter their appearance in Solid viewport mode. Use this option as a temporary result checker.</p>
@@ -1196,7 +1224,7 @@
 <p class="admonition-title">Info</p>
 <p>If you switch the Object Color Type to Attribute manually from the Blender &gt; Viewport Shading panel, the vertex color on the segment display object may not appear. This is because the Solid Viewport Preview button has not been toggled.</p>
 </div>
-<p>See the <a href="../troubleshooting/#viewport-solid-color-preview">Troubleshooting page</a> for the Solid Viewport Preview</p>
+<p>See the <a href="../troubleshooting/#viewport-solid-color-preview">Troubleshooting page</a> for the Solid Viewport Preview</p>
 <h2 class="clear" id="viewport-overlays">Viewport | Overlays<a class="headerlink" href="#viewport-overlays" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="Viewport Overlay Ghosts" src="../assets/images/viewport_overlays/v1.0.0/viewport_ghosts.png" width="400" /></p>
 <h3 id="ghost-segments">Ghost Segments<a class="headerlink" href="#ghost-segments" title="Permanent link">&para;</a></h3>
@@ -1205,7 +1233,7 @@
 <p class="admonition-title">Ghost segments are not visible in final renders.</p>
 </div>
 <h3 class="clear" id="snap-guides">Snap Guides<a class="headerlink" href="#snap-guides" title="Permanent link">&para;</a></h3>
-<p><img align="right" alt="Viewport Overlay Ghosts" src="../assets/images/viewport_overlays/v1.0.0/blender_snap_options.png" width="400" /></p>
+<p><img align="right" alt="Blender Snap Options" src="../assets/images/viewport_overlays/v1.0.0/blender_snap_options.png" width="400" /></p>
 <p><strong>[4]</strong> Displays alignment guidelines when 3D viewport Snap is enabled, helping you align the segment display object with other scene items.</p>
 <div class="admonition info wrap">
 <p class="admonition-title">Snap Guides</p>
@@ -1320,7 +1348,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

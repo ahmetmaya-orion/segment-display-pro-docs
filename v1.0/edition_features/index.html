@@ -18,14 +18,14 @@
         <link rel="prev" href="../prefs_and_settings/">
       
       
-        <link rel="next" href="../changelog/">
+        <link rel="next" href="../changelog_addon/">
       
       
         
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -901,6 +901,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edition Features Table
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -918,6 +936,36 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#asset-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asset Recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -930,14 +978,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../changelog_addon/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog (Documentation)
   
 
     
@@ -1192,7 +1268,7 @@
 </tr>
 <tr>
 <td>Date - Month Format</td>
-<td>✕ *</td>
+<td>✕ ¹</td>
 <td>✓</td>
 </tr>
 <tr>
@@ -1226,7 +1302,7 @@
 <td>Single / Multi (Presets) Input</td>
 </tr>
 <tr>
-<td>Separators In Between **</td>
+<td>Separators In Between ²</td>
 <td>Characters</td>
 <td>Characters / Displays</td>
 </tr>
@@ -1251,7 +1327,7 @@
 <td>Full</td>
 </tr>
 <tr>
-<td>Separators In Between **</td>
+<td>Separators In Between ²</td>
 <td>Characters</td>
 <td>Characters / Displays</td>
 </tr>
@@ -1268,7 +1344,7 @@
 <tr>
 <td>Model Styles</td>
 <td>Single</td>
-<td>Single ***</td>
+<td>Single ³</td>
 </tr>
 <tr>
 <td>Segment Fonts</td>
@@ -1282,9 +1358,60 @@
 </tr>
 </tbody>
 </table>
-<p><strong>*</strong> Month format: Numbers or alphanumeric. The alphanumeric format is only compatible with the 16-segment display model, which is only included in the Pro version.</p>
-<p><strong>**</strong> Locate the "Separators" panel. Because of the alphanumeric display count limitation in the Lite version, this feature is only available in Segment Display Pro.</p>
-<p><strong>***</strong> More styles will be available in future updates for Segment Display Pro.</p>
+<p>¹ Month format: Numbers or alphanumeric. The alphanumeric format is only compatible with the 16-segment display model, which is only included in the Pro version.</p>
+<p>² Locate the "Separators" panel. Because of the alphanumeric display count limitation in the Lite version, this feature is only available in Segment Display Pro.</p>
+<p>³ More styles will be available in future updates for Segment Display Pro.</p>
+<h2 id="asset-recovery">Asset Recovery<a class="headerlink" href="#asset-recovery" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> <strong>v1.0.1 and later</strong></p>
+<table>
+<thead>
+<tr>
+<th>What you can do</th>
+<th>LITE</th>
+<th>PRO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recovery tool</td>
+<td>Simple <strong>Re-link Asset</strong> button</td>
+<td><strong>Review &amp; Recover</strong> panel that previews every fix</td>
+</tr>
+<tr>
+<td>Reconnect the asset file</td>
+<td>Re-links the whole project in one go</td>
+<td>You pick which library to reconnect, across all scenes</td>
+</tr>
+<tr>
+<td>Reconnect a display's missing node setup</td>
+<td>Basic: only displays it can recognize</td>
+<td><strong>Restore Node Tree</strong>; asks you to confirm when it isn't sure which modifier to fix</td>
+</tr>
+<tr>
+<td>Rebuild a deleted SegDisp modifier</td>
+<td>No</td>
+<td>Optional, only for SegDisp objects, rebuilt with default settings</td>
+</tr>
+<tr>
+<td>Back up your project before recovery</td>
+<td>No (Lite has no recovery dialog)</td>
+<td>Yes; if the backup fails, recovery stops and nothing changes</td>
+</tr>
+<tr>
+<td>Fix on/off switches that turned into number fields</td>
+<td>No</td>
+<td>Yes, and it keeps your on/off choices</td>
+</tr>
+<tr>
+<td>Fix displays linked from another .blend file</td>
+<td>No</td>
+<td>No (fix them in the original file)</td>
+</tr>
+</tbody>
+</table>
+<p>Recovery only reconnects what's still in your file. It can't bring back deleted settings or animation.</p>
+<p><strong>Tip:</strong> Reinstalling the matching add-on version and restarting Blender often fixes displays without any recovery.</p>
+<p>Lite's recovery steps aren't covered in this manual. See <a href="../prefs_and_settings/#review-recover">Pro Review &amp; Recover</a>.</p>
 
 
 
@@ -1337,13 +1464,13 @@
         
         
           
-          <a href="../changelog/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog">
+          <a href="../changelog_addon/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog (Add-on)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Changelog
+                Changelog (Add-on)
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1387,7 +1514,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

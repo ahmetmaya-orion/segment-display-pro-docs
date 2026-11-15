@@ -12,24 +12,24 @@
         <meta name="author" content="Segment Display Pro">
       
       
-        <link rel="canonical" href="https://ahmetmaya-orion.github.io/segment-display-pro-docs/v1.0/changelog/">
+        <link rel="canonical" href="https://ahmetmaya-orion.github.io/segment-display-pro-docs/v1.0/changelog_addon/">
       
       
         <link rel="prev" href="../edition_features/">
       
       
-        <link rel="next" href="../troubleshooting/">
+        <link rel="next" href="../changelog_documentation/">
       
       
         
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>Changelog - Segment Display Pro</title>
+        <title>Changelog (Add-on) - Segment Display Pro</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#v100-initial-release" class="md-skip">
+        <a href="#v101" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Changelog
+              Changelog (Add-on)
             
           </span>
         </div>
@@ -934,7 +934,7 @@
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
   
 
     
@@ -952,7 +952,7 @@
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
   
 
     
@@ -974,6 +974,56 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.0.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Improved
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v100-initial-release" class="md-nav__link">
@@ -1062,6 +1112,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog (Documentation)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1195,9 +1273,42 @@
 
 
 
-  <h1>Changelog</h1>
+  <h1>Changelog (Add-on)</h1>
 
 <p>All notable changes to Segment Display Pro are listed here, newest first.</p>
+<h2 id="v101">v1.0.1<a class="headerlink" href="#v101" title="Permanent link">&para;</a></h2>
+<p><strong>Released:</strong> 2026/11/08 &nbsp;·&nbsp; <strong>Requires:</strong> Blender 5.1 (Minimum 5.1.1) &nbsp;·&nbsp; <strong>Tested and recommended:</strong> Blender 5.1.2</p>
+<p>A patch release with an About section and manual update checks, a Pro-only Review &amp; Recover workflow for asset problems, and clearer asset and version notices. This patch has not yet been re-tested on Blender 5.1.1.</p>
+<h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>About:</strong> in Preferences and at the bottom of the N-panel, showing Add-on Version, Assets Version, Compatible Blender and developer credits. See <a href="../prefs_and_settings/#about-panel">About Panel</a>.</li>
+<li><strong>Check for Updates:</strong> a manual check in About, alongside the existing startup check. <strong>Open Downloads</strong> opens the release page; installation stays manual. See <a href="../prefs_and_settings/#add-on-update">Add-on Update</a>.</li>
+<li><strong>Hide update notifications:</strong> an option to hide the N-panel header update notice. Update information remains available in About and Preferences. The preference is saved in <code>addon_userpref.json</code> outside the add-on folder, so it survives normal updates; for now it stores only this preference.</li>
+<li><strong>Review &amp; Recover (Pro):</strong> in <strong>Preferences &gt; Asset Status</strong>. Preview supported library reconnections and missing node-tree repairs, review uncertain cases and pick the right modifier, optionally recreate a missing modifier with default settings, back up an already saved project first, and repair toggle inputs stored as numbers while keeping their on/off values. See <a href="../prefs_and_settings/#review-recover">Review &amp; Recover</a>.</li>
+<li><strong>Recognition properties:</strong> <code>segdisp_*</code> custom properties on Pro objects help recovery recognize displays. See <a href="../troubleshooting/#pro-recognition-properties-and-modifiers">Pro recognition properties</a>.</li>
+<li><strong>Email Support:</strong> a new button in Resources &amp; Support that opens your default mail app. See <a href="../prefs_and_settings/#resources-support-panel">Resources &amp; Support</a>.</li>
+</ul>
+<h3 id="improved">Improved<a class="headerlink" href="#improved" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Review &amp; Recover</strong> replaces the visible <strong>Re-link Asset</strong> button in Pro. Library reconnections can affect displays across scenes, and results show which items were left unchanged and which settings could not be restored.</li>
+<li><strong>Add Segment Display</strong> checks for a missing asset or a known asset/add-on version mismatch before adding a display.</li>
+<li>Clearer asset availability, version mismatch and restart-required notices. Unavailable asset versions show as <strong>Unknown</strong> instead of a misleading value.</li>
+<li>N-panel asset warnings include a shortcut to Preferences.</li>
+<li><strong>About</strong> and <strong>Viewport &amp; Overlays</strong> start collapsed in the N-panel.</li>
+<li>Resources &amp; Support documentation links point to the versioned v1.0 manual.</li>
+</ul>
+<h3 id="update-notes">Update Notes<a class="headerlink" href="#update-notes" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Before and after updating</p>
+<ul>
+<li>Install the new complete Pro ZIP over the existing add-on, then <strong>restart Blender</strong> before troubleshooting. Keep a project backup before running any repair. See <a href="../installation/#updating-the-add-on">Updating the Add-on</a>.</li>
+<li>Recovery does not save over your open project or guarantee that deleted settings come back. Review the result, then save.</li>
+<li>Blender may stop responding for a while during asset processing. Let it finish.</li>
+<li>Local asset copies, objects from the other edition and source-linked modifiers are not repaired directly. Linking displays from another project is not a validated workflow.</li>
+<li><strong>Do not modify</strong> the <code>segdisp_type</code>, <code>segdisp_schema</code>, <code>segdisp_edition</code> or <code>segdisp_modifier</code> custom properties.</li>
+<li>License seat limits and the 14-day offline policy are unchanged.</li>
+</ul>
+</div>
 <h2 id="v100-initial-release">v1.0.0 (Initial Release)<a class="headerlink" href="#v100-initial-release" title="Permanent link">&para;</a></h2>
 <p><strong>Released:</strong> 2026/10/18 &nbsp;·&nbsp; <strong>Requires:</strong> Blender 5.1 (Minimum 5.1.1)</p>
 <p>The first public release of Segment Display Pro.</p>
@@ -1300,13 +1411,13 @@
         
         
           
-          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshooting">
+          <a href="../changelog_documentation/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog (Documentation)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Troubleshooting
+                Changelog (Documentation)
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1350,7 +1461,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

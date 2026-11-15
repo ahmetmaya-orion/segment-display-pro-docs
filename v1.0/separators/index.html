@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -1012,14 +1012,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../changelog_addon/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog (Documentation)
   
 
     
@@ -1189,12 +1217,13 @@
 <li><strong>Colon Distance:</strong> Adjusts the vertical spacing between the two dots of the colon separator.</li>
 </ul>
 <p><strong>[4] Shape Corners:</strong> Toggles between sharp or rounded corners on the separator character shapes. <strong>Round Style:</strong> Selects the rounding style applied to dash or slash/line rectangle-shaped characters.</p>
-<p><strong>[5] Character Angle:</strong> Tilts the separator character to a custom angle. Note: Not available for slash and line characters.</p>
-<p><strong>[6] Vertical Position:</strong> Sets the separator's vertical alignment. The character can be automatically aligned to the decimal digit position or manually adjusted to your preference. Decimal digit position options can be found on the <a href="../display/#display-align-spacing-and-size">Display page</a>.</p>
+<p><strong>[5] Character Angle:</strong> Switches the separator character between <strong>Straight</strong> and <strong>Shear</strong>. <strong>Note:</strong> Not available for slash and line characters.</p>
+<p><strong>[6] Vertical Position:</strong> Sets the separator's vertical alignment. The character can be automatically aligned to the decimal digit position or manually adjusted to your preference. Decimal digit position options can be found on the <a href="../display/#display-align-spacing-and-size">Display page</a>.</p>
 <p><strong>[7] Custom Vertical Position:</strong> Provides a custom vertical position value when automatic alignment is not selected. <strong>Manual Vertical Offset:</strong> Manually adjusts the vertical offset of the separator character.</p>
 <p><strong>[8] Horizontal Position:</strong> Sets the separator's horizontal alignment. Can be centered automatically within the digit spaces or offset based on your preferred value. <strong>Manual Horizontal Offset:</strong> Applies a manual horizontal offset to fine-tune the separator's left/right placement.</p>
-<p><strong>[9] Separator Size:</strong> Scales the overall size of the separator character. There is an additional specific size option for the decimal-side separators <strong>[10]</strong> that allows you to link the separator size to the decimal digit size. Decimal digit size options can be found on the Display page. <strong>Note:</strong> Not available for dash, slash, and line characters since they have their own dedicated size settings.</p>
-<p><strong>[11] Separation Spaces:</strong> Controls the spacing around separators. The same option is labeled "First/Second Separation Spaces" for the Alphanumeric input category. </p>
+<p><strong>[9] Separator Size:</strong> Scales the overall size of the separator character. <strong>Note:</strong> Not available for dash, slash, and line characters since they have their own dedicated size settings.</p>
+<p><strong>[10] Size Link to Decimal / Manual:</strong> Only on the Decimal Number tab. "Size Link to Decimal" links the separator size to the decimal digit size; "Manual" lets you set it yourself. Decimal digit size options can be found on the <a href="../display/#display-align-spacing-and-size">Display page</a>.</p>
+<p><strong>[11] Separation Space:</strong> Controls the spacing for the selected separator. The decimal separator has its own space control. In the Alphanumeric category, use <strong>First Separation Space</strong> and <strong>Second Separation Space</strong> for the two separators.</p>
 <h2 class="clear" id="alphanumeric-specific-separator-options">Alphanumeric Specific Separator Options<a class="headerlink" href="#alphanumeric-specific-separator-options" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="Separators Alphanum Spec" src="../assets/images/separators/v1.0.0/sep_alphanum_spec.png" width="350" /></p>
 <p>Separators In Between Option:</p>
@@ -1206,20 +1235,20 @@
 <p><img alt="Separators Digit Style Spec Display" src="../assets/images/separators/v1.0.0/sep_digit_style_spec_display.png" width="1100" /></p>
 <p><img align="right" alt="Separators Digit Style Spec UI" src="../assets/images/separators/v1.0.0/sep_digit_style_spec_ui.png" width="350" /></p>
 <p><strong>[1] Display Models:</strong> Selects the segment display model used for the separator's digit characters.</p>
-<p><strong>[2] Display Styles:</strong> Selects a visual style preset for the digit separator characters.*</p>
+<p><strong>[2] Display Styles:</strong> Selects a visual style preset for the digit separator characters.¹</p>
 <div class="admonition info wrap">
-<p class="admonition-title">* Info</p>
+<p class="admonition-title">¹ Info</p>
 <p>There is only a single style currently available. The remaining styles are still under development and will be included in future versions.</p>
 </div>
-<p><strong>[3] Digit Segment Count:</strong> Sets the number of segments used for the segment variation presets.</p>
-<p><strong>[4] Segment Variations:</strong> Sets the number of segments used for the segment variation presets.</p>
-<p><strong>[5] Additional Style Options for the Digit Character:</strong> Sets the number of segments used for the segment variation presets.</p>
+<p><strong>[3] Segment Count:</strong> Sets the number of segments used for the segment variation presets.</p>
+<p><strong>[4] Segment Vari:</strong> Selects which segment variation preset the separator's digit character uses.</p>
+<p><strong>[5] Style Options:</strong> Fine-tunes the look of the separator's digit character in the "Whole Sep. | Style Options" panel:</p>
 <ul>
 <li>
-<p>Segment Thickness: Controls the pre-defined thickness of the individual segments used in the separator display.</p>
+<p><strong>Regular / Bold:</strong> Sets the pre-defined thickness of the individual segments used in the separator display.</p>
 </li>
 <li>
-<p>Segment Gap: Adjusts the gap between individual segments within the separator's digit characters.</p>
+<p><strong>1 – 4:</strong> Adjusts the gap between individual segments within the separator's digit characters.</p>
 </li>
 </ul>
 <h2 class="clear" id="non-character-option">Non-character Option<a class="headerlink" href="#non-character-option" title="Permanent link">&para;</a></h2>
@@ -1328,7 +1357,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

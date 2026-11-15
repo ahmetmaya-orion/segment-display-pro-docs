@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -1020,14 +1020,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../changelog_addon/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog (Documentation)
   
 
     
@@ -1211,10 +1239,15 @@
 <p><strong>[4] Input Options:</strong> Single / Multi</p>
 <p><strong>[5] Single Input:</strong> Accepts a single text value containing both letters and numbers, including uppercase and lowercase characters, digits, blank spaces, and separator characters.</p>
 <p><strong>[6] [7] Preset Selector &amp; Slots:</strong> Because Blender does not natively support the animation of string (text) inputs, the add-on includes a built-in multi-input preset system. By switching your input option to "Multi," you can type different words and numbers into a pre-defined list of up to 10 preset slots. You can then keyframe the "Preset Selector" number to animate the text changing over time. Please note that blank spaces and separator characters are not synced between presets. For a realistic result, you will need to configure them manually for each preset.</p>
-<p><strong>[8] Preset Focus Mode:</strong> To keep your add-on panel clean while working, you can focus on the currently selected preset and collapse the rest of the list. After defining your presets, click "Show Selected" for quick UI Management.</p>
+<p><strong>[8] Preset Focus Mode:</strong> Use the two icon buttons beside <strong>Preset Selector</strong> to choose which preset inputs are visible:</p>
+<ul>
+<li><strong>Show as List</strong> (list icon): Shows all preset inputs for this display.</li>
+<li><strong>Show Selected</strong> (minus icon): Shows only the selected preset input.</li>
+</ul>
 <h2 class="clear" id="alphanumeric-separators-using-spaces">Alphanumeric Separators (Using Spaces)<a class="headerlink" href="#alphanumeric-separators-using-spaces" title="Permanent link">&para;</a></h2>
 <p><strong>[1] [2] Creating Separators:</strong> To add a separator character between your data points, simply type a space directly between your inputs in the text field. Do not attempt to enter separator characters (like dots or dashes) directly into the input field, as this will cause an error.</p>
 <p><strong>[3] Independent Separator Controls:</strong> Each space you type automatically activates a dedicated tab ("Alphanum 1" and "Alphanum 2") in the Separators panel. By default, the first space generates a dot, and the second space generates a comma.</p>
+<p><strong>Note:</strong> In the separator demo below, <strong>Alphanum 2</strong> was changed to a dot, so the <code>BL_EN_DER</code> example shows two dots rather than the default dot and comma.</p>
 <p><strong>[4] Simulating True Spaces:</strong> If you want an actual blank space rather than a symbol, select "X" from the Separator panel's character menu. This will insert an extra, empty digit to simulate a blank space.</p>
 <p><img alt="Alphanum Sep Demo" src="../assets/images/in_cat_alphanum/v1.0.0/alpha_sep_demo.png" width="1200" /></p>
 <div class="admonition info">
@@ -1344,7 +1377,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

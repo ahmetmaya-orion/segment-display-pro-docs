@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -1100,14 +1100,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../changelog_addon/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog (Documentation)
   
 
     
@@ -1337,11 +1365,13 @@ files inside it, as this can break the add-on.</p>
 <p><img align="right" alt="Installation (Drag &amp; Drop)" src="../assets/images/preferences/v1.0.0/installation_drag_drop.jpg" width="500" /></p>
 <ol>
 <li>You can also install the add-on by dragging its ZIP file directly into Blender instead of opening Preferences first.</li>
-<li>Drag the Segment Display Pro ZIP file from your computer’s file manager onto the Blender window. You do not need to drop it in a specific editor or area.</li>
+<li>Drag the Segment Display Pro ZIP file from your computer’s file manager onto the Blender window. You do not need to drop it in a specific editor or area. Do not extract it first.</li>
 <li>In the Install from Disk popup, leave Target set to Default.</li>
 <li>Make sure Overwrite and Enable on Install are checked, then click OK.</li>
+<li>Check that <strong>"Segment Display Pro"</strong> is enabled in <strong>Edit</strong> → <strong>Preferences</strong> → <strong>Add-ons</strong> (checkbox ticked).</li>
 <li>Restart Blender after installation to refresh the asset file.</li>
 </ol>
+<p>Dropping the ZIP doesn't open the install popup? Use <a href="#from-the-preferences-panel">Install from Disk...</a> instead.</p>
 <p>After enabling, the add-on appears in the 3D Viewport sidebar under the
 <strong>SegDisp Pro</strong> tab.</p>
 <div class="admonition info">
@@ -1372,7 +1402,7 @@ files inside it, as this can break the add-on.</p>
 <p>If you use a custom add-on directory, proper linking of asset files within a scene cannot be guaranteed, even if the add-on uses relative paths to reference assets. This add-on has only been tested with the default Blender scripts directory.</p>
 </div>
 <h2 id="activationdeactivation">Activation/Deactivation<a class="headerlink" href="#activationdeactivation" title="Permanent link">&para;</a></h2>
-<p><img align="right" alt="Enabling the add-on in Blender Preferences" src="../assets/images/preferences/v1.0.0/prefs_license_key.jpg" width="500" /></p>
+<p><img align="right" alt="License activation in Blender Preferences" src="../assets/images/preferences/v1.0.0/prefs_license_key.png" width="500" /></p>
 <p>After purchasing Segment Display Pro, you will receive an order confirmation email from Lemon Squeezy containing your license key. You can also find your license key anytime in your Lemon Squeezy account under your order details.</p>
 <ol>
 <li>In <strong>Edit</strong> → <strong>Preferences</strong> → <strong>Add-ons</strong>, expand <strong>"Segment Display Pro"</strong>.</li>
@@ -1381,6 +1411,7 @@ files inside it, as this can break the add-on.</p>
 <li>When it shows as activated, you're done. Activation stays active after you restart Blender, update or reinstall the add-on, or move to a newer Blender version.</li>
 </ol>
 <p>The status monitor above the key field displays your current activation status (top-left) and your activation limit/seats (top-right).</p>
+<p><strong>Click to read this before uninstalling the add-on:</strong> Opens a popup explaining why you must deactivate your license before uninstalling.</p>
 <div class="admonition internet">
 <p class="admonition-title">Internet Connection Required</p>
 <p>License activation and deactivation both require an internet connection. Activation validates your license key online, and deactivation contacts the server to free up your activation slot. This ensures your activation count stays accurate and protected. If either fails, make sure "Allow Online Access" is enabled in Blender under Preferences &gt; System &gt; Network.</p>
@@ -1400,6 +1431,16 @@ files inside it, as this can break the add-on.</p>
 <li>macOS: <code>~/Library/Application Support/OrionNovember.Studio/SegmentDisplay_Pro/</code></li>
 <li>Linux: <code>~/.local/state/OrionNovember.Studio/SegmentDisplay_Pro/</code> (or <code>$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Pro/</code> if set)</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">For Lite users</p>
+<p>Lite saves its activation in <strong>sdl_activation.lic</strong>, in its own folder:</p>
+<ul>
+<li>Windows: <code>%LOCALAPPDATA%\OrionNovember.Studio\SegmentDisplay_Lite\</code></li>
+<li>macOS: <code>~/Library/Application Support/OrionNovember.Studio/SegmentDisplay_Lite/</code></li>
+<li>Linux: <code>~/.local/state/OrionNovember.Studio/SegmentDisplay_Lite/</code> (or <code>$XDG_STATE_HOME/OrionNovember.Studio/SegmentDisplay_Lite/</code> if set)</li>
+</ul>
+<p>The same rules below apply to the Lite file.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Do not edit, move or copy the license file</p>
 <p>Don't edit or move this file, and don't copy it to another computer. The license file is tied to the computer it was activated on, so a copied file will not unlock the add-on on any other machine. Every new or additional computer must be activated on its own by entering your license key in the add-on preferences, and each activation uses one seat of your activation limit. Deleting the file does <strong>NOT</strong> free up an activation slot. Use "Deactivate" in the add-on or your Lemon Squeezy order dashboard instead.</p>
@@ -1423,15 +1464,18 @@ files inside it, as this can break the add-on.</p>
 <p>The device name on your Lemon Squeezy order dashboard is your computer's name at the time you first activated. Renaming the computer later doesn't change it there, and doesn't use a new activation. Want the new name to show? Click "Deactivate", then "Activate" again. This frees the old slot and takes a new one, so your activation count stays the same.</p>
 </div>
 <h2 id="updating-the-add-on">Updating the Add-on<a class="headerlink" href="#updating-the-add-on" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> <strong>Pro v1.0.1 and later</strong></p>
 <ol>
-<li>No need to remove the old version. Install the new ZIP right over it (see <a href="#installation">Installation</a> above) with <strong>"Target Path"</strong> set to <strong>"Default"</strong> and <strong>"Overwrite"</strong> ticked, then restart Blender.</li>
-<li>Your license stays activated, no need to reactivate. The license file is stored outside the add-on folder (see <a href="#activationdeactivation">Activation/Deactivation</a> above), so updates don't touch it.</li>
-<li>Open your project. Your Segment Display objects are restored with the updated asset, and your current add-on panel settings are kept.</li>
-<li>Objects didn't come back after restarting Blender? Go to <strong>Edit</strong> → <strong>Preferences</strong> → <strong>Add-ons</strong>, expand <strong>"Segment Display Pro"</strong>, and click <strong>"Re-link Asset"</strong> in the <strong>"Asset Status"</strong> section.</li>
+<li>Save a backup copy of your project before updating or repairing connections.</li>
+<li>Install the complete new ZIP over the existing add-on with <strong>Target Path: Default</strong> and <strong>Overwrite</strong> enabled. No uninstall is needed. Dragging the new ZIP into Blender also works (see <a href="#drag-drop-the-zip-optional">Drag &amp; Drop the ZIP</a>). Your activation file is outside the add-on folder, so reinstalling does not normally require reactivation.</li>
+<li><strong>Restart Blender</strong>, reopen your project and inspect the displays, settings and animation. Reinstalling and restarting often restores displays automatically; if everything is correct, no manual recovery is needed.</li>
+<li>If Asset Status shows <strong>Not Available</strong>, reinstall the matching complete package to restore the shipped asset in the add-on's <code>assets</code> folder, then restart again. Do not delete modifiers or remove node-tree assignments to fix this state.</li>
+<li>If supported connection issues remain while the installed asset is available, open <strong>Edit &gt; Preferences &gt; Add-ons &gt; Segment Display Pro &gt; Asset Status &gt; Review &amp; Recover…</strong>. Review the proposed actions, recover, inspect the result and save the project. See <a href="../prefs_and_settings/#review-recover">the recovery walkthrough</a>.</li>
 </ol>
+<p>Reconnection uses settings and animation still present in your project. It cannot restore data already deleted by removing a modifier or node-tree assignment. <strong>Lite recovery differs and is not covered in this Pro manual.</strong></p>
 <div class="admonition info">
-<p class="admonition-title">Re-link Asset only works within the same Blender version</p>
-<p>If the new version of the add-on requires a newer version of Blender, you will be notified. Blender keeps add-ons in a separate folder for each version, so the asset file path changes when you switch Blender versions.</p>
+<p class="admonition-title">Changing Blender versions</p>
+<p>Blender keeps installations in version-specific folders, so changing Blender versions can change asset paths. Install a matching, supported package in the target Blender version and restart before checking the project. Recovery is not a guarantee of compatibility with an untested Blender version.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Custom add-on directories are not tested</p>
@@ -1444,7 +1488,7 @@ files inside it, as this can break the add-on.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Accidentally Uninstalled the Add-on Mid-Project?</p>
-<p>If you accidentally uninstall the add-on, all your segment display objects will appear as planes on the next Blender launch, because the linked asset file is no longer available. The link directory information, however, is retained in the Blender file as a broken link. To restore everything, simply re-install the add-on and click the Re-link button in the Preferences &gt; "Asset Status" panel — all your objects will be restored with their original settings.</p>
+<p>Displays can appear as planes because the linked asset is unavailable; this does not by itself mean their stored settings are lost. Preserve the project and leave its modifiers untouched. Reinstall the complete matching add-on, restart Blender and check the project first. Displays often return without manual recovery. If supported issues remain, use Pro <strong>Review &amp; Recover…</strong> once the asset is available. Inspect settings and animation before saving; deleted data cannot be guaranteed recoverable. See <a href="../prefs_and_settings/#review-recover">Review &amp; Recover</a>.</p>
 </div>
 
 
@@ -1548,7 +1592,7 @@ files inside it, as this can break the add-on.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

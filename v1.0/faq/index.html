@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -918,14 +918,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../changelog_addon/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog (Documentation)
   
 
     
@@ -1202,11 +1230,31 @@
 <h2 id="installation-updates">Installation &amp; Updates<a class="headerlink" href="#installation-updates" title="Permanent link">&para;</a></h2>
 <details class="question">
 <summary>Which Blender versions are supported?</summary>
-<p>Segment Display Pro v1.0.0 is built for Blender 5.1, with Blender 5.1.1 as the minimum version. It runs on Windows, macOS and Linux, and works with both the Cycles and EEVEE render engines. If a future add-on update needs a newer Blender version, the add-on will notify you. See the <a href="../installation/#requirements">Installation &amp; Activation</a> page for the full system requirements.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> <strong>v1.0.1 and later</strong></p>
+<p>SegDisp v1.0.1 has been tested with <strong>Blender 5.1.2</strong>, the recommended version for this release. The declared minimum is <strong>Blender 5.1.1</strong>, but v1.0.1 has not yet been re-tested on that version. Newer Blender versions are not confirmed as supported yet. The add-on runs on Windows, macOS and Linux (tested on Windows 11 only), and works with both the Cycles and EEVEE render engines. If a future add-on update needs a newer Blender version, the add-on will notify you. See the <a href="../installation/#requirements">Installation &amp; Activation</a> page for the full system requirements.</p>
 </details>
 <details class="question">
 <summary>How do I update the add-on without losing my activation?</summary>
-<p>Just install the new ZIP right over the old one; no need to uninstall first. Use "Install from Disk" with "Target Path" set to "Default" and "Overwrite" ticked, then restart Blender. Your license stays activated because the license file is stored outside the add-on folder and updates never touch it. If your Segment Display objects don't come back after the restart, click "Re-link Asset" in Preferences &gt; Add-ons &gt; Segment Display Pro &gt; "Asset Status". See <a href="../installation/#updating-the-add-on">Updating the Add-on</a> for details.</p>
+<p>Install the complete matching ZIP over the old version with Target Path set to Default and Overwrite enabled, then restart Blender. Your activation file is outside the add-on folder. Reopen and inspect your project first: displays often return automatically. For Pro v1.0.1 and later, use <strong>Review &amp; Recover…</strong> only if supported issues remain after the installed asset is available. See <a href="../installation/#updating-the-add-on">Updating the Add-on</a>.</p>
+</details>
+<details class="question">
+<summary>Does Check for Updates install the update?</summary>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> <strong>v1.0.1 and later</strong></p>
+<p>No. <strong>Check for Updates</strong> only checks whether a newer version is available. If there is one, <strong>Open Downloads</strong> opens the download page in your browser. Nothing is downloaded, installed or restarted for you. Download the new ZIP, install it over your current version, then restart Blender. See <a href="../prefs_and_settings/#add-on-update">Add-on Update</a> and <a href="../installation/#updating-the-add-on">Updating the Add-on</a>.</p>
+</details>
+<details class="question">
+<summary>How do I repair displays after an update or reinstall?</summary>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> <strong>Pro v1.0.1 and later</strong></p>
+<p>If displays appear as planes, preserve a project copy and leave their modifiers untouched. Reinstall the complete matching add-on and restart Blender first; this often restores displays without manual recovery. If problems remain, use <strong>Preferences &gt; Add-ons &gt; Segment Display Pro &gt; Asset Status &gt; Review &amp; Recover…</strong>. Review the actions and backup option, recover, inspect settings/animation and save.</p>
+<p>Reconnection uses data still present. Deleted settings and animation cannot be restored by assigning a node tree again or recreating a modifier with defaults. Lite uses a different recovery procedure, not covered here. See <a href="../prefs_and_settings/#review-recover">Review &amp; Recover</a>.</p>
+</details>
+<details class="question">
+<summary>Why is Add unavailable after updating?</summary>
+<p>Restart Blender first, then check Asset Status. <strong>Not Available</strong> means the installed asset cannot be used; <strong>Unknown</strong> version information needs checking, and a known asset/add-on version mismatch can block adding displays. Reinstall the complete matching package rather than mixing asset/script versions or editing modifiers. See <a href="../troubleshooting/#the-asset-file">asset troubleshooting</a>.</p>
+</details>
+<details class="question">
+<summary>Why did Blender stop responding during recovery?</summary>
+<p>Blender can pause while recovery relocates and reloads an asset library whose path points outside the current installation. Allow it to finish; duration varies and a temporary not-responding message does not necessarily mean a crash. This involves Blender's library handling; the exact bottleneck is unconfirmed. See <a href="../troubleshooting/#blender-temporarily-stops-responding">recovery pauses</a>.</p>
 </details>
 <h2 id="licensing-usage">Licensing &amp; Usage<a class="headerlink" href="#licensing-usage" title="Permanent link">&para;</a></h2>
 <details class="question">
@@ -1223,21 +1271,26 @@
 </details>
 <details class="question">
 <summary>Does the add-on work on render farms?</summary>
-<p>Your own render machines, yes. Your Pro license comes with 3 activation seats, so you can use it on your main workstation, a laptop, and a dedicated render machine. Every machine that renders your scene needs Segment Display Pro installed in Blender's default add-on folder, using the same Blender version, and its own activation (the license file can't be copied between machines). Cloud render farms that don't let you install add-ons are not supported.</p>
+<p>Render-farm workflows have not been tested with SegDisp, so compatibility, setup requirements and activation requirements for render nodes are not confirmed. We cannot currently guarantee that projects using live procedural SegDisp objects will render correctly on a cloud or network render farm.</p>
+<p>You can apply the display's Geometry Nodes modifier and use the resulting mesh outside Blender, as explained under <strong>Sharing &amp; Exporting</strong>. This is allowed, but it is not a tested render-farm workflow.</p>
 </details>
 <details class="question">
 <summary>Can I use the add-on in commercial projects?</summary>
 <p>Yes. Segment Display Pro uses a dual license:</p>
 <ul>
 <li><strong>Add-on code (GPL v3):</strong> You're free to use, copy, and modify the code for your own pipeline. If you distribute a modified version, you must pass on the same freedoms and source code.</li>
-<li><strong>Assets (Single User Commercial License):</strong> The .blend files, 3D models, and textures remain the property of Orion November Studio. You can use them to produce videos and animations for commercial use and to build your personal portfolio. You can't sell, share, sub-license, or upload the assets, in original or modified form, as standalone files or as part of another tool or add-on.</li>
+<li><strong>Assets (Single User Commercial License):</strong> The supplied asset .blend file remains the property of Orion November Studio and must not be redistributed, sold, shared, sub-licensed, or uploaded, in original or modified form. This restriction does not prevent you from using your generated SegDisp objects in commercial projects, including applying their modifiers and exporting the resulting meshes for use in game engines or other software.</li>
 </ul>
-<p>In short: your renders are yours to sell, the asset files are not. Full details are in our <a href="https://www.orionnovemberstudio.com/integrated-governance-and-license-framework" target="_blank" rel="noopener">license terms</a>.</p>
+<p>In short: you can use your renders and generated display meshes in your projects; you cannot redistribute the supplied asset .blend file. Full details are in our <a href="https://www.orionnovemberstudio.com/integrated-governance-and-license-framework" target="_blank" rel="noopener">license terms</a>.</p>
 </details>
 <h2 id="add-on-in-action">Add-on In Action<a class="headerlink" href="#add-on-in-action" title="Permanent link">&para;</a></h2>
 <details class="question">
 <summary>Why does the add-on link assets instead of appending them to the scene?</summary>
 <p>The Segment Display Geometry Nodes asset references numerous external objects and collections required for correct functionality. Appending the asset would automatically import all of those external objects into the scene, with no way to preserve the original collections and sub-collections hierarchy, leaving the Outliner cluttered and difficult to manage. Linking also offers an additional advantage: any future updates made to the asset in the source file are automatically reflected in the scene, eliminating the need to re-import.</p>
+</details>
+<details class="question">
+<summary>What are the segdisp_* custom properties on my Pro object?</summary>
+<p>They are recognition/recovery metadata, not display controls. Leave <code>segdisp_type</code>, <code>segdisp_schema</code>, <code>segdisp_edition</code> and <code>segdisp_modifier</code> intact, and do not manually rename/delete the SegDisp modifier. An object's identity does not always identify its correct empty modifier; ambiguous targets require <strong>Needs Review</strong>. See <a href="../troubleshooting/#pro-recognition-properties-and-modifiers">recognition properties</a>.</p>
 </details>
 <details class="question">
 <summary>Why are segment value results not shown in solid shading mode when the display base is toggled?</summary>
@@ -1249,11 +1302,11 @@
 </details>
 <details class="question">
 <summary>Why are there two different options for the Numbers category?</summary>
-<p>Blender stores number inputs as single-precision floats (float32), which can only hold about 7 significant digits. Beyond that, even whole integers get rounded, so a long number typed into a single field would show wrong digits on the display.</p>
+<p>Blender stores number inputs as single-precision floats (float32), which limit the precision of a single input. SegDisp Pro's Simple input supports values up to <strong>10,000,000</strong>; an 8-digit display does not mean every 8-digit value is supported.</p>
 <p>That's why the Numbers category offers two input options:</p>
 <ul>
-<li><strong>Simple:</strong> A single input field for everyday values, up to 8 digits.</li>
-<li><strong>Complex:</strong> The number is split into five three-digit groups (0 to 999), one for each place value (ones, thousands, millions, billions, trillions). Each group stays well within Blender's safe precision range, and the add-on procedurally combines them on the display. This lets you show numbers up to 15 digits (hundred trillions) without any precision loss.</li>
+<li><strong>Simple:</strong> A single input field for everyday values, with up to 8 display digits and a maximum input value of <strong>10,000,000</strong>.</li>
+<li><strong>Complex:</strong> Builds the current number from five three-digit input groups, each accepting <strong>0-999</strong>, for up to <strong>15 display digits</strong>. These are not fixed decimal or place-value separator groups. Display Length determines which groups remain active, while Decimals and Decimal Length determine decimal formatting. The rightmost group [1] remains active for whole numbers when Decimals is off.</li>
 </ul>
 <p>See the <a href="../troubleshooting/#numbers">Troubleshooting</a> page for details.</p>
 </details>
@@ -1268,16 +1321,22 @@
 </details>
 <details class="question">
 <summary>Why is my timer drifting at 29.97 fps?</summary>
-<p>The auto time animations (Clock, Timer) and the Animation Start Offset only work correctly with whole-number frame rates such as 24, 25, 30, or 60. Decimal frame rates like 23.98 or 29.97 cause small timing errors because of how Blender converts frames to time. Also, make sure the "Addon Frame Rate" dropdown in the N-panel matches your scene's frame rate. See the <a href="../prefs_and_settings/#time-synchronization">Preferences &amp; Settings</a> page for details.</p>
+<p>The auto time animations (Clock, Timer), including <strong>Clock Start Frame</strong> and <strong>Timer Start Frame</strong>, only work correctly with whole-number frame rates such as 24, 25, 30, or 60. Decimal frame rates like 23.98 or 29.97 cause small timing errors because of how Blender converts frames to time. Also, make sure the "Addon Frame Rate" dropdown in the N-panel matches your scene's frame rate. See the <a href="../prefs_and_settings/#time-synchronization">Preferences &amp; Settings</a> page for details.</p>
 </details>
 <h2 id="sharing-exporting">Sharing &amp; Exporting<a class="headerlink" href="#sharing-exporting" title="Permanent link">&para;</a></h2>
 <details class="question">
+<summary>Can I link a SegDisp object from another project?</summary>
+<p>This workflow is not currently validated. Configure and animate displays in their owning project; repair and save that source before reloading its library in the destination. Recovery does not directly edit source-linked modifiers. Lite testing showed input-type errors after library reload; restarting cleared the observed error but is not a guaranteed fix or a confirmed Pro defect. Linked-object still and animation rendering remain unverified. See <a href="../troubleshooting/#linking-displays-from-another-project">linking limitations</a>.</p>
+</details>
+<details class="question">
 <summary>Can I share my .blend file with someone who doesn't own the add-on?</summary>
-<p>Your renders and videos are yours to share with anyone. The .blend project itself is a different story: Segment Display objects link to the asset file inside the add-on installation, so on a computer without Segment Display Pro they show up as flat planes. A teammate who owns their own copy of Segment Display Pro can open and edit your project normally (Lite can't open Pro objects). Since the assets are covered by a single-user license, they can't be shared inside a .blend file in original, converted, or modified form.</p>
+<p>Yes, if you share the generated display as an applied or converted mesh rather than redistributing the supplied asset .blend file. Work on a copy if you want to keep the original procedural display editable.</p>
+<p>An unapplied SegDisp object still depends on the linked asset file in the add-on installation and may appear as a plane when that file is unavailable. To continue editing it procedurally, your teammate needs their own copy of the matching add-on edition and its assets; Lite cannot control Pro objects. Do not pack or include the supplied asset .blend file as a way to bypass that requirement.</p>
 </details>
 <details class="question">
 <summary>Can I export to Unity, Unreal or FBX?</summary>
-<p>Not in the current version. Segment Display Pro is built for rendering inside Blender: the displays are generated procedurally with Geometry Nodes and linked assets, which can't be exported to other software with their animation. Exporting the assets as models for use in games or other tools would also fall outside the asset license, which only covers videos, animations, and portfolio work made in Blender.</p>
+<p>Yes. Apply the SegDisp object's Geometry Nodes modifier to convert the generated display into a mesh, then export it in a format supported by your target software, such as FBX, for use in Unity, Unreal or other game engines. Work on a copy if you want to retain the original procedural display.</p>
+<p>Applying the modifier captures the current geometry; it does not automatically transfer SegDisp's procedural controls or Geometry Nodes-driven animation to another application. Exporting your generated display mesh is allowed. <strong>The restriction is on redistributing the supplied asset .blend file, not on exporting SegDisp objects.</strong></p>
 </details>
 
 
@@ -1365,7 +1424,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

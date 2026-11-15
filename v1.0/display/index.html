@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -1068,14 +1068,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../changelog_addon/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changelog
+    Changelog (Add-on)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog (Documentation)
   
 
     
@@ -1246,12 +1274,12 @@
 <h3 id="7-segment-fonts">7-Segment Fonts<a class="headerlink" href="#7-segment-fonts" title="Permanent link">&para;</a></h3>
 <div class="grid">
 <figure>
-<p><img alt="Addon FPS" src="../assets/images/display_options/v1.0.0/disp_7seg_fonts_a.png" width="400" />
+<p><img alt="7-Segment Font A" src="../assets/images/display_options/v1.0.0/disp_7seg_fonts_a.png" width="400" />
   </p>
 <figcaption>Font - A</figcaption>
 </figure>
 <figure>
-<p><img alt="Scene FPS" src="../assets/images/display_options/v1.0.0/disp_7seg_fonts_b.png" width="400" />
+<p><img alt="7-Segment Font B" src="../assets/images/display_options/v1.0.0/disp_7seg_fonts_b.png" width="400" />
   </p>
 <figcaption>Font - B</figcaption>
 </figure>
@@ -1264,9 +1292,22 @@
 <h3 class="clear" id="16-segment-fonts">16-Segment Fonts<a class="headerlink" href="#16-segment-fonts" title="Permanent link">&para;</a></h3>
 <p><img alt="Display 16-seg Fonts" src="../assets/images/display_options/v1.0.0/disp_16seg_fonts_v2.png" width="1100" /></p>
 <p>The 16-segment display unlocks a wide range of font possibilities, thanks to its higher segment count.</p>
-<p><strong>[1] Font Width:</strong> Adjusts the font to occupy either the full width or half of the display base. <strong>Note:</strong> Not available with the 7-Segment Display Model due to segment count limitations.</p>
+<p><strong>[1] Font Width:</strong> Sets the font to "Wide" (full width of the display base) or "Narrow" (half width). <strong>Note:</strong> Not available with the 7-Segment Display Model due to segment count limitations.</p>
 <p><strong>[2] Font Align:</strong> Aligns the font to the left or right side of the display base when "Narrow" is selected as the font width.</p>
-<p><strong>[3] Font Alternatives:</strong> Selects alternative font variations for numeric and alphabetic characters.</p>
+<p><strong>[3] Font Alternatives:</strong> Selects alternative font variations for numeric and alphabetic characters.</p>
+<ul>
+<li><strong>Number Fonts:</strong> Sets the font variation per digit. The digit list changes with Font Width and Font Align, because each layout has a different number of segments to work with. Some digits also have more variations than others.<ul>
+<li><strong>Wide:</strong> All digits, 0 to 9.</li>
+<li><strong>Narrow + Left:</strong> 2, 5, 6, 7, and 9.</li>
+<li><strong>Narrow + Right:</strong> 1, 2, 4, 5, 6, 7, and 9.</li>
+</ul>
+</li>
+<li><strong>Alphanum Fonts:</strong> Sets the font variation (A, B, or C) for letters. The 3A, 3B, and 3C rows in the image show each variation.</li>
+</ul>
+<div class="admonition info wrap">
+<p class="admonition-title">Info</p>
+<p>The UI in the image above is cropped to fit the layout. Your panel may show more rows, depending on the selected Font Width and Font Align.</p>
+</div>
 <hr />
 <h2 class="clear" id="display-align-spacing-and-size">Display | Align, Spacing, and Size<a class="headerlink" href="#display-align-spacing-and-size" title="Permanent link">&para;</a></h2>
 <p><img alt="Display Align" src="../assets/images/display_options/v1.0.0/disp_align_display.png" width="1100" /></p>
@@ -1277,11 +1318,11 @@
 <p class="admonition-title">Tip</p>
 <p>Alignment and sizing options can be used to stack multiple display objects together.</p>
 </div>
-<p><strong>[3] Digit Spaces:</strong> Controls the distance between digits of whole and decimal numbers in the <code>Numbers</code> and <code>Time</code> categories. </p>
+<p><strong>[3] Digit Spaces:</strong> Controls the distance between digits of whole and decimal numbers in the <code>Numbers</code> and <code>Time</code> categories. </p>
 <div class="admonition info wrap">
 <p class="admonition-title">To enable spacing  options, you need a display and a decimal length of at least two.</p>
 </div>
-<p><strong>[3] Character Space:</strong> Controls the distance between character spaces in the <code>Alphanumeric</code> category. </p>
+<p><strong>[3] Character Space:</strong> Controls the distance between character spaces in the <code>Alphanumeric</code> category. </p>
 <div class="admonition info wrap">
 <p class="admonition-title">This option appears only if the Alphanumeric category is selected.</p>
 </div>
@@ -1301,7 +1342,7 @@
 <p><strong>[2] Toggle Led:</strong> Enables or disables the LED emission effect on the display segments.</p>
 <div class="admonition info wrap">
 <p class="admonition-title">Info</p>
-<p>This option is currently located in the Appearances panel, which has no direct relationship to it. A new feature called "Actions" is planned for the Segment Display Pro edition. All animation-related toggles will be moved to the new panel when it is implemented in the future.</p>
+<p>This option is currently located in the Appearances panel, which has no direct relationship to it. A new feature called "Actions" is planned for the Segment Display Pro edition. All animation-related toggles will be moved to the new panel when it is implemented in the future.</p>
 </div>
 <p><strong>[3] Emission Color &amp; Strength:</strong> Sets the color and intensity of the LED emission on active (lit) segments.</p>
 <div class="admonition info wrap">
@@ -1421,7 +1462,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
