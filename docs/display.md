@@ -51,7 +51,7 @@ Switches to an alternative font variation. This option is limited to the digits 
 
 ### 16-Segment Fonts {: .clear }
 
-![Display 16-seg Fonts](assets/images/display_options/v1.0.0/disp_16seg_fonts_v2.png){ width="1100" }
+![Display 16-seg Fonts](assets/images/display_options/v1.0.2/disp_16seg_fonts_v2.png){ width="1100" }
 
 The 16-segment display unlocks a wide range of font possibilities, thanks to its higher segment count.
 
@@ -112,7 +112,7 @@ The 16-segment display unlocks a wide range of font possibilities, thanks to its
 
 ### LED {: .clear }
 
-![Display Appearances Header](assets/images/display_options/v1.0.0/disp_appear_ui.png){ align=right width="350" }
+![Display Appearances Header](assets/images/display_options/v1.0.2/disp_appear_ui.png){ align=right width="350" }
 
 **[2] Toggle Led:** Enables or disables the LED emission effect on the display segments.
 
